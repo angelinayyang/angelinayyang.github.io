@@ -1,0 +1,6 @@
+.post-category,
+.post-tag,
+.menu-item,
+.site-title {
+  text-transform: none !important;
+}
