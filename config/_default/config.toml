@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "angelinayyang.github.io"
+baseurl = "https://angelinayyang.github.io"
 languageCode = "en-us"
 title = "Angelina's Internet Corner"
 
@@ -18,11 +18,6 @@ disqusShortname = "hugo-theme-stack"
 [pagination]
 pagerSize = 5
 
-[params]
-    avatar = "static/avatar1.png"
 
-[[menu.main]]
-name = "About Me"
-url = "/page/about-me/index.md"
-icon = "user"
-weight = 10
+
+

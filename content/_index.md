@@ -7,4 +7,3 @@ menu:
             icon: home
 ---
 
-Hello!

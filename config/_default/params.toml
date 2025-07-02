@@ -41,7 +41,7 @@ type = "archives"
 limit = 5
 
 [[widgets.homepage]]
-type = "about"
+
 
 [widgets.homepage.params]
 limit = 10
