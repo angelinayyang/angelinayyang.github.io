@@ -6,10 +6,10 @@ slug: rhythmlink
 date: 2025-06-30 00:00:00+0000
 
 categories:
-    - Biomedical Engineering
+    - Internship
     - Research and Development
     
-tags:
+tags: 
     - css
     - html
     - markdown
