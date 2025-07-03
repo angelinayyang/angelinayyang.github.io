@@ -252,6 +252,8 @@ The AI-driven approach was expanded to use neural networks trained with speciali
 
 
 All of these neural networks were trained using the ‘Adam’ optimizer and ‘Cross-Entropy Loss’ as the loss function for the model. It was run for 100 epochs with a validation split of 0.2 and batch size of 32 for the specialist models and 16 for the generalist model. The exact number of data points depends on the calibration results. This yielded a model with ~84% accuracy. 
+
+![AI training results yielding 84% accuracy](Ai-train-results.png)
  
  [^2]: “[64,128]” indicates that the grid-search algorithm determined whether these hidden layers contained 64 or 128 neurons. All of these layers implemented the ReLU activation function.
 
@@ -283,6 +285,37 @@ These calculations were implemented using the [NumPy Python library](https://num
 
 After completing the prototype, we conducted a blind test to ensure the functionality of the prototype. One person did not look at the electrodes and solely controlled the touchscreen the SSH terminal, while the other person used a random number generator to select either one of different types of defective electrodes or a set of broken electrodes, and indicated to the other person the electrode numbers to test. Then, after running the test, the predicted results were recorded and verified against the actual results. The predictions were all accurate, demonstrating that the prototype works!
 
+### Electrode Callibration
+
+In the calibration, we can visualize all of the read values through the silicone polymer.
+
+<center>
+<img src="../rhythmlink/all21.png"  width=500 > 
+
+</center>
+
+### Diagnosis
+
+
+**Defective Electrode**[^5]
+
+[^5]: Note that the defect is replicated across all 21 electrodes.
+
+
+<video width="685" height="445" controls>
+  <source src="../rhythmlink/defective.MOV" type="video/mp4">
+
+</video>
+
+
+
+**Functional Electrode**
+
+
+<video width="685" height="445" controls>
+  <source src="../rhythmlink/functional.MOV" type="video/mp4">
+
+</video>
 
 ## Next Steps
 
