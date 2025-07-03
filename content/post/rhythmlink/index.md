@@ -10,9 +10,9 @@ categories:
     - Research and Development
     
 tags: 
-    - css
-    - html
-    - markdown
+    - PCB design
+    - neural network
+    - raspberry pi
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 
 ---
@@ -134,12 +134,161 @@ In addition to “lollipop” shaped slits tangent to the head at points alignin
 The head phantom was made in a shape as close to a real human head as possible to ensure a realistic simulated testing environment that would detect potential issues or defects with electrodes during the quality assurance process.
 You can access the Fusion 360 model [here](https://a360.co/4cvf0zE).
 
+![Head phantom separated to show top and bottom hemisphere, LCD mount](3D_head_model.png)
+
+To secure the various ‘prongs’ of the conductive silicone polymer to the head, a set of twelve clamps was developed. Each clamp contains a label according to the 10-20 Standard, two M3 threaded holes, and an impressment for the outer electrode.
 
 
+
+<center>
+<img src="../rhythmlink/clamp.png"  width=500 > 
+
+</center>
 
 
 
 [^1]: [Audette, William E., et. al.](https://www.researchgate.net/publication/339697951_Design_and_Demonstration_of_a_Head_Phantom_for_Testing_of_Electroencephalography_EEG_Equipment)
 
+### Silicone Polymer Wrapping
+
+To implement a suitable silicone cut-out that can tightly ‘wrap’ around the head phantom, minimize scrunching, and effectively cover each of the electrodes, we initially looked into using map projections, which are used to portray spherical shapes in 2D. Thus, we created a snowflake design.
+
+!['Snowflake' design in Cuttle](cuttle.png)
+
+To simulate the positional accuracy of each of the snowflake prongs, we used cloth simulations in Blender on top of the existing head phantom CAD model. Then, we adjusted the Cuttle file as needed.
+
+<video width="685" height="445" controls>
+  <source src="../rhythmlink/cloth_sim.mp4#t=2,8" type="video/mp4">
+
+</video>
+
+We initially explored using complex boolean operations (subtract/combine) in Blender to physically embed the snowflake design into the head phantom. However, with the development of the silicone clamps, we ultimately decided to keep the head phantom in its original state.
+
+To cut out the snowflake, we used an Epilog CO2 laser cutter with the following settings: **15% speed, 100% power, and 100% frequency**. We ran the job twice to ensure the laser fully penetrated the material.
+
+![Fully-scaled snowflake after laser cutting with listed settings above](fullyscaled_snowflake.jpg)
 
 
+### Assembly
+
+The EEG Electrode Testbed was assembled in the following order:
+
+1. Place microcontrollers into the casing. 
+2. Insert screws to fasten the microcontroller into the base of the head.
+3. Wire microcontroller to the digital-to-analog board and analog-to-digital board, as well as the screen.
+4. Inserting the electrodes from the head phantom’s interior, install the first set of electrodes.
+5. Stretch the silicone over each electrode.
+6. Apply silicone paste to each electrode of the second electrode set.
+7. Insert the exterior electrode into the clamp.
+8. Screw the clamp(s) into their respective positions on the head, ensuring sufficient contact between the silicone and the electrodes.
+9. Screw the screen onto the front of the casing.
+
+### Electronics: Amplifying the Signal
+
+After 20+ iterations of the circuit board designs, we arrived at two double-sided PCB boards that allow the Raspberry Pi to interface with the analog-to-digital and digital-to-analog converter chips, as well as an I2C multiplexer. KiCad, an open-source PCB CAD program, was utilized in tandem with Fab Academy’s footprint and symbol library in order to develop these boards. We produced one PCB in-house and ordered one from PCBWay.
+
+#### Analog-to-Digital Converter Board
+
+The Raspberry Pi 5 does not have built-in analog input capabilities on its GPIO pins. Thus, to convert the electrodes’ analog signals to digital, which can be effectively processed by the Pi, an analog-to-digital board was developed using the MCP3008 digital-to-analog converter chip. Each MCP3008 has eight input channels, and each channel is paired with a 10K ohm pull-down resistor.
+
+![Schematic for the analog to digital converter board in Kicad](adc_schematic.png)
+
+The board was routed with two copper layers, F.Cu and B.Cu. 
+
+
+![Tool paths visualized: red and blue indicate traces, yellow indicates silkscreen, and white indicates edge cuts](adc_layout.png)
+
+
+This board was manufactured by PCBWay and assembled in-house.
+
+**
+
+#### Digital-to-Analog Converter Board
+
+Contrarily, to output analog signals from the Raspberry Pi, a digital-to-analog converter board was designed using the MCP4728 digital-to-analog converter chip and a TCA9548A 1-to-8 I2C multiplexer breakout. Each MCP4728 has four output channels.
+
+The first iteration involved utilizing embedded circuits, or mounting the MCP4728 and the TCA9548A directly onto the PCB. 
+
+![Embedded circuit schematic in KiCad](first_it_schematic.png)
+
+Similar to the analog-to-digital converter board, the digital-to-analog converter board necessitated a two-sided PCB.
+
+![Tool paths visualized for the embedded circuit iteration](first_it_layout.png)
+
+Due to the sheer size of each chip, this board was produced and assembled at a domestic PCB company called [uFab](https://u-fab.co/). 
+
+![Manufactured and assembled embedded circuit PCB](first_it_manufactured.png)
+
+Unfortunately, this board did not work as intended, likely due to a lack of pull-up resistors present in the initial schematic.
+
+For our second iteration, we pivoted and instead opted for an integrated circuit design with Adafruit's existing MCP4728 and TCA9548A breakout boards.
+
+![Integrated circuit schematic in KiCad](second_it_schematic.png)
+
+
+![Tool paths visualized for the integrated circuit interation](second_it_layout.png)
+
+After 2 iterations, this board was successfully produced and soldered in-house.
+
+![Manufactured and assembled integrated circuit PCB](second_it_manufactured.jpg)
+
+## Software
+
+ The EEG testbed prototype applies two networking and communications: SPI and I2C. To interface with the MCP3008 Digital-to-Analog Converters from the Raspberry Pi 5, SPI protocol was implemented over one bus with three Chip Select pins. The adafruit_mcp3xxx.mcp3008 Python library was used to implement this communication. To interface with the MCP4728 Analog-to-Digital Converters from the Raspberry Pi 5, I2C protocol was implemented with a TCA9548A I2C Multiplexer to allow for communication to six MCP4728 chips from a single I2C channel.
+
+### Artificial Intelligence 
+
+> The system architecture consists of Specialist, Generalist, & Synthesizer Models
+
+The AI-driven approach was expanded to use neural networks trained with specialized datasets to make them more accurate at specific tasks, such as diagnosing defects in a specific electrode pair. In tandem, we trained generalist neural networks that are trained on data from all different electrode pairs and can diagnose defects in any pair of electrodes. And finally, we utilized a synthesizer model, an LLM that takes the output of these specialist and generalist models to diagnose manufacturing issues that have occurred in the electrode set as a whole. This leads to 21 specialist networks + 1 generalist network + 1 synthesizer LLM  = 23 neural AI agents, 22 of which were hyper-parameter tuned using a grid-search algorithm.
+
+
+
+**Model Architecture**: 
+
+* Specialist AI models’ hidden layers: 16x64x64x64 – ReLU + Softmax for output layer
+
+* Generalist AI model’s hidden layer[^2]: 16x[64,128]x[64, 128]x[64, 128] – ReLU + Softmax for output layer
+
+
+All of these neural networks were trained using the ‘Adam’ optimizer and ‘Cross-Entropy Loss’ as the loss function for the model. It was run for 100 epochs with a validation split of 0.2 and batch size of 32 for the specialist models and 16 for the generalist model. The exact number of data points depends on the calibration results. This yielded a model with ~84% accuracy. 
+ 
+ [^2]: “[64,128]” indicates that the grid-search algorithm determined whether these hidden layers contained 64 or 128 neurons. All of these layers implemented the ReLU activation function.
+
+ The synthesizer AI model was then created using Meta's LLama 2.7 billion parameter LLM to diagnose overall issues with the EEG electrodes and generate a prompt summary.
+
+ After several iterations of prompt engineering, we landed on this script for LLM Prompt Generation, finding that it yields the most consistent and comprehensive results while minimizing hallucinations[^3]:
+
+![LLM prompt generation definition](prompt_generation.png)
+
+[^3]: [Edwards, Benj.](https://arstechnica.com/information-technology/2023/04/why-ai-chatbots-are-the-ultimate-bs-machines-and-how-people-hope-to-fix-them/)
+
+#### Signal Replication for Defective Electrodes
+
+Although the Specialist AI Models are designed to train specifically to detect defects in the manufacturing process for specific electrodes, i.e. FP1 or C4, our training dataset only included data collected from the 1-3 electrodes provided per bad sample. For these datasets, predominantly for defective electrodes, that did not contain data for several electrode channels, the data was copied around the head to the different electrode positions to enable the specialist models to complete their training with defective data in addition to the existing functional electrode data. No code change is required to train on a full set of 21 defective electrodes if this becomes available.
+
+#### Matrix Calibration
+
+Referencing the matrix calculations run by several previous attempts[^4] at creating EEG testbeds, we came up with the following process:
+
+![](matrix.png)
+
+After calculating the matrix **Z**, applying the same transformation from the input to the output brainwave signal to **Z** returns the original brainwave, which comes as close to a simulated testing environment as possible where the EEG data generated by the MATLAB library is approximated by the signal distorted after being sent through the conductive silicone polymer.
+
+[^4]: [Collier, Thomas J., PhD, et. al.](https://www.researchgate.net/publication/230714956_Creation_of_a_Human_Head_Phantom_for_Testing_of_Electroencephalography_Equipment_and_Techniques)
+
+These calculations were implemented using the [NumPy Python library](https://numpy.org/).
+
+## Prototype Testing
+
+After completing the prototype, we conducted a blind test to ensure the functionality of the prototype. One person did not look at the electrodes and solely controlled the touchscreen the SSH terminal, while the other person used a random number generator to select either one of different types of defective electrodes or a set of broken electrodes, and indicated to the other person the electrode numbers to test. Then, after running the test, the predicted results were recorded and verified against the actual results. The predictions were all accurate, demonstrating that the prototype works!
+
+
+## Next Steps
+
+The next steps to address in improving the prototype are as follows:
+
+1. Include a much larger dataset of defective electrode signals labeled with different kinds of defects – can be used to fine-tune an LLM for accurate diagnosis.
+2. Simplify wire management inside of the 3D printed head phantom.
+3. Transition from using embedded circuits to integrated circuits on the custom PCB board to minimize space taken up and copper costs.
+4. If a dedicated server with a GPU is able to run code to support the EEG Testbed, the code already exists in the GitHub Repo to interface over WiFi with a server locally hosting the Llama LLM, minimizing the time it takes for a natural text summary to generate from running directly on the Raspberry Pi’s CPU.
