@@ -21,7 +21,8 @@ pagerSize = 5
 [params]
 customCSS = ["css/custom.css"]
 
-
-
-
-
+[module]
+  [[module.imports]]
+    path = "github.com/KKKZOZ/hugo-admonitions"
+  [[module.imports]]
+    path = "my-theme"

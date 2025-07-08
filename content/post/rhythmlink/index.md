@@ -1,9 +1,9 @@
 ---
-title: Rhythmlink
+title: Quality Assurance Testing with EEG Electrodes
 description: Continued development of current EEG Testbed prototype and expand casing design to fit 21 electrode locations.
 image: cover.JPG
 slug: rhythmlink
-date: 2025-06-30 00:00:00+0000
+date: 2025-06-30 
 
 categories:
     - Internship
