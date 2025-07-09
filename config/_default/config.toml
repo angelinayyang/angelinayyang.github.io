@@ -1,4 +1,3 @@
-# Change baseurl before deploy
 baseurl = "https://angelinayyang.github.io"
 languageCode = "en-us"
 title = "Angelina's Internet Corner"
@@ -13,7 +12,7 @@ defaultContentLanguage = "en"
 hasCJKLanguage = false
 
 # Change it to your Disqus shortname before using
-disqusShortname = "hugo-theme-stack"
+disqusShortname = "Angelina"
 
 [pagination]
 pagerSize = 5

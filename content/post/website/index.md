@@ -2,7 +2,7 @@
 title: How I Made This Website
 description: Intro to Github Pages, using static site generation with MkDocs, and applying the Hugo Stack theme to develop my personal blog.
 image: cover.png
-date: 2025-07-06
+date: 2025-06-15
 
 categories:
     - Web Development
@@ -33,7 +33,7 @@ angelinayyang.github.io
  YOUR_USERNAME.github.io
  ```
 
- After creating this repo, I cloned it to my local folder by using the command
+ After creating this repo, I **cloned** it to my local folder by using the command
 
  ```
  git clone REPO-NAME
@@ -103,7 +103,7 @@ In your coding environment, ensure that you have:
     brew upgrade git
     ```
 
-    1b. For Windows users, you will need to use Gitbash (packaged with the Git download for Windows) and run the following command: 
+    1b. For **Windows** users, you will need to use Gitbash (packaged with the Git download for Windows) and run the following command: 
     ```
     git update-git-for-windows
 
@@ -113,29 +113,29 @@ Once you have met both requirements, you can install MkDocs by running the follo
 
 
 ```
-pip install MkDocs
+pip install mkdocs
 ```
 
 MkDocs has good [documentation](https://www.MkDocs.org/getting-started/) on how to get started, but here's a general summary of the most fundamental commands. To create a basic static documentation site, run the following command:
 
 ```
-MkDocs new my-project
+mkdocs new my-project
 cd my-project
 ```
 
-This will create the following **hierarchy** in your coding environment, where index.md is the home-page and the MkDocs.yml configures the site with information like site_name, repo_url, and site_description:
+This will create the following **hierarchy** or directory structure in your coding environment, where index.md is the home-page and the MkDocs.yml configures the site with information like site_name, repo_url, and site_description:
 
 ```
 .
 ├─ docs/
 │  └─ index.md
-└─ MkDocs.yml
+└─ mkdocs.yml
 ```
 
 To view your site on a local server, run:
 
 ```
-MkDocs serve
+mkdocs serve
 ```
 
 You will get something like this in response:
@@ -144,7 +144,7 @@ You will get something like this in response:
 INFO    -  Building documentation...
 INFO    -  Cleaning site directory
 INFO    -  Documentation built in 0.22 seconds
-INFO    -  [15:50:43] Watching paths for changes: 'docs', 'MkDocs.yml'
+INFO    -  [15:50:43] Watching paths for changes: 'docs', 'mkdocs.yml'
 INFO    -  [15:50:43] Serving on http://127.0.0.1:8000/
 ```
 
@@ -233,7 +233,6 @@ ____
     1. you can nest these too
 
 2. **numbers** can be in order
-    1. can also nest
 
 4. but markdown will automatically fix them if not
 
@@ -269,9 +268,117 @@ More about MkDocs syntax can be found [here](https://www.markdownguide.org/basic
 
 MkDocs naturally has themes, such as [Material](https://squidfunk.github.io/MkDocs-material/), which work wonderfully for documentation purposes. However, for greater visual appeal, you can opt for other theme options. [Hugo](https://gohugo.io/), for instance provides a simple and easy-to-follow framework for developing visually stunning sites. This documentation specifically uses the [Stack](https://themes.gohugo.io/themes/hugo-theme-stack/) theme, created by Jimmy Cai. 
 
+To use Hugo, ensure that you have
 
+1. Installed the latest version of Go.
+
+    1a. Download the [Go MSI package](https://go.dev/doc/install)
+    
+    1b. To see the Go version, run
+
+    ```
+     go version
+    ```
+2. Installed the latest version of Git
+
+To install hugo, run the following command in terminal:
+```
+brew install hugo
+```
+
+
+### Installing Theme Manually
+
+If you're starting with an existing repo, you can create a new site with the command:
+
+```
+hugo new site SITE-NAME
+```
+This will create the following hierarchy:
+
+```
+my-site/
+├── archetypes/
+│   └── default.md
+├── assets/
+├── content/
+├── data/
+├── i18n/
+├── layouts/
+├── static/
+├── themes/
+└── hugo.toml
+```
+
+
+Then, you can change the current directory to the root of your project by running 
+
+```
+cd SITE-NAME
+```
+
+To clone the stack theme as a submodule to your existing repo, run
+
+```
+git submodule add https://github.com/CaiJimmy hugo-theme-stack/ themes/hugo-theme-stack
+```
+
+### Using the Starter Pack
+
+If you're starting from scratch **without a repo** and would like to use the theme starter, you can also directly create a new codespace from the [hugo-theme-stack-starter repo](https://github.com/CaiJimmy/hugo-theme-stack-starter/tree/master).
+
+The starter pack configuration file lies under the config/_default/ folder. 
+
+Note that the hugo-theme-stack-starter, format-wise, looks a bit different from the manually installed theme. For instance, the starter pack is missing the **layouts folder**, which is crucial for defining the HTML templates that control your website's content. The layout folder consists of files like **list.html** and **single.html**. Without this folder, you don't have as much control or flexibility with the visual format of your website. 
+
+Depending on which option you pick to create your Hugo site, you will either have a **config.yaml** or **config.toml** file, which configures site-wide parameters. For instance:
+
+```
+baseurl = "https://angelinayyang.github.io"
+languageCode = "en-us"
+title = "Angelina's Internet Corner"
+```
+
+Other parameters include the **avatar** icon. For my site, I custom designed a pixel art avatar of myself in a free online software, [PixilArt](https://www.pixilart.com/).
+
+![A pixel version of me!](pixelavatar.png)
+
+Each post in your new site will also have its own metadata and specific parameters, known as [front matter](https://gohugo.io/content-management/front-matter/). For instance, here is the front matter for this particular page:
+
+```yaml
+---
+title: How I Made This Website
+description: Intro to Github Pages, using static site generation with MkDocs, and applying the Hugo Stack theme to develop my personal blog.
+image: cover.png
+date: 2025-06-15
+
+categories:
+    - Web Development
+    - Personal Project
+    
+tags: 
+    - website design
+    - html
+    - markdown
+weight: 3 
+---
+```
+
+Whether you are manually installing the theme or applying the starter pack, to view your site on a local server, run in the terminal of your coding environment
+
+```
+hugo serve -D -F
+```
+**-D** ensures that pages marked as "drafts" will be included in the server, and **-F** loads pages with dates set in the future. Here is what the example site will look like:
+
+![Example site with Hugo Stack theme](examplesite.png)
 
 ## Publishing Your Site
+
+Before publishing changes, make sure that Github Pages is set up properly by going to your repository on Github > Settings > Pages > toggling **gh-pages** as the main branch.
+
+![](ghpages.png)
+
 
 To publish your local changes to your remote repository, run the following commands:
 
@@ -281,11 +388,11 @@ git commit -m "Insert description here"
 git push 
 ```
 
-- Git add . adds all changes in the current directory and its subdirectories to the Git staging area, in preparation for a commit. 
+- **Git add .** adds all changes in the current directory and its subdirectories to the Git staging area, in preparation for a commit. 
 
-- Git commit -m "" is a local action that records all changes in the repository's history. This is the 'version control' aspect of Git.
+- **Git commit -m ""** is a local action that records all changes in the repository's history. This is the 'version control' aspect of Git.
 
-- Git push then takes all of the changes that have been made locally and push them up to a remote repository
+- **Git push** then takes all of the changes that have been made locally and push them up to a remote repository
 
 If you make any changes in the remote repository (e.g. via the web IDE), be sure to **pull** all changes first before making additional edits in your local repository. Use the following command:
 
