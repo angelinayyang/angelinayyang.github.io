@@ -2,7 +2,7 @@
 title: The E-Mask
 description: A non-invasive early detection mechanism of lung cancer by analyzing unique exhaled VOC signatures
 image:
-date: 2025-09-09
+date: 2025-08-20
 
 categories:
     - Research and Development
@@ -12,7 +12,7 @@ tags:
     - feature extraction
     - python
     - cad
-weight: 1      # You can add weight to some posts to override the default sorting (date descending)
+weight: 2     # You can add weight to some posts to override the default sorting (date descending)
 
 ---
 
