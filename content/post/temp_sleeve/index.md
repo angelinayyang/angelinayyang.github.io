@@ -24,7 +24,5 @@ Temperature is a major physiological factor that may affect the signals displaye
 nerve conduction studies. Furthermore, customized sleeves that include visual aids to the technologist and even active warming could provide an even more streamlined and accurate process for nerve conduction study, ultimately providing a better outcome for the patient.
 
 
-
-
-
 ## Bill of Materials (BOM)
+
