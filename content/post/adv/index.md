@@ -97,7 +97,14 @@ The last step of the kit was to install the M3 screws and standoffs, allowing th
 <img src="standoff.JPG" width=400>
 </center>
 
-INSERT VIDEO OF KIT WORKING
+Here is a video of the final kit working:
+
+<center>
+<video width="500" height="300" controls>
+  <source src="pcbowl.mp4" type="video/mp4">
+
+</video>
+</center>
 
 
 
