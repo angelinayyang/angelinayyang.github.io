@@ -89,7 +89,13 @@ Rhythmlink responded with a new assignment for me! („• ᴗ •„)
 
 Since today's class was 75 minutes, we had a soldering party. (˵ •̀ ᴗ •́ ˵ ) ✧  Mr. Dubick went through a quick tutorial reviewing soldering basics, and we first practiced soldering 3 through-hole resistors vertically on a protoboard. Once our soldering got approved, we began working on a soldering kit, which had a mix of through-hole and surface mount components. I hadn't surface-mount soldered since last year, so I used a multimeter on the continuity setting to make sure I didn't create any solder bridges. Overall, this was pretty fun, and I challenged myself to finish the entire kit within the period!
 
-![Front side of the owl PCB, containing the main electronics and the surface-mount components](frontowl.jpeg) ![Back side of the owl PCB, containing the LEDs](backowl.jpeg)
+![Front side of the owl PCB, containing the main electronics and the surface-mount components](frontowl.jpeg) ![Back side of the owl PCB, containing the LEDs](backowl.JPG)
+
+The last step of the kit was to install the M3 screws and standoffs, allowing the PCB to sit upright. 
+
+<center>
+<img src="standoff.JPG" width=400>
+</center>
 
 INSERT VIDEO OF KIT WORKING
 
