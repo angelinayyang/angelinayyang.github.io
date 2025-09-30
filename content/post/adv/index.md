@@ -107,7 +107,10 @@ Here is a video of the final kit working:
 </center>
 
 
+### 09/30/25
 
+Since I was still struggling to figure out the best approach for temperature sensing in the Rhythmlink project, I did some more preliminary research comparing precision temperature sensors and thermistors. I found this [research paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC5797625/) that explained contact thermometry and provided a systematic review of different setup variables (e.g. type of sensor, applied pressure, etc.). This article also reaffirmed my concerns with sensor adhesion to the skin:
 
+> "Due to inherent skin contact and coverage at the measured sites, a disadvantage of contact thermometry is that the sensors and their attachments modify the immediate environment for the underlying skin. The effects of such a modification may manifest as a disturbance of the temperature that would otherwise exist in the undisturbed case."
 
-
+Based on this article, it appears that coupling thermistors with a voltage divider circuit, and correlating the measured resistance to the temperature was the most common and reliable approach.
