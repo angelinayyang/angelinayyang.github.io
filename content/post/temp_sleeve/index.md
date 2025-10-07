@@ -26,3 +26,10 @@ nerve conduction studies. Furthermore, customized sleeves that include visual ai
 
 ## Bill of Materials (BOM)
 
+https://www.adafruit.com/product/3328
+
+| Component    | Quantity | Source | Cost Per Unit | 
+| :-----------: | :-----------: | :------------: | :-------------: | 
+| PT1000 thin-film RTD | 8 | [Digikey](https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/NB-PTCO-153/5272167) | $6.65 | 
+| 1.8" TFT LCD - ST7735R | 1 | [Adafruit](https://www.adafruit.com/product/358) | $19.95 |
+| ATMEGA328P-AU | 1 | [Digikey](https://www.digikey.com/en/products/detail/microchip-technology/ATMEGA328P-AU/1832260) | $2.66 | 

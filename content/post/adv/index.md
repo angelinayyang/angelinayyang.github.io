@@ -107,10 +107,10 @@ Here is a video of the final kit working:
 </center>
 
 
-### 09/30/25
+### 09/30/25-10/1/25
 
-Since I was still struggling to figure out the best approach for temperature sensing in the Rhythmlink project, I did some more preliminary research comparing precision temperature sensors and thermistors. I found this [research paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC5797625/) that explained contact thermometry and provided a systematic review of different setup variables (e.g. type of sensor, applied pressure, etc.). This article also reaffirmed my concerns with sensor adhesion to the skin:
+I discussed with Mr. Dubick, and he suggested some alternative temperature sensors, including digital sensors, thermocouple, and thin-film RTD (PT1000). These solutions offer higher-precision measurements but are typically more expensive and harder to integrate into wearable technology. I looked into PT resistance temperature detectors (RTD), which reliably correlate the resistance of platinum with measured temperature. I read [online](https://www.dwyeromega.com/en-us/resources/rtd-pt100-vs-pt1000) that the PT100 is better suited for 3-4 wire configurations, and unwanted resistance from lead wires and connectors will have a larger distorting effect on overall resistance measurements. On the other hand, PT1000 has a much greater resistance, meaning that it's less vulnerable to resistance distortion.
 
-> "Due to inherent skin contact and coverage at the measured sites, a disadvantage of contact thermometry is that the sensors and their attachments modify the immediate environment for the underlying skin. The effects of such a modification may manifest as a disturbance of the temperature that would otherwise exist in the undisturbed case."
+### 10/06/25
 
-Based on this article, it appears that coupling thermistors with a voltage divider circuit, and correlating the measured resistance to the temperature was the most common and reliable approach.
+Today, I wrote up the [Bill of Materials](https://angelinayyang.github.io/p/nerve-conduction-study-temperature-monitoring-sleeve/#bill-of-materials-bom) for this project. 
