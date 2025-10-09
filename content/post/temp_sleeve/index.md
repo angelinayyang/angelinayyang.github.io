@@ -26,10 +26,32 @@ nerve conduction studies. Furthermore, customized sleeves that include visual ai
 
 ## Bill of Materials (BOM)
 
-https://www.adafruit.com/product/3328
 
-| Component    | Quantity | Source | Cost Per Unit | 
-| :-----------: | :-----------: | :------------: | :-------------: | 
-| PT1000 thin-film RTD | 8 | [Digikey](https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/NB-PTCO-153/5272167) | $6.65 | 
-| 1.8" TFT LCD - ST7735R | 1 | [Adafruit](https://www.adafruit.com/product/358) | $19.95 |
-| ATMEGA328P-AU | 1 | [Digikey](https://www.digikey.com/en/products/detail/microchip-technology/ATMEGA328P-AU/1832260) | $2.66 | 
+| Component    | Quantity | Source | Cost Per Unit | Available in Lab? | 
+| :-----------: | :-----------: | :------------: | :-------------: | :-------------: | 
+| PT1000 thin-film RTD | 8 | [Digikey](https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/NB-PTCO-153/5272167) | $6.65 | No | 
+| 1.8" TFT LCD - ST7735R | 1 | [Adafruit](https://www.adafruit.com/product/358) | $19.95 | Yes | 
+| ATMEGA328P-AU | 1 | [Digikey](https://www.digikey.com/en/products/detail/microchip-technology/ATMEGA328P-AU/1832260) | $2.66 | Yes | 
+| ADG1408 8-1 Multiplexer | 1 | [Digikey](https://www.digikey.com/en/products/detail/analog-devices-inc/ADG1408YRUZ-REEL/1210200) | $10.79 | No |
+| ADS1261 24-bit Analog-to-Digital converter | 1 | [Digikey](https://www.digikey.com/en/products/detail/texas-instruments/ADS1261IRHBT/9360681) | $19.31 | No |
+
+
+## Proof-of-Concept
+
+My approach is to send a precision current source of 1mA (by setting a reference resistance and voltage) to the common lead of the 8 RTDs. The ADG1408 (8-1 MUX) then selects the other leg of each RTD, cycling through each RTD and measuring the effective voltage. The respective outputs will be sent to the ADS1261 24-bit Analog-to-Digital converter (differential sensor input pins AIN0 and AIN1), which communicates with the ATmega328 via SPI. Here is a low-level schematic of the design:
+
+```
+
+           +-----------+           +-----------+           +-------------+
+RTD1 --- S1|           |           |           |           |             |
+RTD2 --- S2|  ADG1408  |---------->| AIN0 (+)  |           |             |
+RTD3 --- S3|           |           |           |           |             |
+ ...       |           |           |  ADS1261  | <---> SPI |  ATmega328  |
+RTD8 --- S8|           |           |  AIN1(-)  |           |             |
+           +-----------+           +-----------+           +-------------+
+                                          ^
+                                      NODE_REF or Common (-) Lead
+                                        
+                                       
+```
+
