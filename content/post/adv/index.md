@@ -87,7 +87,7 @@ Rhythmlink responded with a new assignment for me! („• ᴗ •„)
 
  ### 09/25/25
 
-Since today's class was 75 minutes, we had a soldering party. (˵ •̀ ᴗ •́ ˵ ) ✧  Mr. Dubick went through a quick tutorial reviewing soldering basics, and we first practiced soldering 3 through-hole resistors vertically on a protoboard. Once our soldering got approved, we began working on a soldering kit, which had a mix of through-hole and surface mount components. I hadn't surface-mount soldered since last year, so I used a multimeter on the continuity setting to make sure I didn't create any solder bridges. Overall, this was pretty fun, and I challenged myself to finish the entire kit within the period!
+Since today's class was 75 minutes, we had a soldering party. (˵ •̀ ᴗ •́ ˵ ) ✧  Mr. Dubick went through a quick tutorial reviewing soldering basics, including using solder flux to improve solder joints. We first practiced soldering 3 through-hole resistors vertically on a protoboard. Once our soldering got approved, we began working on a soldering kit, which had a mix of through-hole and surface mount components. I hadn't surface-mount soldered since last year, so I used a multimeter on the continuity setting to make sure I didn't create any solder bridges. Overall, this was pretty fun, and I challenged myself to finish the entire kit within the period!
 
 ![Front side of the owl PCB, containing the main electronics and the surface-mount components](frontowl.jpeg) ![Back side of the owl PCB, containing the LEDs](backowl.JPG)
 
@@ -120,3 +120,8 @@ Today, I wrote up the [Bill of Materials](https://angelinayyang.github.io/p/nerv
 ### 10/09/25
 
 Today, I designed a detailed schematic of my design, which includes 1 ADG1408 8-1 multiplexer, 1 ADS1261 Analog-to-Digital converter, and the main MCU. You can access the abstracted text version of the schematic [here](https://angelinayyang.github.io/p/nerve-conduction-study-temperature-monitoring-sleeve/#proof-of-concept).
+
+### 10/10/25
+
+Today's class was a 75-minute block, and I'm waiting on the RTDs to arrive, so I went through the formal rubric and completed the design specification considerations. You can access them [here](dsc.pdf). I also designed a [gantt chart](https://docs.google.com/spreadsheets/d/1M1naMrrbnOMg5gQO8-gfPohlKmZIxycnOxSoGX8i0pI/edit?usp=sharing) to monitor the progression of this project. So far, I'm on track with my timeline, and I look forward to begin prototyping once all of my components are delivered! Since I plan on using the 1.8" TFT LCD, I decided to spend the remainder of claess exploring the ST7735 and the Adafruit_GFX library. I wrote up a sample code that initiates the TFT and displays a simple text.
+
