@@ -119,9 +119,63 @@ Today, I wrote up the [Bill of Materials](https://angelinayyang.github.io/p/nerv
 
 ### 10/09/25
 
-Today, I designed a detailed schematic of my design, which includes 1 ADG1408 8-1 multiplexer, 1 ADS1261 Analog-to-Digital converter, and the main MCU. You can access the abstracted text version of the schematic [here](https://angelinayyang.github.io/p/nerve-conduction-study-temperature-monitoring-sleeve/#proof-of-concept).
+Today, I designed a basic schematic/conceptualization of my design, which includes 1 ADG1408 8-1 multiplexer, 1 ADS1261 Analog-to-Digital converter, and the main MCU. You can access the text version of the schematic [here](https://angelinayyang.github.io/p/nerve-conduction-study-temperature-monitoring-sleeve/#proof-of-concept). I intend on using the MUX to select each leg of each RTD in the array, before sending the signal through the ADC.
 
 ### 10/10/25
 
 Today's class was a 75-minute block, and I'm waiting on the RTDs to arrive, so I went through the formal rubric and completed the design specification considerations. You can access them [here](dsc.pdf). I also designed a [gantt chart](https://docs.google.com/spreadsheets/d/1M1naMrrbnOMg5gQO8-gfPohlKmZIxycnOxSoGX8i0pI/edit?usp=sharing) to monitor the progression of this project. So far, I'm on track with my timeline, and I look forward to begin prototyping once all of my components are delivered! Since I plan on using the 1.8" TFT LCD, I decided to spend the remainder of claess exploring the ST7735 and the Adafruit_GFX library. I wrote up a sample code that initiates the TFT and displays a simple text.
 
+```
+
+
+#include <Adafruit_GFX.h>    // Core graphics library
+#include <Adafruit_ST7735.h> // Hardware-specific library for ST7735
+#include <Adafruit_ST7789.h> // Hardware-specific library for ST7789
+#include <SPI.h>
+
+// define the SPI pins for the Arduino Uno
+#define TFT_CS 10
+#define TFT_DC 9
+#define TFT_RST 8
+
+
+Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
+
+
+void setup(void) {
+  Serial.begin(9600);
+  Serial.print(F("Hello! ST77xx TFT Test"));
+
+
+  tft.initR(INITR_BLACKTAB);      // Init ST7735S chip, black tab
+  tft.setRotation(1);
+  Serial.println(F("Initialized"));
+
+
+  tft.fillScreen(ST7735_BLACK);
+
+  tft.setTextWrap(true);
+  tft.setTextSize(2);
+  tft.setTextColor(ST7735_WHITE);
+  tft.setCursor(10, 10);
+  tft.print("Hello World!");
+
+
+}
+
+void loop() {
+
+}
+
+
+```
+
+### 10/14/25
+
+Today, Mr. Dubick went over the process of using Github Pages to develop our digital portfolio sites. Since I already set up a site, and I'm waiting for the RTDs to arrive, I worked on side project during class. I wanted to design a MIDI player and record some music for the backtrack of my STEM maker portfolio. I designed a basic schematic of the main board, which uses an Arduino Nano board as the microcontroller:
+
+<center>
+<img src="midischematic.png" width=500>
+</center>
+
+After assigning footprints, I arranged all of the components in the PCB layout editor. I then tried to route this board, but for some reason, Kicad kept crashing whenever I drew a trace. 
