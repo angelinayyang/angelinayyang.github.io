@@ -217,3 +217,17 @@ Here's the projected BOM for this project:
 | 1206 SMD LEDs | $0.36 | 6 | [Digikey](https://www.digikey.com/en/products/detail/liteon/LTW-C230DS/3198820) |
 | 1206 SMD 330Ω | $0.21 | 6 | [Digikey](https://www.digikey.com/en/products/detail/rohm-semiconductor/KTR18EZPF3303/1983725) |
 | Arduino Nano Every Development board | $12.90 | 1 | [Arduino Store](https://store-usa.arduino.cc/products/nano-every?srsltid=AfmBOor4duAdkQ7W_REHfcpkdtGwOyXQd2NoSeVBtsPD7mocRG2U5cxd) |
+
+### 10/16/25-10/17/25
+
+Today, Mr. Dubick went over jekyll and how to use a provided template to create a Github site. I followed along, cloning the template into Github Desktop and modifying the markdown files included in the repo. For this template, the title requirements for each "post" are quite strict, requiring users to label each file with a formatted date. Even though I find this template pretty easy to use, I like the design flexibility of my current layout.
+
+# 10/22/25 
+
+During class, Mr. Budzichowski introduced me to the new CNC milling machines that lab recently bought. I had a KiCad project with a special graphic that I've been wanting to mill for a while, but with Bantam's abstracted software, I couldn't figure out how to isolate-mill certain parts of the board. The new software, however, is a lot more similar to Aspire, in the sense that you define individual toolpaths (e.g., contour) based on the different layers of the PCB (e.g., Fcu, edge cuts, etc.). Learning this software was relatively easy, and I enjoyed seeing the 5x5 z-axis touch-down and the automatic tool changer in action! The use of clamps, rather than nitto tape, was also notably convenient: after taking out the PCB, I noticed that I had set the edge cuts "ending depth" too small, so I simply realigned the FR1 with the corner of the bed and sent a new g-code with the modified edge cuts toolpath. Here's how it turned out:
+
+<center>
+<img src="calebpcb.JPG" width=500>
+</center>
+
+If I have time on Friday, I'll formally develop a workflow for the new CNCs!
