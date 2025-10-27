@@ -230,4 +230,83 @@ During class, Mr. Budzichowski introduced me to the new CNC milling machines tha
 <img src="calebpcb.JPG" width=500>
 </center>
 
-If I have time on Friday, I'll formally develop a workflow for the new CNCs!
+# 10/24/25
+
+Good news: most of my components for my MIDI player arrived today! However, since JLC hasn't dlivered my PCB, I can't get started on soldering just yet. During class, I watched a couple of a videos on op-amps, including this [one](https://www.youtube.com/watch?v=kqCV-HGJc6A). Although I didn't find it particularly helpful, I think I have a basic understanding of how op-amps work: it takes two inputs, consisting of a non-inverting and inverting input, and it amplifies their difference, outputting a large, controlled voltage. For the rest of class, I worked on my ADG1408 multiplexer board. It seems like the pin connections to the Raspberry Pi Pico are pretty intuitive, so I'm not too worried about designing the schematic in KiCad.
+
+# 10/27/25
+
+Today, Mr. Dubick formally went over the process of developing toolpaths in MakeraCAM and using the milling machines. I wrote the following workflow based on the slideshow and his instructions:
+
+**Key notes:**
+* .8mm Corn flat-end bit is used to remove the bulk of the material
+* The .2mm*30ºEngraving(Metal) engraving bit will be used to cut out the copper traces
+* The Makera Milling machine affixes the FR4 using clamps, rather than adhesive, so tabs are necessary to keep the PCB in place.
+* 2D contour is used for edge cuts 
+* 2D pocket is used for copper traces
+* 2D drilling is used for drill holes  
+
+**PCB Toolpath Workflow on MakeraCAM**
+
+1. Open MakeraCAM on your desktop.
+2. Select the “3-AXIS” option on the welcome screen.
+3. Edit the “Stock” settings in the top right corner
+
+   3a. For Material, select “PCB”
+
+   3b.For Length(X), adjust the value to 150mm
+
+   3c. For Width(Y), adjust the value to 100mm
+
+4. For Height(Z), adjust the value to 1.7mm (thickness of FR4)
+5. In the top toolbar, click the icon titled “import PCB” and individually insert all Gerber files into the workspace.
+6. The imported gerbers will likely populate outside of the workspace, so select all 2D layers, hover over the “Adjust object” and “Transform” drop-down menu and select the  “Move” tool
+7. When layers are dotted, that indicates that they are selected; when layers are solid, that indicates that they are unselected
+8. Select the bottom left corner as the anchor point
+9. Set both the X and Y location values to 6 mm, which positions the file in the bottom right corner of the workspace
+10. Keeping all layers selected, hold the shift key and deselect the outer edge of the Edge_cuts
+11. Toggle the visibility such that only the “F_Cu” and the “Edge_cuts” layer are visible 
+12. In the top toolbar, hover over the “2D Path” drop-down menu and select the “2D Pocket” option
+13. In the dialogue box, adjust the “End Depth” value to .05mm
+14. Under “Tools,” click the “Add Tool” button, select “.8mm Corn tool” and click “Choose”
+15. Click “Add Tool” again, select the “.2mm*30ºEngraving(Metal),“ and click “Choose”
+16. Ensure that the material selected is “PCB”
+17. Click “Calculate”; you should see a “2D Pocket” toolpath fall under the Path dropdown in the hierarchy
+18. If you have drill files, untoggle the visibility for all “F_Cu” and “Edge_cuts” layers and toggle visibility for all drill files 
+19. In the top toolbar, hover over the “2D Path” drop-down menu and select the “2D Drilling” option
+20. In the dialogue box, adjust the “Drill Tip End Depth” value to 1.7mm
+21. Under “Tools,” click the “Add Tool” button, select “.8mm Corn tool” and click “Choose”
+22. Click “Calculate”; you should see a “2D Drilling” toolpath fall under the Path dropdown in the hierarchy
+23. To design a toolpath for the edge cuts, untoggle the visibility for all drill files and toggle visibility for solely the “Edge_cuts” layer
+24. Select the inner outline of the “Edge_cuts” layer
+25. In the top toolbar, hover over the “2D Path” drop-down menu and select the “2D Contour” option (synonymous with a “Pocket” cut)
+26. In the dialogue box, adjust the “End Depth” value to 1.7mm
+27. Under “Tools,” click the “Add Tool” button, select “.8mm Corn tool” and click “Choose”
+28. Under “Strategy,” select “Outside”
+29. Under “Tabs,” select “Custom,” and click “Add”
+30. Add appropriate tabs around the selected “Edge_cuts” layer (typically, 3 will be sufficient)
+
+    30a. Tip: Ensure that these tabs are staggered and not directly across from one another
+
+31. Click “Calculate”; you should see a “2D Contour” toolpath fall under the Path dropdown in the hierarchy
+32. In the top toolbar, click the icon “Preview Toolpaths,” and select all toolpaths in the pop-up dialogue box
+33. Click “Preview” and press the play button to view a simulation of the toolpaths 
+34. In the top toolbar, click the “Export” button, ensure all toolpaths are selected, and click “Export”
+Rename the .nc file to your last name, your first initial, and your project name, followed by “gcode”
+
+
+**PCB Milling on Carvera**
+1. Open the Carvera Controller software on the desktop
+2. In the top toolbar, click on the button with status “N/A disconnected”
+3. Click “USB” and select the appropriate COM port (e.g. COM10)
+4. In the settings, select the “Home” button 
+5. Under “Tool Status and Control,” ensure that the probe is charged to at least 3.6V (this ensures the machine operates in the z-axis as intended)
+6. In the bottom left corner, open the G-code from your files 
+7. Click “Config and run,” and ensure that both the “auto vacuum” and “auto leveling” options are on.
+8. Click “Run”
+
+
+
+
+
+
