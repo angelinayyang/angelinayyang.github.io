@@ -297,13 +297,46 @@ Rename the .nc file to your last name, your first initial, and your project name
 
 **PCB Milling on Carvera**
 1. Open the Carvera Controller software on the desktop
-2. In the top toolbar, click on the button with status “N/A disconnected”
-3. Click “USB” and select the appropriate COM port (e.g. COM10)
-4. In the settings, select the “Home” button 
+2. In the top toolbar, click on the button with the status “N/A disconnected”
+3. Select the appropriate COM port to connect the Carvera to the computer (if the COM port is already connected, leave it as is)
+4. In the menu in the top right corner, click “Switch to display manual control interface” followed by the “Home” button 
 5. Under “Tool Status and Control,” ensure that the probe is charged to at least 3.6V (this ensures the machine operates in the z-axis as intended)
 6. In the bottom left corner, open the G-code from your files 
-7. Click “Config and run,” and ensure that both the “auto vacuum” and “auto leveling” options are on.
-8. Click “Run”
+7. Before starting the mill, open the menu in the top right corner and click the “Switch to display file preview interface” to preview the toolpaths 
+8. Click “Config and run,” and ensure that both the “auto vacuum” and “auto leveling” options are on.
+9. Once all settings are verified, click “Run”
+
+# 10/28/25
+
+Today, we began class by reviewing how to design the toolpaths for the PCB and generate the g-code. To do this, I first downloaded the gerber files from the FabLab google drive, including Resistance1-Edge_cuts and Resistance1-F_Cu, and imported them into the MakeraCAM software. I created three toolpaths total: 1 pocket toolpath with an end depth of .05mm (traces), 1 contour toolpath with an end depth of 1.7mm (edge cuts), and 1 drill file with an end depth of 1.7mm (holes). I previewed these toolpaths in the software, before exporting them as a .nc file. You can access this file [here](content/post/adv/YangA_resistorgcode.nc). 
+
+ On the Carvera software, I first checked the probe voltage. Initially, it said 3.3V, which is below the functional threshold; however, this was because a tool had already been selected and installed by the milling machine. Once I uninstalled the tool, the voltage went to 3.7V. Perfect! ദ്ദി ˉ͈꒳ˉ͈ )✧
+
+ I imported the .nc file into the software and clicked "Config and run."
+
+The milling machine first began with the .8mm corn flatend mill to remove the bulk of material on the PCB, before going back in with the engraving bit and creating the intricate traces. Something I found odd was that the engraving bit moved around the perimeter as well, but Mr. Budzichowski told me that this was naturally apart of the g-code. 
+
+<center>
+<img src="midmill.jpeg" width=500>
+</center>
+
+One problem I encountered: Dr. Taylor, in epic Dr. Taylor fashion, came in and accidentally turned off the power strip powering the milling machine. As a result, my edge cuts toolpath was cut short. (  •̀⤙•́  ) This was a easy fix, though. I isolated the contour toolpath on MakeraCAM and re-exported the .nc file, before selecting and running the new .nc file on the milling machine. 
+
+Here is what the final PCB looked like:
+
+<center>
+<img src="resistor_finalboard.jpeg" width=500>
+</center>
+
+# 10/29/25
+
+Absent from school.
+
+# 10/30/25 
+
+Today, I wrapped up my documentation for the PCB milling (see "10/28/25). I inserted the pictures and wrote up the "problems encountered" section.
+
+
 
 
 
