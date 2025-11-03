@@ -37,29 +37,19 @@ Temperature is a major physiological factor that may affect the signals displaye
 | :-----------: | :-----------: | :------------: | :-------------: | :-------------: | 
 | PT1000 thin-film RTD | 8 | [Digikey](https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/NB-PTCO-153/5272167) | $6.65 | No | 
 | 1.8" TFT LCD - ST7735R | 1 | [Adafruit](https://www.adafruit.com/product/358) | $19.95 | Yes | 
-| ATMEGA328P-AU | 1 | [Digikey](https://www.digikey.com/en/products/detail/microchip-technology/ATMEGA328P-AU/1832260) | $2.66 | Yes | 
+| Raspberry Pi Pico W | 1 | [Adafruit](https://www.adafruit.com/product/5526?srsltid=AfmBOopqR3Wl-y9DlKY8-o0aSwuq2oWv0LDjT1GeACE9isgQt66CW6UW) | $6.00 | Yes | 
 | ADG1408 8-1 Multiplexer | 1 | [Digikey](https://www.digikey.com/en/products/detail/analog-devices-inc/ADG1408YRUZ-REEL/1210200) | $10.79 | No |
-| ADS1261 24-bit Analog-to-Digital converter | 1 | [Digikey](https://www.digikey.com/en/products/detail/texas-instruments/ADS1261IRHBT/9360681) | $19.31 | No |
+| ADS1220 24-bit Analog-to-Digital converter | 1 | [Mouser Electronics](https://www.mouser.com/ProductDetail/Texas-Instruments/ADS1220IPW?qs=5GI1giJCN%252BKzuruuF2dUlQ%3D%3D) | $10.37 | No |
+| OPA333 Operational Amplifier | 1 | [Digikey](https://www.digikey.com/en/products/detail/texas-instruments/OPA333AIDCKR/1004601) | $1.88 | No |
+| INA333 Instrumentation Amplifier | 1 | [Digikey](https://www.digikey.com/en/products/detail/texas-instruments/INA333AIDGKR/1886116) | $4.54 | No |
+| REF5025 Voltage Reference IC | 1 | [Digikey](https://www.digikey.com/en/products/detail/texas-instruments/REF5025AIDGKR/2232440) | $3.54 | No |
 
 
 ## Proof-of-Concept and Ideation
 
 Here is the [design specification considerations](dsc.pdf) for this project.
 
-My approach is to send a precision current source of 1mA (by setting a reference resistance and voltage) to the common lead of the 8 RTDs. The ADG1408 (8-1 MUX) then selects the other leg of each RTD, cycling through each RTD and measuring the effective voltage. The respective outputs will be sent to the ADS1261 24-bit Analog-to-Digital converter (differential sensor input pins AIN0 and AIN1), which communicates with the ATmega328 via SPI. Here is a low-level schematic of the design:
 
-```
+A precision voltage reference (REF5025) and OPA333 op-amp form a low-side current sink (1mA) using the 2N3904 transistor; that current is sunk through whichever RTD is selected by the ADG1408 (8-1 MUX). The INA333 then measures the small differential voltage across the RTD (V_top − V_bottom), the RC smooths/anti-aliases the INA output, and the ADS1220 digitizes the result. The Raspberry Pi Pico controls the multiplexer and communicates with the ADS1220 over SPI.
 
-           +-----------+           +-----------+           +-------------+
-RTD1 --- S1|           |           |           |           |             |
-RTD2 --- S2|  ADG1408  |---------->| AIN0 (+)  |           |             |
-RTD3 --- S3|           |           |           |           |             |
- ...       |           |           |  ADS1261  | <---> SPI |  ATmega328  |
-RTD8 --- S8|           |           |  AIN1(-)  |           |             |
-           +-----------+           +-----------+           +-------------+
-                                          ^
-                                      NODE_REF or Common (-) Lead
-                                        
-                                       
-```
 
