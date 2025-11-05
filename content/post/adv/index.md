@@ -337,6 +337,22 @@ Absent from school.
 Today, I wrapped up my documentation for the PCB milling (see "10/28/25). I inserted the pictures and wrote up the "problems encountered" section.
 
 
+# 11/3/25-11/4/25
+
+During these two classes, I revised the basic schematic Kathryn and I made during our last Rhythmlink meeting. Here's the pipeline we finalized: 
+excitation precision current source → RTD_COMMON (Emitter/collector node) → RTD → ADG1408 CHx → ADG1408 COM → ADS1220 AIN+ ; ADS1220 AIN− → pico for software processing. Here is what the schematic looks like in KiCad:
+
+![](/11425schematic.png)
+
+Additionally, I set up the interim virtual meeting with Rhythmlink for November 18th, and I've begun making the presentation on Google Slides. 
+
+Some specific changes I made to the schematic:
+
+- According to the ADS1220 [datasheet](https://www.ti.com/lit/ds/symlink/ads1220.pdf) from Texas Instruments (TI), they recommend including 47Ω resistors with all the digital input and output pins like CS, SCLK, DIN, DOUT/DRDY, and DRDY to make transitioning smoother.
+ 
+- The emitter leg of the 2N9304 transistor is connected to resistor Rset, and the other end of the resistor is tied to ground. It's connected to ground because the current source needs a stable reference point (ground) to define the voltage across Rset.
+
+Before I begin production on this board, Kathryn and I are planning on meeting and discussing the schematic design with Dr. Harris. Mr. Dubick reached out to him today, so I'm looking forward to hearing back!
 
 
 
