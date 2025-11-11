@@ -355,6 +355,25 @@ Some specific changes I made to the schematic:
 Before I begin production on this board, Kathryn and I are planning on meeting and discussing the schematic design with Dr. Harris. Mr. Dubick reached out to him today, so I'm looking forward to hearing back!
 
 
+# 11/6/25
+
+Today, I decided to wrap up assembly for my MIDI controller. I first soldered 5 1k ohm resistors and a 94 nF capacitor to my PCB. These were the last two things I needed to solder before I began assembly. To put the controller together, I used 4 6m-long M5 screws
+
+# 11/7/25
+
+Kathryn and I had our conversation with Dr. Harris yesterday, and it was very helpful! He thought the general approach to our circuit was correct. However, he suggested adjusting the multiplexer connections to create a wheatstone bridge, a circuit that precisely measures an unknown electrical resistance by balancing two legs of a bridge circuit. 
+
+<center>
+<img src="wheatstonebridge.png" width=500>
+</center>
+
+
+The variable resistance is referred to the strain gauge, which is basically variable resistor that measures 'mechanical strain' by changing its resistance as it is stretched or compressed. For the purposes of our design, the strain gauge is the common output of one lead of the RTD. He also suggested adding a resistor between the Rg pins on the INA333, as the ohmic value would determine how much the signal going in is amplified.
+
+Additionally, I added 2 bypass capacitors (.1 uF and 10 uF) to the REF5025 to improve reference stability, per advised on page 3 of the [datasheet](https://www.ti.com/lit/ds/symlink/ref5025-ht.pdf?ts=1762532810665). Finally, I changed the REFP0 connection on the ADS1220 to be linked to the stable reference voltage Vout, rather than 3v3. Here's what the schematic looks like now:
+
+![The updated schematic featuring bypass capacitors and a wheatstone bridge configuration](11725schematic.png)
+
 
 
 
