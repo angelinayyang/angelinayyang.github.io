@@ -375,6 +375,24 @@ Additionally, I added 2 bypass capacitors (.1 uF and 10 uF) to the REF5025 to im
 ![The updated schematic featuring bypass capacitors and a wheatstone bridge configuration](11725schematic.png)
 
 
+# 11/11/25
 
+Today, I wrote up the basic test scripts for running the ST7735R TFT LCD and the ADS1220 analog-to-digital converter. For the TFT LCD, I referenced [this](https://docs.circuitpython.org/projects/st7735r/en/latest/examples.html#x160-tests) site and the [Github repository](https://github.com/adafruit/Adafruit_CircuitPython_ST7735R), which includes the documentation for circuitpython and using the adafruit library linked to this screen. All of the code I wrote up is located in the [project repository](https://github.com/angelinayyang/NCS-Temp-Monitoring-Sleeve). As for the adc code, because there isn't a specific ADS1220 library, I had to manually adress the SPI pins (MOSI, MISO, clock); I used ChatGPT to help me analyze the datasheet and refine the code accordingly. 
+
+# 11/12/25
+
+Today, Mr. Dubick went over the process of creating an STL of a mountain range through [this site](https://jthatch.com/Terrain2STL/). After dragging the red box over a mountain range, under "Model Details," I set the box width and height to .05º. Then, under "Water and Base Settings," I set the water drop and base height to the max value. I first clicked "Generate," before hitting "Download" to export the .STL file. Here is the [.STL file](Angelina's_mountain_range.stl).
+
+<center>
+<img src="mountaininbambu.png" width=500>
+</center>
+
+# 11/13/25
+
+Today, I formally picked my mountain range, following the same process as yesterday. I decided to pick a mountainous region around the Himalayan region. Generating and downloading the model from the site, I imported the .STL file into Bambu Studio. I used the "scale" tool to adjust the x, y, and z dimensions to 2.5in, 3.5in, and 1.0in, respectively. Then, I sent the file to be printed. Here is the final and scaled [.STL file](Yang_A_B_Topo.stl). 
+
+<center>
+<img src="finalmountaininbambu.png" width=500>
+</center>
 
 
