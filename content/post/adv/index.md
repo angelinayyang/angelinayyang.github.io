@@ -232,7 +232,7 @@ During class, Mr. Budzichowski introduced me to the new CNC milling machines tha
 
 # 10/24/25
 
-Good news: most of my components for my MIDI player arrived today! However, since JLC hasn't dlivered my PCB, I can't get started on soldering just yet. During class, I watched a couple of a videos on op-amps, including this [one](https://www.youtube.com/watch?v=kqCV-HGJc6A). Although I didn't find it particularly helpful, I think I have a basic understanding of how op-amps work: it takes two inputs, consisting of a non-inverting and inverting input, and it amplifies their difference, outputting a large, controlled voltage. For the rest of class, I worked on my ADG1408 multiplexer board. It seems like the pin connections to the Raspberry Pi Pico are pretty intuitive, so I'm not too worried about designing the schematic in KiCad.
+Good news: most of my components for my MIDI player arrived today! However, since JLC hasn't delivered my PCB, I can't get started on soldering just yet. During class, I watched a couple of a videos on op-amps, including this [one](https://www.youtube.com/watch?v=kqCV-HGJc6A). Although I didn't find it particularly helpful, I think I have a basic understanding of how op-amps work: it takes two inputs, consisting of a non-inverting and inverting input, and it amplifies their difference, outputting a large, controlled voltage. For the rest of class, I worked on my ADG1408 multiplexer board. It seems like the pin connections to the Raspberry Pi Pico are pretty intuitive, so I'm not too worried about designing the schematic in KiCad.
 
 # 10/27/25
 
@@ -328,6 +328,10 @@ Here is what the final PCB looked like:
 <img src="resistor_finalboard.jpeg" width=500>
 </center>
 
+Overall, through this project, I continued to familiarize myself with the new software, and I was able to review the fundamentals of toolpaths, feeds & speeds, inclusion of tabs, etc. Additionally, although the milling machine operates through a more "hands-off" approach, I prefer it over the old Bantam machines because there is less human error involved (especially with bits snapping and z-axis probing). 
+
+In the future, to save time on my PCB mills, I may adjust the KiCad files to include "zones". Similar to be previous board (see 10/22/25), including these zones allows you to solely mill around the traces and keep the remainder of the copper in tact. 
+
 # 10/29/25
 
 Absent from school.
@@ -394,5 +398,13 @@ Today, I formally picked my mountain range, following the same process as yester
 <center>
 <img src="finalmountaininbambu.png" width=500>
 </center>
+
+# 11/14/25
+
+Today, I formalized my presentation for my Rhythmlink virtual check-in meeting on this Tuesday, including the up-to-date BOM and the heating design mechanism. You can find the presentation [here](https://docs.google.com/presentation/d/1PqOhVfdrmDky0n9mDZeVNytKNfMDkOpkWzbMBGjTZ28/edit?usp=sharing). I also worked on the code scaffolding. Based on Kathryn and I's multiplexer, adc, and lcd test scripts, I decided to design three main classes: MUX_Manager, ADC_Manager, and ST7735R_Manager. the MUX_Manager class rotates through each channel of the multiplexer, accessing each RTD per timestep. The ADC_Manager will take the output from the in-amp and the RC filter per RTD and translate the measured voltage via the `read_rtd_resistance()` method. All of the scaffolding can be accessed in the [README.md file](https://github.com/angelinayyang/NCS-Temp-Monitoring-Sleeve/blob/main/README.md).
+
+# 11/17/25 
+
+Mr. Dubick went over the Aspire workflow for designing our topography map toolpaths in class today. We followed [this workflow](https://docs.google.com/document/d/1tivBCj7krFAnMuTojKnl7sYzdXHBOTjOttF18pJgJQY/edit?usp=sharing), and we used a sample file that Dr. Taylor created.
 
 
