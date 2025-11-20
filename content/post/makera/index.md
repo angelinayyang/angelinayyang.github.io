@@ -25,9 +25,9 @@ weight: 1      # You can add weight to some posts to override the default sortin
 
 * **Flute**: Cutting edge of a metal bit for removing stock material. Most common types of flutes include a **straight flute** and **spiral flute**  
 
-    * **straight flute**
+    * **Straight Flute**
 
-    * **spiral flute**
+    * **Spiral Flute**
 
 * **Chip load**: Thickness of a machined chip as cut by a specific tool type 
 * **Spindle speed**:  Number of revolutions made by the endmill in a unit of time (RPM) 
@@ -68,17 +68,40 @@ There isn't one *universal* way to determine speeds and feeds because they often
 
    3c. For Width(Y), adjust the value to 100mm
 
+
+<center>
+<img src="stock.png" width=400>
+</center>
+
 4. For Height(Z), adjust the value to 1.7mm (thickness of FR4)
 5. In the top toolbar, click the icon titled “import PCB” and individually insert all Gerber files into the workspace.
+
+<center>
+<img src="hierarchy.png" width=400>
+</center>
+
 6. The imported gerbers will likely populate outside of the workspace, so select all 2D layers, hover over the “Adjust object” and “Transform” drop-down menu and select the  “Move” tool
 7. When layers are dotted, that indicates that they are selected; when layers are solid, that indicates that they are unselected
+
+
+![Selected files](selected.png) ![Non-selected files](notselected.png)
+
+
 8. Select the bottom left corner as the anchor point
 9. Set both the X and Y location values to 6 mm, which positions the file in the bottom right corner of the workspace
+
+<center>
+<img src="positioning.png" width=500>
+</center>
+
 10. Keeping all layers selected, hold the shift key and deselect the outer edge of the Edge_cuts
 11. Toggle the visibility such that only the “F_Cu” and the “Edge_cuts” layer are visible 
 12. In the top toolbar, hover over the “2D Path” drop-down menu and select the “2D Pocket” option
 13. In the dialogue box, adjust the “End Depth” value to .05mm
 14. Under “Tools,” click the “Add Tool” button, select “.8mm Corn tool” and click “Choose”
+
+![Here is the dialogue box that pops up, containing all of the tools.](tools.png)
+
 15. Click “Add Tool” again, select the “.2mm*30ºEngraving(Metal),“ and click “Choose”
 16. Ensure that the material selected is “PCB”
 17. Click “Calculate”; you should see a “2D Pocket” toolpath fall under the Path dropdown in the hierarchy
@@ -93,14 +116,33 @@ There isn't one *universal* way to determine speeds and feeds because they often
 26. In the dialogue box, adjust the “End Depth” value to 1.7mm
 27. Under “Tools,” click the “Add Tool” button, select “.8mm Corn tool” and click “Choose”
 28. Under “Strategy,” select “Outside”
+
+<center>
+<img src="outside.png" width=350>
+</center>
+
 29. Under “Tabs,” select “Custom,” and click “Add”
 30. Add appropriate tabs around the selected “Edge_cuts” layer (typically, 3 will be sufficient)
 
     30a. Tip: Ensure that these tabs are staggered and not directly across from one another
 
+<center>
+<img src="tabs.png" width=500>
+</center>
+
 31. Click “Calculate”; you should see a “2D Contour” toolpath fall under the Path dropdown in the hierarchy
+
+<center>
+<img src="finaltoolpaths.png" width=300>
+</center>
+
 32. In the top toolbar, click the icon “Preview Toolpaths,” and select all toolpaths in the pop-up dialogue box
 33. Click “Preview” and press the play button to view a simulation of the toolpaths 
+
+<center>
+<img src="preview.png" width=500>
+</center>
+
 34. In the top toolbar, click the “Export” button, ensure all toolpaths are selected, and click “Export”
 Rename the .nc file to your last name, your first initial, and your project name, followed by “gcode”
 
