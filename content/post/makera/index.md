@@ -180,6 +180,8 @@ Here is what the final PCB looked like:
 <img src="resistor_finalboard.jpeg" width=500>
 </center>
 
-Overall, through this project, I continued to familiarize myself with the new software, and I was able to review the fundamentals of toolpaths, feeds & speeds, inclusion of tabs, etc. Additionally, although the milling machine operates through a more "hands-off" approach, I prefer it over the old Bantam machines because there is less human error involved (especially with bits snapping and z-axis probing). 
+Overall, through this project, I continued to familiarize myself with the new software, and I was able to review the fundamentals of toolpaths, feeds & speeds, inclusion of tabs, etc. Additionally, although the milling machine operates through a more "hands-off" approach, I prefer it over the old Bantam machines because there is less human error involved (especially with bits snapping and issues with z-axis probing). The tool-changing feature is also a nice touch. 
+
+Besides my repeat of the edge cuts file, I didn't encounter any major issues with designing the g-code or using the new CNC machine. MakeraCAM is pretty similar to Aspire in nature, so using it was rather intuitive. 
 
 In the future, to save time on my PCB mills, I may adjust the KiCad files to include "zones". Similar to be previous board (see 10/22/25), including these zones allows you to solely mill around the traces and keep the remainder of the copper in tact. 
