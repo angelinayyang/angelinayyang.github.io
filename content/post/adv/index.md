@@ -260,7 +260,7 @@ Absent from school.
 
 # 10/30/25 
 
-Today, I wrapped up my documentation for the PCB milling (see "10/28/25). I inserted the pictures and wrote up the "problems encountered" section.
+Today, I wrapped up my documentation for the PCB milling (see "10/28/25"). I inserted the pictures and wrote up the "problems encountered" section.
 
 
 # 11/3/25-11/4/25
@@ -327,7 +327,11 @@ Today, I formalized my presentation for my Rhythmlink virtual check-in meeting o
 
 # 11/17/25 
 
-Mr. Dubick went over the Aspire workflow for designing our topography map toolpaths in class today. We followed [this workflow](https://docs.google.com/document/d/1tivBCj7krFAnMuTojKnl7sYzdXHBOTjOttF18pJgJQY/edit?usp=sharing), and we used a sample file that Dr. Taylor created.
+Mr. Dubick went over the Aspire workflow for designing our topography map toolpaths in class today. We followed [this workflow](https://docs.google.com/document/d/1tivBCj7krFAnMuTojKnl7sYzdXHBOTjOttF18pJgJQY/edit?usp=sharing), and we used a sample file that Dr. Taylor created. Afterwards, we designed our own topography gcodes with our own mountain ranges. Here is what my file in Aspire looked like with and without the toolpath:
+
+![](aspiretoolpath.png)![](aspirefile.png)
+
+
 
 # 12/01/25
 
@@ -336,3 +340,37 @@ Today, Mr. Dubick taught the basics of electronics, using Tinkercad to illustrat
 Separately, I worked on designing the casing for the LCD screen in Fusion360. To adopt Rhythmlink's proposal to include a light indicator as to whether the temperature of a user's forearm is fit for NCS, I decided to switch from the 1.8" screen to the 2.8" screen. This screen still operates on SPI, but I believe I'll have to adjust the code I wrote previously.
 
 ![](screencase.png)
+
+# 12/02/25
+
+Since there are no company-manufactured breakouts that use the reference voltage (REF50250)/op-amp (OPA333), I isolated one part of the master schematic and routed a simple breakout. This is what it looked like:
+
+![](opamp_schematic.png) ![](opamp_pcblayout.png)
+
+
+# 12/03/25
+
+In class today, Mr. Dubick introduced the concept of Pulse Width Modulation with the example of a fading LED. 
+
+In terms of my Rhythmlink development, I milled out the board on the Carvera; however, the CNC machine unfortunately did not mill all of the gaps between the pads of the IC. Shucks.
+
+# 12/04/25
+
+I milled out the  op-amp and reference voltage board again today, and I worked on the software side, designing the `MUX_manager`, `LCD_manager`, and `ADC_manager` classes. I have yet to integrate everything into a `main.py`, but I intend on doing that over the weekend.
+
+# 12/05/25
+
+Today, I spent class soldering the op-amp and the reference voltage onto the board. Because the components are naturally tiny and traditional solder would result in bridges, I decided to do reflow soldering with a heat gun and solder paste. This worked pretty well, so I'm confident that I'll be able to reproduce it for the real thing.
+
+<center>
+<img src="opamp_halfsoldered.JPG" width=500>
+</center>
+
+
+# 12/9/25
+
+I designed another breakout board today based on the RC-filter and the inamp that proceeds the RTD in the proof-of-concept. Here is what it looks like:
+
+![](inamp_schematic.png)![](inamp_pcblayout.png)
+
+After school, I started the mill on the Carvera.
