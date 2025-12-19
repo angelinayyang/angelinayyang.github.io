@@ -36,20 +36,32 @@ Temperature is a major physiological factor that may affect the signals displaye
 | Component    | Quantity | Source | Cost Per Unit | Available in Lab? | 
 | :-----------: | :-----------: | :------------: | :-------------: | :-------------: | 
 | PT1000 thin-film RTD | 8 | [Digikey](https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/NB-PTCO-153/5272167) | $6.65 | No | 
-| 1.8" TFT LCD - ST7735R | 1 | [Adafruit](https://www.adafruit.com/product/358) | $19.95 | Yes | 
+| 2.8" TFT LCD - ILI9341 | 1 | [Adafruit](https://www.adafruit.com/product/1770?srsltid=AfmBOoqoj3elneHPFLwtWOMmx21mZA04d9PxkCAEO36Iyasb3Dnv8Ubq) | $29.95 | Yes | 
 | Raspberry Pi Pico W | 1 | [Adafruit](https://www.adafruit.com/product/5526?srsltid=AfmBOopqR3Wl-y9DlKY8-o0aSwuq2oWv0LDjT1GeACE9isgQt66CW6UW) | $6.00 | Yes | 
 | ADG1408 8-1 Multiplexer | 1 | [Digikey](https://www.digikey.com/en/products/detail/analog-devices-inc/ADG1408YRUZ-REEL/1210200) | $10.79 | No |
 | ADS1220 24-bit Analog-to-Digital converter | 1 | [Mouser Electronics](https://www.mouser.com/ProductDetail/Texas-Instruments/ADS1220IPW?qs=5GI1giJCN%252BKzuruuF2dUlQ%3D%3D) | $10.37 | No |
 | OPA333 Operational Amplifier | 1 | [Digikey](https://www.digikey.com/en/products/detail/texas-instruments/OPA333AIDCKR/1004601) | $1.88 | No |
 | INA333 Instrumentation Amplifier | 1 | [Digikey](https://www.digikey.com/en/products/detail/texas-instruments/INA333AIDGKR/1886116) | $4.54 | No |
 | REF5025 Voltage Reference IC | 1 | [Digikey](https://www.digikey.com/en/products/detail/texas-instruments/REF5025AIDGKR/2232440) | $3.54 | No |
+| Silicone Thermal Pad | 1 | [Amazon](https://a.co/d/aHpsNRI) | $7.94 | No |
+| Velcro Roll | 1 | [Amazon](https://a.co/d/cPnOWCi) | $9.99 | No |
+| Nylon (per yard) | 1 | [Amazon](https://a.co/d/9OwZLaa) | $6.89 | No |
+| Spandex (per yard) | 1 | [Amazon](https://a.co/d/hNvpx1m) | $10.99 | No |
+
+## Projected Timeline
+
+As of the November 18th internal check-in, here is our projected timeline:
+
+![12/18/25: Thus far, we've made notable progress on the sleeve design, including the heat-regulating approach and the physical layout of the RTDs. In terms of the electronics, we are slightly behind schedule, but we should be able to complete our proof-of-concept in the coming days.](projected.png)
 
 
-## Proof-of-Concept and Ideation
+## System Architecture
 
 Here is the [design specification considerations](dsc.pdf) for this project.
 
+A precision voltage reference (REF5025) and OPA333 op-amp form a low-side current sink (1mA) using the 2N3904 transistor. This resultant current is sunk through whichever RTD is selected by the ADG1408 (8-1 MUX). The INA333 then measures the small differential voltage across the RTD (V_top − V_bottom), before RC smooths/anti-aliases the INA output, and the ADS1220 (24-bit analog to digital converter) digitizes the result for the Raspberry Pi to effectively process via Python. 
 
-A precision voltage reference (REF5025) and OPA333 op-amp form a low-side current sink (1mA) using the 2N3904 transistor; that current is sunk through whichever RTD is selected by the ADG1408 (8-1 MUX). The INA333 then measures the small differential voltage across the RTD (V_top − V_bottom), the RC smooths/anti-aliases the INA output, and the ADS1220 digitizes the result. The Raspberry Pi Pico controls the multiplexer and communicates with the ADS1220 over SPI.
+Here is a sketch of the proposed design:
 
+![](systemdesign.png)
 
