@@ -1,15 +1,15 @@
+
 ---
 title: Topography Map, Aspire Toolpaths, and Milling Workflows
-description: Design of th
-image: 
-slug: rhythmlink
-date: 2025-12-15
+description: Using Aspire to develop roughing and finishing toolpaths
+image:
+date: 2025-12-16
 
 categories:
     
 tags: 
-    - CNC
-    - CAM
-weight: 1       # You can add weight to some posts to override the default sorting (date descending)
+    - daily journal
+    
+weight: 1      # You can add weight to some posts to override the default sorting (date descending)
 
 ---
