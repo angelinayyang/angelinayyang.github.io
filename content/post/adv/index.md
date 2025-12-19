@@ -373,4 +373,31 @@ I designed another breakout board today based on the RC-filter and the inamp tha
 
 ![](inamp_schematic.png)![](inamp_pcblayout.png)
 
-After school, I started the mill on the Carvera.
+After school, I started the mill on the Carvera and was able to obtain a successful version on the second try!
+
+# 12/10/25
+
+During class, I soldered my new in-amp board. One of the main challenges I had was determining that what the Rg, or the gain resistance value would be. Because the lowest forearm temperature would correlate to a resistance value greater than 1,000 ohms (and therefore maintain a voltage of 1V), the amplified voltage coming out of the inamp would never swing below the reference. In cases like these, the [INA333 datasheet](https://www.ti.com/lit/ds/symlink/ina333.pdf?ts=1766039200822) suggests grounding the Ref pin and adjusting the resistance value to cover the appropriate range of the ADC input (in this case, 0V to 2.5). The equation for gain is defined as G = 1 + (100k)/Rg, and the pre-ampliifed voltage would range between 1V and 1.194V (equating to ~50ºC), so I decided to define the gain as 2 and Rg as 100k ohms.
+
+# 12/11/12
+
+During class today, I milled out my topography map. After checking the toolpaths one last time in my Aspire file, I uploaded my g-code to the Carvera software. In terms of milling the wood, the only major difference was the clamps we used to fix the block. The milling process was relatively straightforward, and I didn't experience any issues during this process. One change I would make, however, is adjusting the z-depth of the mill, as it came out looking shallower than I intended. Here is what it looked like:
+
+
+
+<center>
+<img src="finishedtopo.JPG" width=400>
+</center>
+
+
+# 12/15/25
+
+Today, I wired up the connections for my proof-of-concept board. I'm not fully confident this will work, but I'm excited to try it out with the Pi. I also printed out the case for the electronics/Pi, and it fits pretty well.
+
+# 12/16/25
+
+Absent.
+
+# 12/18/25
+
+Today, I worked on my final project and topography map documentation.
