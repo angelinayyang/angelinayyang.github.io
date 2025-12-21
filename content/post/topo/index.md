@@ -1,15 +1,16 @@
 ---
-title: Topography Map, Aspire Toolpaths, and Milling Workflows
+title: Topography Map, Aspire Toolpaths, and 3D Milling Workflows
 description: Using Vetric Aspire to develop roughing and finishing toolpaths
 image:
 date: 2025-12-16
 
 categories:
+    - Workflows
     
 tags: 
     - daily journal
     
-weight: 1      # You can add weight to some posts to override the default sorting (date descending)
+weight: 3      # You can add weight to some posts to override the default sorting (date descending)
 
 ---
 
@@ -17,9 +18,9 @@ Unlike [milling PCBs](https://angelinayyang.github.io/p/pcb-milling-workflows/),
 
 ## 3D Machining Terminology
 
-* **Roughing pass**: 
+* **Roughing pass**: Typically the first pass, the roughing pass uses an end mill (e.g., flat end mill) that will eject a large number of chips at a high feed rate. In other words, the roughing pass is intended to create the *rough* shape of the design. 
 
-* **Finishing pass**:
+* **Finishing pass**: The second pass, called the finishing pass, won’t require as aggressive of a cut (e.g., use of the ball nose bit) and can provide a smoother finish at a high speed. The finishing pass cuts the material into a *fine* shape and usually takes significantly longer than the roughing pass.
 
 ## Exporting an STL via Terrain2STL
 

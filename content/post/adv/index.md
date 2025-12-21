@@ -5,11 +5,12 @@ image:
 date: 2025-08-25
 
 categories:
+  - Personal Project
     
 tags: 
     - daily journal
     
-weight: 3      # You can add weight to some posts to override the default sorting (date descending)
+weight: 5      # You can add weight to some posts to override the default sorting (date descending)
 
 ---
 
@@ -384,7 +385,6 @@ During class, I soldered my new in-amp board. One of the main challenges I had w
 During class today, I milled out my topography map. After checking the toolpaths one last time in my Aspire file, I uploaded my g-code to the Carvera software. In terms of milling the wood, the only major difference was the clamps we used to fix the block. The milling process was relatively straightforward, and I didn't experience any issues during this process. One change I would make, however, is adjusting the z-depth of the mill, as it came out looking shallower than I intended. Here is what it looked like:
 
 
-
 <center>
 <img src="finishedtopo.JPG" width=400>
 </center>
@@ -392,7 +392,21 @@ During class today, I milled out my topography map. After checking the toolpaths
 
 # 12/15/25
 
-Today, I wired up the connections for my proof-of-concept board. I'm not fully confident this will work, but I'm excited to try it out with the Pi. I also printed out the case for the electronics/Pi, and it fits pretty well.
+Today, I wired up the connections for my proof-of-concept board. I'm not fully confident this will work, but I'm excited to try it out with the Pi. I also printed out the case for the electronics/Pi, and it fits pretty well. 
+
+Here is what the connections look like finished:
+
+
+<center>
+<img src="poc_connections.JPG" width=400>
+</center>
+
+I tested the output of the REF5025 with a multimeter afterwards to see if the 2.5V reference voltage was properly produced:
+
+<center>
+<img src="2.5v.JPG" width=400>
+</center>
+
 
 # 12/16/25
 

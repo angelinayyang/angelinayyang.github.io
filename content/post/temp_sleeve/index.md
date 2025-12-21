@@ -1,7 +1,7 @@
 ---
 title: Nerve Conduction Study Temperature-Monitoring Sleeve
 description: 
-image:
+image: systemdesign.png
 date: 2025-09-15
 
 categories:
@@ -37,7 +37,7 @@ Temperature is a major physiological factor that may affect the signals displaye
 | :-----------: | :-----------: | :------------: | :-------------: | :-------------: | 
 | PT1000 thin-film RTD | 8 | [Digikey](https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/NB-PTCO-153/5272167) | $6.65 | No | 
 | 2.8" TFT LCD - ILI9341 | 1 | [Adafruit](https://www.adafruit.com/product/1770?srsltid=AfmBOoqoj3elneHPFLwtWOMmx21mZA04d9PxkCAEO36Iyasb3Dnv8Ubq) | $29.95 | Yes | 
-| Raspberry Pi Pico W | 1 | [Adafruit](https://www.adafruit.com/product/5526?srsltid=AfmBOopqR3Wl-y9DlKY8-o0aSwuq2oWv0LDjT1GeACE9isgQt66CW6UW) | $6.00 | Yes | 
+| Raspberry Pi 4 Model B | 1 | [Adafruit](https://www.adafruit.com/product/4292?src=raspberrypi) | $49.50 | Yes | 
 | ADG1408 8-1 Multiplexer | 1 | [Digikey](https://www.digikey.com/en/products/detail/analog-devices-inc/ADG1408YRUZ-REEL/1210200) | $10.79 | No |
 | ADS1220 24-bit Analog-to-Digital converter | 1 | [Mouser Electronics](https://www.mouser.com/ProductDetail/Texas-Instruments/ADS1220IPW?qs=5GI1giJCN%252BKzuruuF2dUlQ%3D%3D) | $10.37 | No |
 | OPA333 Operational Amplifier | 1 | [Digikey](https://www.digikey.com/en/products/detail/texas-instruments/OPA333AIDCKR/1004601) | $1.88 | No |
@@ -65,3 +65,6 @@ Here is a sketch of the proposed design:
 
 ![](systemdesign.png)
 
+# Proof of Concept
+
+Our proof of concept involved the 
