@@ -415,3 +415,22 @@ Absent.
 # 12/18/25
 
 Today, I worked on my final project and topography map documentation.
+
+# 12/24/25
+
+
+Downloading [RaspberryPi Imager](https://www.raspberrypi.com/software/), I installed Rasberry Pi OS by writing to a 32GB microsd card. Then, in VSCode, using the Remote - SSH extension, opening a remote communication window with the Pi's IP address.
+
+In the terminal I ran
+
+```
+python -m venv my_venv
+```
+
+And then
+
+```
+source my_venv/bin/activate
+```
+
+to open the virtual environment.

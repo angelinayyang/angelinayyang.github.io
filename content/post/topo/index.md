@@ -14,7 +14,7 @@ weight: 3      # You can add weight to some posts to override the default sortin
 
 ---
 
-Unlike [milling PCBs](https://angelinayyang.github.io/p/pcb-milling-workflows/), which uses the native MakeraCAM software to define the trace toolpaths, designing toolpaths for milling 3D materials like wood is often done through Vetric Aspire. 
+Unlike [milling PCBs](https://angelinayyang.github.io/p/pcb-milling-workflows/), which uses the native MakeraCAM software to define the trace toolpaths, designing toolpaths for milling 3D materials like wood is often done through Vetric Aspire. This page introduces the fundamentals of 3D milling, comprising topography STL creation, a workflow for toolpath generation in Vetric Aspire, and the development of a milled topography map.
 
 ## 3D Machining Terminology
 
@@ -42,6 +42,22 @@ Unlike [milling PCBs](https://angelinayyang.github.io/p/pcb-milling-workflows/),
 
 
 5. Once all settings are adjusted as intended, click the "Generate Model" button. This will generate and export your terrain .STL file as a .ZIP file.
+
+
+## 3D-Printed Topography Map
+
+After picking my mountain range and generating an .STL file, I imported it into Bambu Studio. I used the "scale" tool to adjust the x, y, and z dimensions to 2.5in, 3.5in, and 1.0in, respectively. Then, I sent the file to be printed.
+
+<center>
+<img src="finalmountaininbambu.png" width=500>
+</center>
+
+Below is the final print. Once I verified the mountain range was depicted well on the 3D-print, I transitioned towards developing the CNC toolpaths.
+
+
+<center>
+<img src="3dprintedtopo.JPG" width=400>
+</center>
 
 ## Aspire Workflow
 
@@ -182,12 +198,28 @@ Following the workflow for designing CNC toolpaths via Aspire, I successfully de
 
 The process of loading the file to the Carvera was virtually the same as instructed in the PCB milling workflow; the only major difference was that I disabled the automatic z-axis probing (5x5 touchdown), since we already defined the depth in the Aspire Job Setup.
 
-Here is what my final topography map looked like:
+Here is what my topography map looked like:
 
 <center>
 <img src="finishedtopo.JPG" width=400>
 </center>
 
+To clean up the edges, I used the tablesaw and trimmed off excess wood from each side of the topography map:
+
+<center>
+<video width="500" height="300" controls>
+  <source src="tablesaw.mp4" type="video/mp4">
+
+</video>
+</center>
+
+Here is what my final and trimmed topography map looks like:
+
+<center>
+<img src="finaltopo.jpeg" width=500>
+</center>
+
+
 Overall, through this project, I reviewed fundamental terminology, such as rough and finishing passes, as well as refreshed my memory on how to use Aspire to design toolpaths for 3D machining. It's been a while since I've used this software in general, and I've  only used it when designing toolpaths for the larger CNC machines, so the specific tools we used for table-top milling were unfamiliar to me. However, with the provided workflow and a bit of practice, I felt like I got the hang of it again!
 
-The only "problem" I encountered was the assigned milling depth; the value I set in Aspire was too shallow for my liking. In the future, I would adjust this leveling after importing my .STL model into Aspire. Beyond that minor change, this project was pretty successful!
+One challenge I faced was during the trimming phase of the project. Because certain sides of my topography map had very thin excess wood, I had to be particularly careful when cutting it off with the tablesaw. To ensure that the block was stable, I used some miscellaneous scrap wood I found laying around to create a secure clamp. The only other "problem" I encountered was the assigned milling depth; the value I set in Aspire was too shallow for my liking. In the future, I would adjust this leveling after importing my .STL model into Aspire. Beyond that minor change, this project was pretty successful!

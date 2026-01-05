@@ -48,6 +48,24 @@ Temperature is a major physiological factor that may affect the signals displaye
 | Nylon (per yard) | 1 | [Amazon](https://a.co/d/9OwZLaa) | $6.89 | No |
 | Spandex (per yard) | 1 | [Amazon](https://a.co/d/hNvpx1m) | $10.99 | No |
 
+## Tools Used
+
+* Embroidery/sewing machine
+
+* Bambu 3D-printer
+
+* Carvera desktop milling machine (access the workflow [here](https://angelinayyang.github.io/p/pcb-milling-workflows/))
+
+    * .2mm*30ºEngraving(Metal) engraving bit
+
+    * .8mm Corn flat-end bit
+        
+
+* Soldering iron
+
+* Vinyl cutter
+
+
 ## Projected Timeline
 
 As of the November 18th internal check-in, here is our projected timeline:
@@ -59,12 +77,240 @@ As of the November 18th internal check-in, here is our projected timeline:
 
 Here is the [design specification considerations](dsc.pdf) for this project.
 
-A precision voltage reference (REF5025) and OPA333 op-amp form a low-side current sink (1mA) using the 2N3904 transistor. This resultant current is sunk through whichever RTD is selected by the ADG1408 (8-1 MUX). The INA333 then measures the small differential voltage across the RTD (V_top − V_bottom), before RC smooths/anti-aliases the INA output, and the ADS1220 (24-bit analog to digital converter) digitizes the result for the Raspberry Pi to effectively process via Python. 
+A precision voltage reference (REF5025) and OPA333 op-amp form a low-side current sink (1mA) using the 2N3904 transistor. This resultant current is sunk through whichever RTD is selected by the ADG1408 (8-1 MUX), which serves as a low-current leakage switch. The INA333 then amplifies the small differential voltage across the RTD (V_top − V_bottom), before RC smooths/anti-aliases the INA output. The ADS1220 (24-bit analog to digital converter) digitizes the result for the Raspberry Pi to effectively process via Python. 
 
 Here is a sketch of the proposed design:
 
 ![](systemdesign.png)
 
-# Proof of Concept
+## Final Prototype Development 
 
-Our proof of concept involved the 
+### Proof of Concept
+
+Phase 1 goals:
+
+* Fabricate the first iteration of a wrappable sleeve with mapped positions of RTDs
+
+* Develop modular components of master circuit to verify that a singular RTD works as intended
+
+
+### Electronics
+
+A wheatstone bridge configuration (voltage divider) is the conventional method of measuring RTD resistance, but this approach offers little to no flexibility with operating multiple RTDs. Thus, I instead opted to multiplex RTDs. 
+
+![Early iteration of the master schematic, featuring a Raspberry Pi Pico W 8 multiplexed RTDs](schematicit1.png)
+
+Looking ahead in software development, I felt like a Raspberry Pi Pico W didn't offer enough computing power; moreover, I wasn't used to using a full CircuitPython hierarchy. Thus, Kathryn and I made the decision to migrate over to a Raspberry Pi 4.
+
+For an electonics proof-of-concept, we tried measuring the temperature of a single RTD through the RPi and displaying it to the LCD.
+
+Unfortunately, there are virtually no manufactured breakouts of the op-amp and in-amp we chose to use, so we resorted to designing and milling our own breakout boards, which we could assembled modularly and easily troubleshoot:
+
+**Op-Amp Circuit (Excitation current) Breakout**
+
+Here is the [op-amp gcode file](opamp_breakout_gcode120125.nc).
+
+![](opamp_schematic.png) ![](opamp_pcblayout.png) ![](opamp_pcb.jpg)
+
+**In-Amp Circuit and RC Filter Breakout**
+
+Here is the [in-amp gcode file](newinampgcode.nc).
+
+ ![](inamp_schematic.png)![](inamp_pcblayout.png) ![](inamp_pcb.jpg)
+
+
+Here is the configuration fully wired:
+
+<center>
+<img src="wiredup.JPG" width=500>
+</center>
+
+
+ Before programming the RPi, I confirmed that the 2.5V and 1mA excitation current were firmly established:
+
+ <center>
+ <img src="2.5v.JPG" width=400>
+ </center>
+
+Here is the sample single RTD script I compiled, using the ADC_manager class:
+
+```python
+"""This is a sampling test with a single RTD, using the newly revised ADC_manager_PI4 class"""
+
+import time
+from ADC_manager_PI4 import adc_Manager
+
+def main():
+    adc = adc_Manager(
+        excitation_current=0.001,  
+        reference_voltage=2.5,      
+        gain=1,
+        data_rate=20 
+    )
+    adc.initialize()
+    n = 0
+
+    while True:
+
+        print("\n CYCLE: ", n)
+        voltage = adc.read_voltage()      
+        resistance = adc.read_rtd_resistance(voltage)   
+        tempcelsius = adc.convert_rtd_resistance_to_temp(resistance)
+        print("Measured Temperature: {:.2f} °C".format(tempcelsius))
+        if tempcelsius >= 32.0 and tempcelsius <= 35:
+            print("ALERT: Temperature is within safe range! {:.2f} °C".format(tempcelsius))
+        else:
+            print("ALERT: Temperature within the critical range! {:.2f} °C".format(tempcelsius))
+
+
+        print("\nCYCLE", n, "COMPLETE")
+        time.sleep(1)
+        n+=1
+
+
+if __name__ == "__main__":
+    main()
+
+```
+
+
+### Software
+
+
+
+
+**I'm currently working on the script for programming this breakout.**
+
+
+The software hierarchy consists of three classes: 1) ADC_Manager, 2) MUX_Manager, and 3) LCD_Manager. 
+
+**1)  ADC_Manager**: The ADC_Manager class handles the conversion of RTD voltage to RTD resistance to temperature through the **caldus** python library. Here is the most up-to-date version:
+
+```python
+
+import time
+import spidev
+import caldus # facilitates conversion from resistance to temp.
+
+class adc_Manager:
+    RESET = 0x06
+    START = 0x08
+    STOP  = 0x0A
+    RDATA = 0x10
+    WREG  = 0x40
+
+    def __init__(
+        self,
+        spi_bus=0,
+        spi_device=1,
+        spi_speed=500000,
+
+        excitation_current=0.001,   
+        reference_voltage=2.048, # INTERNAL ref of ads1220; verify      
+        ina_gain=2,                
+        ads_gain=1,             
+        data_rate=20               
+    ):
+        self.excitation_current = excitation_current
+        self.reference_voltage = reference_voltage
+        self.ina_gain = ina_gain
+        self.ads_gain = ads_gain
+
+
+        self.spi = spidev.SpiDev()
+        self.spi.open(spi_bus, spi_device)
+        self.spi.max_speed_hz = spi_speed
+        self.spi.mode = 0b01  
+
+        self._initialize_ads1220(data_rate)
+
+    def _initialize_ads1220(self, data_rate):
+        print("Resetting ADS1220...")
+        self.spi.xfer2([self.RESET])
+        time.sleep(0.05)
+
+        # REG0:
+        # AINP = AIN0, AINN = AIN1 (default) --> about this, I hooked up AIN1 to GND to create that differential
+        # Gain = 1
+        reg0 = 0b00000000 # first config register
+
+ 
+        dr_map = {
+            20:  0b010,
+            45:  0b011,
+            90:  0b100,
+            175: 0b101,
+        }
+        if data_rate not in dr_map:
+            raise ValueError("Unsupported data rate")
+
+        reg1 = dr_map[data_rate] << 5
+
+        reg2 = 0b10000000  # Enable internal 2.048V reference
+
+        reg3 = 0b00000000
+
+
+        self.spi.xfer2([
+            self.WREG | 0x00,
+            0x03,
+            reg0,
+            reg1,
+            reg2,
+            reg3
+        ])
+        time.sleep(0.05)
+        self.spi.xfer2([self.START])
+        time.sleep(1 / data_rate)
+        print("ADS1220 Initialized.")
+
+
+
+    def _read_raw(self):
+        raw = self.spi.xfer2([self.RDATA, 0x00, 0x00, 0x00])[1:]
+
+        raw_val = (raw[0] << 16) | (raw[1] << 8) | raw[2]
+
+        if raw_val & 0x800000:
+            raw_val -= 1 << 24
+
+        return raw_val
+
+    def read_voltage(self):
+        raw = self._read_raw()
+        voltage = (raw / (2**23)) * self.reference_voltage # ref voltage * full scale
+        return voltage
+    
+
+    def read_rtd_resistance(self):
+        voltage = self.read_voltage()
+        voltage_rtd = voltage / self.ina_gain
+        resistance = voltage_rtd / self.excitation_current
+        return resistance
+
+
+    def convert_rtd_resistance_to_temp(self):
+        resistance = self.read_rtd_resistance()
+        return caldus.resistance2temperature(resistance)
+
+
+```
+
+
+
+### Sleeve Design
+
+For the sleeve, Kathryn suggested lining the RTDs along two "belts" on the inner side of the sleeve. As an early prototype, we stitched together nylon and spandex, securing the sleeve on a 3D-printed forearm with velcro. 
+
+
+<center>
+<img src="sleeveprototype.jpg" width=500>
+</center>
+
+**Sleeve assembly demonstration:** To put on the sleeve, users first fasten the two belts, before gently wrapping the external sleeve around their arm. 
+
+
+<center>
+<video width="500" height="300" controls>
+  <source src="sleeve-assembly.mp4" type="video/mp4">
+
