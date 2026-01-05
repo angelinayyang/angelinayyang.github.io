@@ -56,7 +56,7 @@ Below is the final print. Once I verified the mountain range was depicted well o
 
 
 <center>
-<img src="3dprintedtopo.JPG" width=400>
+<img src="3dprintedtopo.jpg" width=400>
 </center>
 
 ## Aspire Workflow
