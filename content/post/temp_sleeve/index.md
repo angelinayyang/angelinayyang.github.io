@@ -179,7 +179,7 @@ if __name__ == "__main__":
 
 
 
-**I'm currently working on the script for programming this breakout.**
+**The software is a work in progress.**
 
 
 The software hierarchy consists of three classes: 1) ADC_Manager, 2) MUX_Manager, and 3) LCD_Manager. 
