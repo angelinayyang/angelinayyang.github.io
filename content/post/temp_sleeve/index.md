@@ -73,6 +73,9 @@ As of the November 18th internal check-in, here is our projected timeline:
 ![12/18/25: Thus far, we've made notable progress on the sleeve design, including the heat-regulating approach and the physical layout of the RTDs. In terms of the electronics, we are slightly behind schedule, but we should be able to complete our proof-of-concept in the coming days.](projected.png)
 
 
+Here is the link to the [Gantt chart](https://docs.google.com/spreadsheets/d/1M1naMrrbnOMg5gQO8-gfPohlKmZIxycnOxSoGX8i0pI/edit?usp=sharing) for an individual task breakdown.
+
+
 ## System Architecture
 
 Here is the [design specification considerations](dsc.pdf) for this project.
