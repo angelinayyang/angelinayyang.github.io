@@ -368,7 +368,7 @@ The ATmega328P board can easily be programmed via Arduino as ISP through the fol
 
 9. When uploading code, continue manually jumping digital pin 10 to the reset pin, and use the `Upload using Programmer` option
 
-The ADC-MUX board features a dual ADG1408 setup that shares address lines and maintains unique enable pins. The RTDs are connected by lead to the multiplexer inputs, and both multiplexers simultaneously switch channels, cycling through all 8 RTDs. 
+The ADC-MUX board features a dual ADG1408 setup that shares address lines and maintains unique enable pins. The RTDs are connected by lead to the multiplexer inputs, and both multiplexers simultaneously switch channels, cycling through all 8 RTDs. Here are the [gerber files](adcmuxgerber.zip). Here are the [Kicad files](adcmuxkicad.zip).
 
 Here is the schematic in Kicad:
 
@@ -655,8 +655,16 @@ Here is a more thorough comparison of the inaccuracy occasionally caused by the 
   <source src="unstable.mp4" type="video/mp4">
   </center>
 
+## Problems Encountered and Solutions
 
-# Reflection
+| Problem    | Solution |
+| :----------: | :---------: |
+| Poor connection through the conductive thread, causing inaccurate readings | 1] Applying solder paste and attempting to remedy the connection (ineffective) 2] redesigning the sleeve as a patch and using direct PCB traces as connections, which are historically more reliable |
+| Unable to  burn bootloader on Atmega328P board | Including a 10uF capacitor between reset and GND on the programmer, and jumping digital pin 10 to the reset pin of the target board directly |
+| Misalignment of drill holes on PCBs | Callibrating Carvera origin before each side's mill begins using the probing block |
+| Resizing for individuals of different size (i.e., infeasibility of customization) | Opting for a simpler and easier path design that can be easily reproduced for indivdiuals of different size |
+
+## Reflection
 
 So far in this project, I've not only learned how to burn the bootloader and program an Atmega328P-AU chip through an Arduino as ISP configuration, but I've explored and encountered multiple obstacles with integrating technology into textiles. Through my first major attempt at developing a sleeve, I effectively experimented with conductive thread as the primary bridge between 8 flex PCBs containing a resistance-based temperature sensor, and my main, rigid PCB. Although I have been able to consistently confirm the success of the individual RTDs on the flex PCBs, the results of the fully multiplexed RTDs have been mixed--a large reason being the inconsistency of the conductive thread. Although my timeline is a bit crunched, I'd like to explore the opportunity of developing a smart 'patch' (versus a formal sleeve) and offering Rhythmlink an array of temperature-sensing options moving forward. This approach will prioritize function over form and will rely on flexible PCBs and direct traces, rather than conductive thread. 
 
