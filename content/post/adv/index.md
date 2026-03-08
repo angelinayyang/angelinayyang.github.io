@@ -915,7 +915,7 @@ I spent the rest of class soldering this board. Here's what it looked like:
 After school, I milled the atmega328pboard on the older Bantam machines, since those get the job done quicker compared to the Carveras. I promptly soldered all the components on the PCB afterwards, and here is the finished result:
 
 <center>
-<img src="finishedatmegaboard.JPG" width=400>
+<img src="finishedatmegaboard.jpg" width=400>
 </center>
 
 I checked for bridges and continuity errors on both boards, and as of right now, it seems that both should work fine.
@@ -1168,6 +1168,27 @@ I uploaded the basic graphicstest to the PCB after connecting its SPI pins to th
 <video width="500" height="300" controls>
   <source src="graphicstest.mp4" type="video/mp4">
   </center>
+
+Here is an updated workflow on programming the Atmega328P:
+
+1. Find a standard Arduino Uno to serve as the programmer
+
+2. Create all ISP connections (Arduino Uno digital pins 11-13) between the Arduino Uno and the target board
+
+3. Insert a male-to-male jumper wire into digital pin 10
+
+4. Insert a 10uF electrolytic capacitor between Ground and Reset on the Arduino Uno programmer, with the positive leg inserted into Reset
+
+5. Under `Examples`, run the `ArduinoISP` sketch, selecting `Arduino Uno` as the board
+
+6. Once that sketch has uploaded, manually jump the jumper wire in the Arduino's digital pin 10 to the Atmega328P's reset pin
+
+7. Under `Tools`, ensure that `Arduino as ISP` is selected as the programmer
+
+8. Click `Burn Bootloader` and verify that the bootloader has successfully been burnt
+
+9. When uploading code, continue manually jumping digital pin 10 to the reset pin, and use the `Upload using Programmer` option
+
 
 
 # 3/5/26
