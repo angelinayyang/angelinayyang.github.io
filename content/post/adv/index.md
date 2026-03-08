@@ -419,7 +419,7 @@ Today, I worked on my final project and topography map documentation.
 # 12/24/25
 
 
-Downloading [RaspberryPi Imager](https://www.raspberrypi.com/software/), I installed Rasberry Pi OS by writing to a 32GB microsd card. Then, in VSCode, using the Remote - SSH extension, opening a remote communication window with the Pi's IP address.
+Downloading [RaspberryPi Imager](https://www.raspberrypi.com/software/), I installed Rasberry Pi OS by writing to a 32GB microsd card. I used my home wifi to ssh into the Pi to confirm that it worked as intended. Then, in VSCode, using the Remote - SSH extension, opening a remote communication window with the Pi's IP address.
 
 In the terminal I ran
 
@@ -434,3 +434,743 @@ source my_venv/bin/activate
 ```
 
 to open the virtual environment.
+
+using `pip install`, I downloaded the following libraries:
+
+```
+pip install adafruit-blinka
+
+pip install adafruit-circuitpython-rgb-display
+```
+
+I tried to upload the sample ILI9341 code I compiled to the LCD, but the screen remained white, unresponsive. After a bit of troubleshooting, I realized that I forgot to solder the IM2, IM3, and IM4 pads on the back of the screen, which enable the SPI communication. Once I did that, the screen was working as intended.
+
+
+
+# 1/5/26:
+
+Worked on documentation for semester 1.
+
+# 1/6/26:
+
+At the start of class, I was still a bit confused on the wiring of the RTD to the ADS1220; thus, I went through the ADS1220 datasheet again. It seems that the ADS1220 has a lot more features than I initially thought, including but not limited to IDAC (internal excitation current), differential AND single-ended measurements, internal reference voltage of 2.048V, and innate temperature sensing. Interesting! I ended up following the differential signal configuration, in which I bridged AIN0 and AIN1 with the RTD. I'm going to try programming it with the Pi after school.
+
+
+# 1/7/26:
+
+Worked on gantt chart and task analysis.
+
+# 1/8/26:
+
+After many attempts and fails to program the single RTD with the Raspberry Pi using our proposed approach of a manual and external excitation current, I re-configured the circuit from scratch: this time, I chose to experiment with the ADS1220 IDAC, so I removed the opa333/transistor module as well as the ina333/rc filter module. Kathryn and I tried to add the lab's wifi to the Pi, but we weren't able to successfully ssh into the Pi, so we wired the new configuration with an Arduino Uno. Theoretically, if this works, there might be the tradeoff of reduced flexibility (since we aren't in control of the ref voltage/excitation current), but on the bright side, I think that we can really simplify this design by using two multiplexers. Curious to see how this approach would work, I started developing a new schematic in Kicad:
+
+![](2mux.png)
+
+# 1/9/26
+
+Today, I started routing the board in Kicad, and I was able to create a pretty decent layout:
+
+![For B-cu, I used zones to cut down on milling time. As for the F-cu, however, I wanted the pads as isolated as possible to prevent creating unwanted connections.](2muxpcb.png)
+
+
+The only problem is that I'm not sure what size via to use. It seems like the lab only has 1.0mm inner diameter rivets, so I assume the size of the hole must be at least 1.0 mm in diameter. I'll verify this on Monday though.
+
+
+# 1/12/26
+
+[Voltera](https://docs.voltera.io/docs/v-one/learn-v-one/drill-attachment/working-with-rivets) had some documentation on rivet sizes, and they suggested making the drill hole size .1 mm larger than the outer diameter of the rivet. However, since this was my first time working with vias, Mr. Budzichowski recommended running a quick test with different sizes.
+
+Thus I created a test file on KiCad, which features vias with hole diameters 1.0mm-1.5mm. Here's what it looked like:
+
+<center>
+<img src="viatest.png" width=200>
+</center>
+
+Upon milling this board, I tried to insert the 1mm ID rivets into each drill hole, and I found that the 1.5mm diameter indeed worked best! During this time, I also had the opportunity to practice installing rivets with the rivet press.
+
+# 1/13/26
+
+I tried milling out the double-sided board today. To do this, I imported the PCB gerbers into MakeraCAM, moved everything to the stock coordinate (6,6), and applied the *horizontal mirror* feature on the B.cu and edge-cuts layers. I then created the toolpaths as usual and sent the files to the Carvera. Since I've encountered issues with "uneven" milling in the past, I put a small piece of nitto on the other side of the FR-1. 
+
+The first side milled quite nicely, but once I turned it around and sent the g-code for the backside, I noticed that it was unaligned with the front. ( • ᴖ • ｡)
+
+Although it was frustrating to dedicate a lot of time to a board that ended up failing, I'm still glad I did, as I noticed that the 1.5 mm drill hole size did not accomodate the via as well on the double-sided FR-1 vs. the single-sided FR-1 that I did the via test on. Keeping this in mind, I changed the 1.5mm diameter to 1.6mm.
+
+
+# 1/14/26
+
+In preparation for the Rhythmlink presentation tomorrow, I wanted to finish up two tasks:
+
+1. Successfully produce the double sided PCB
+2. 3D print an updated electronics casing
+
+First, to tackle the double sided PCB, Mr. Budzichowski and I ran a quick test to see if there was an inherent offset to the origin of the machine, and as we guessed, there was! That would explain the misalignment of the front/back-side mills. To solve this, we manually reset the origin by using the manual XYZ axis probe. We followed [this official tutorial](https://www.youtube.com/watch?time_continue=154&v=JMioN66AYvk&embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MjM4NTE) from the Makera youtube channel. Thankfully the process was pretty straight-forward:
+
+1. Install the special probing bit into one of the tool-changing beds
+
+2. In the Carvera control app, manually load the probing bit by selecting the appropraite tool-changing bed
+
+3. Once the probing bit is selected, click "calibrate" under the tool menu
+
+4. Remove the dust chute to prevent it from obstructing the tool
+
+5. Install the stock material onto the spoil bed
+
+6. In the Carvera control app, use the jog controls to manually position the bit roughly over the bottom left corner of the stock material
+
+7. Plug the probing block into the side port of the machine
+
+8. Sit the probing block on the stock material such that the L-shape lines up with the corners of the stock
+
+9. Attach the magnetic extension of the probing block to the spindle
+
+10. Adjust the position of the probing bit so that it is hovering above the "pocket" of the probing block
+
+11. Click the "run and config" button
+
+12. Under "set work origin," click "config"
+
+13. Select "set by XYZ probe"
+
+14. Press "OK"; the machine will begin its sequence, pressing the probing bit against the edge of the probing block pocket
+
+Once I completed this sequence, I tried milling out the board again, and it worked!
+
+While I was waiting for the board to mill, however, I decided to print the new electronics case, including the new middle compartment and the LCD-mounted top. With permission, I used the lime filament to print the Rhythmlink logo. Here is the case:
+
+
+
+<center>
+<img src="printedcase_not_assembled.jpg" width=400>
+</center>
+
+# 1/15/26
+
+Rhythmlink presentation day.
+
+# 1/21/26
+
+During class, I used reflow soldering to solder the 2 ADG1408 chips and the 1 ADS1220 to the master board. Since I had some practice from assembling the breakout boards from before, this wasn't as difficult, and I was able to finish soldering everything within the period. Similar to before, I used Kapton tape to ensure that the pin headers weren't making unnecessary contact with some of the other traces. In the future, I'll make sure to account for this within the PCB layout design.
+
+
+<center>
+<img src="solderedmaster.jpg" width=400>
+</center>
+
+# 1/22/26
+
+Today, I began constructing the individual flex nodes by soldering the RTDs to the circular flex PCBs. After soldering 8 of the these nodes, I applied a trace amount of super glue to keep the top of the RTD securely attached. Here is what it looked like assembled:
+
+<center>
+<img src="single_node.jpg" width=400>
+</center>
+
+Here is the proposed layout on the sleeve:
+
+
+<center>
+<img src="nodesonsleeve.jpg" width=400>
+</center>
+
+Since each one of these nodes is connected to the same channel of two multiplexers, I also designed this connector flex pcb:
+
+<center>
+<img src="connector_pcb.png" width=400>
+</center>
+
+
+# 1/28/26
+
+Today, I soldered the 2x4 male to the master board; one of the traces unfortunately ripped on the back side when I pushed its pins through, so I had to improvise and use a stray piece of wire to force the connection. Once I confirm the board is working as intended, I'll likely apply hot glue to the back since my solution is a bit flimsy. 
+
+
+
+<center>
+<img src="solderedwithribbon.jpg" width=400>
+</center>
+
+I wanted to try assembling the full electronics case afterwards, but I don't think there is enough free space in the middle compartment to fit the screen on top of the PCB. To solve this, I went back into Fusion360 and increased the wall length by around 10mm and re-printed it on the X1. 
+
+For the remainder of class, I adjusted my ADC_manager class code, as it was still operating on the assumption that we would be using an external reference voltage, rather than the internal reference voltage of 2.048. I additionally made changes to define a specific excitation current based on the available IDAC values.
+
+# 1/29/26
+
+I began class by assembling the newly printed middle compartment of the electronics case with the PCB and the mounted LCD, and it fit perfectly! I think this will be one of the final iterations for the case, thankfully. 
+
+Since Kathryn and I were experiencing some issues with remotely SSH-ing into the RPi, we decided to try a new approach, recommended by Collin: Pi Connect. To do this, I scrapped the headless setup and connected the Pi to a desktop, keyboard, and mouse. I then opened the terminal and, following the [online documentation](https://www.raspberrypi.com/documentation/services/connect.html), ran 
+
+```
+sudo apt install rpi-connect
+```
+
+followed by 
+
+```
+rpi-connect on
+```
+
+I signed in by clicking the "sign-in" icon in the top toolbar, before logging in with my Raspberry Pi ID. Then, opening the [devices page](https://connect.raspberrypi.com/devices) on my personal device, I could screen-share/remotely access the Pi as long as it was plugged into the monitor. This was pretty cool, but in the future, I'd like to still figure out a way to upload code directly through VS. Anyways, to test out my code, I pasted my `single_rtd_test.py` and `ADC_manager.py` scripts into Geany, downloaded all library packages (caldus, numpy, rpi-gpio, etc.), and clicked run. Unfortunately, despite confirming that the caldus library was actually downloaded and that SPI was on (done through `raspi-config`), the terminal kept saying that it couldn't find the caldus package. I'm not sure why this is the case, but for now, I decided to remove the resistance to temperature function in the code and simply display the measured voltage. 
+
+On a side note, Kathryn has used regular thread to effectively attach the RTD flexible PCB nodes to the sleeve. 
+
+
+# 2/4/26
+
+After attempting to program the RPi over the weekend to no avail, I decided to continue trouble-shooting during class today. However, upon connecting my pi to the monitor and initiating Pi connect, I noticed that neighter the keyboard nor the mouse was working, and frustratingly, the monitor kept flickering on and off. Initially, I speculated that this was an issue related to the power supply, but after swapping out the power supply a couple of times (and also attempting to connect the Pi directly to my Mac), I realized that it might just be an issue with a faulty Pi. The Pi seems less reliable at the moment, and given the current time frame, I've made the decision to switch to using an Atmega328P.
+
+Arduino IDE conveniently supports an ADS1220 library, meaning that switching over to this microcontroller should be a relatively streamlined process. Using ChatGPT, I converted my code from Python to C++, keeping the same settings of the ADC (IDAC, 1mA, differential voltage between AIN0 and AIN1). Here is the updated code:
+
+
+```
+#include "Protocentral_ADS1220.h"
+#include <SPI.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_ILI9341.h>
+
+
+// ==============================
+// ADS1220 configuration
+// ==============================
+#define PGA 1
+#define VREF 2.048
+#define VFSR (VREF / PGA)
+#define FSR (((long int)1 << 23) - 1)
+
+
+// ==============================
+// Pin definitions
+// ==============================
+#define ADS1220_CS_PIN    10
+#define ADS1220_DRDY_PIN  2
+
+
+#define TFT_CS   7
+#define TFT_DC   9
+#define TFT_RST  8
+
+
+// ==============================
+// SPI settings
+// ==============================
+SPISettings ads1220SPI(1000000, MSBFIRST, SPI_MODE1);
+SPISettings tftSPI(8000000, MSBFIRST, SPI_MODE0);
+
+
+// ==============================
+// Objects
+// ==============================
+Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_RST);
+Protocentral_ADS1220 pc_ads1220;
+
+
+
+
+
+
+volatile bool drdyIntrFlag = false;
+int32_t adc_data;
+
+
+
+
+// ==============================
+// DRDY interrupt
+// ==============================
+void drdyInterruptHndlr() {
+ drdyIntrFlag = true;
+}
+
+
+void enableInterruptPin() {
+ attachInterrupt(digitalPinToInterrupt(ADS1220_DRDY_PIN),
+                 drdyInterruptHndlr, FALLING);
+}
+
+
+
+
+// ==============================
+// Setup
+// ==============================
+void setup() {
+ Serial.begin(115200);
+ SPI.begin();
+
+
+ // ---- TFT INIT ----
+ SPI.beginTransaction(tftSPI);
+ tft.begin();
+ SPI.endTransaction();
+
+
+ tft.setRotation(3);
+ tft.fillScreen(ILI9341_WHITE);
+
+
+ tft.setCursor(10, 20);
+ tft.setTextColor(ILI9341_BLACK);
+ tft.setTextSize(2);
+ tft.print("Forearm Temp. Monitor");
+
+
+ tft.drawLine(0, 40, 320, 40, ILI9341_BLACK);
+
+
+ tft.setTextSize(2);
+ tft.setTextColor(ILI9341_BLACK);
+ tft.setCursor(10, 60);
+ tft.print("Temperature in C:");
+
+
+ tft.setCursor(10, 110);
+ tft.print("Temperature in F:");
+
+
+ tft.setCursor(10, 160);
+ tft.print("NCS Status:");
+
+
+ // ---- ADS1220 INIT ----
+ pc_ads1220.begin(ADS1220_CS_PIN, ADS1220_DRDY_PIN);
+
+
+ pc_ads1220.set_data_rate(DR_20SPS);
+ pc_ads1220.set_pga_gain(PGA_GAIN_1);
+ pc_ads1220.select_mux_channels(MUX_AIN0_AIN1);
+
+
+ pc_ads1220.set_IDAC_Current(IDAC_1000);    // 1 mA excitation
+ pc_ads1220.set_IDAC1_Route(IDAC1_AIN0);
+ pc_ads1220.set_IDAC2_Route(IDAC_OFF);
+
+
+ pc_ads1220.set_conv_mode_continuous();
+ pc_ads1220.Start_Conv();
+
+
+ enableInterruptPin();
+}
+
+
+// ==============================
+// Main loop
+// ==============================
+void loop() {
+ if (!drdyIntrFlag) return;
+ drdyIntrFlag = false;
+
+
+ // ---- SAFE SPI READ ----
+ SPI.beginTransaction(ads1220SPI);
+ adc_data = pc_ads1220.Read_Data_Samples();
+ SPI.endTransaction();
+
+
+ // ---- Voltage calculation ----
+ float Vout_mV = (adc_data * VREF * 1000.0) / (FSR * PGA);
+
+
+ // ---- Resistance (1mA excitation) ----
+ float resistance = Vout_mV;   // mV == ohms
+
+
+ // ---- PT1000 temperature ----
+ float pt1000_temp_C = (resistance - 1000.0) / 3.85;
+
+
+ float pt1000_temp_F = pt1000_temp_C * (9) / 5 +32;
+
+
+ // ---- Serial output ----
+ Serial.print("ADC: ");
+ Serial.print(adc_data);
+ Serial.print(" | Vout: ");
+ Serial.print(Vout_mV, 6);
+ Serial.print(" mV | R: ");
+ Serial.print(resistance, 2);
+ Serial.print(" ohm | T: ");
+ Serial.print(pt1000_temp_C, 2);
+ Serial.println(" C");
+
+
+ // ---- TFT UPDATE ----
+ SPI.beginTransaction(tftSPI);
+
+
+ tft.fillRect(10, 85, 300, 20, ILI9341_WHITE);
+ tft.setCursor(10, 85);
+ tft.setTextColor(ILI9341_BLACK);
+ tft.setTextSize(2);
+ tft.print(pt1000_temp_C, 2);
+ tft.print(" C");
+
+
+ tft.fillRect(10, 135, 300, 20, ILI9341_WHITE);
+ tft.setCursor(10, 135);
+ tft.setTextColor(ILI9341_BLACK);
+ tft.print(pt1000_temp_F, 2);
+ tft.print("  F");
+
+
+ tft.fillRect(10, 185, 300, 20, ILI9341_WHITE);
+ //tft.setCursor(10, 185);
+ if (pt1000_temp_C >= 31 && pt1000_temp_C <= 34) {
+ tft.drawCircle(150,  165,  8, ILI9341_GREEN);
+  tft.fillCircle(150, 165, 8, ILI9341_GREEN);
+  tft.fillRect(1, 190, 300, 100, ILI9341_WHITE);
+    tft.setCursor(10, 190);
+   tft.setTextColor(ILI9341_GREEN);
+   tft.print("PROCEED WITH ");
+   tft.setCursor(10, 206);
+   tft.print("NERVE CONDUCTION STUDY");
+ }
+ else {
+   tft.drawCircle(150,  165,  8, ILI9341_RED);
+   tft.fillCircle(150, 165, 8, ILI9341_RED);
+   tft.fillRect(1, 190, 300, 100, ILI9341_WHITE);
+    tft.setCursor(10, 190);
+   tft.setTextColor(ILI9341_RED);
+   tft.print("DO NOT PROCEED WITH NERVE CONDUCTION STUDY");
+ }
+
+
+
+
+
+
+ SPI.endTransaction();
+
+
+ delay(300);
+}
+
+
+
+
+```
+
+
+I tested this code with the LCD wired up, directly probing the RTDs, and I got suitable readings for the individual RTDs:
+
+<center>
+<video width="500" height="300" controls>
+  <source src="temptest.mp4" type="video/mp4">
+</center>
+
+# 2/11/26
+
+I looked into developing the sleeve heater today, and it seems like JLCPCB requires just a DXF file (nice!). In terms of the circuit, I'm using a Proportional Integral Derivative (PID) system, a feedback loop design that incorporates a current heating pad and a  sensor to regulate the temperature. The lab has a couple of SMD thermistors, and this part of the project doesn't seem to have to be super precise, so I'm likely going to use it.
+
+Following an [online example](https://electronoobs.com/eng_arduino_tut24.php), I iniitally wanted to use the IRFZ44N Mosfet paired with the S8050 transistor, but I soon realized that this wouldn't be feasible in terms of compactness because the mosfet has a gate threshold voltage of 10V (they integrated a 12V power source). Thus, I chose to use the AO344A mosfet. Besides that, it seems that the only thing I need is a PWM pin from a microcontroller of choice. 
+
+Here is the DXF file I intend on sending: [link to file](SleeveFInished-2.dxf).
+
+
+
+# 2/18/26
+
+I made modifications to the ADC/MUX board to account for the shared address pins on the MUX. I used more rivets and vias to connect A0, A1, and A2 to common pins. This layout is more favorable, since I'll ultimately have to use less jumper wires (yay for better system integration!). 
+
+
+<center>
+<img src="rivetschanged.png" width=400>
+</center>
+
+
+# 2/19/26-2/20/26
+
+Today, I began milling out V2 of the ADC/MUX board. Unfortunately, because another class was using the milling machines and removed the bracket, I had to recallibrate the machine manually with the XYZ probe. In the past, I've experienced issues with the bit not fully penetrating through the copper (largely due to PCB not being uniformly attached to the spoil board), so I was especially anxious this time. I impulsively terminated the mill half-way through to check up on the board, and it seemed fine, but I wasn't sure how to begin the mill again without going repeating part of the g-code. To solve this, I searched up how to move to a specific line in the g-code and found this handy [Makera Wiki](https://wiki.makera.com/en/knowledge-sharing/knowledge-sharing/starting-from-middle-of-file). I simply had to start the g-code again, deactivating scan margin and all z-axis probing options, pause the job, and click the "MDI" button. In the command line, I typed `goto ____` and inserted the last line of the g-code I was on before I terminated the job. This seemed to work.
+
+When I came back to check up on the job, the internal lights of the machine were off. I'm not sure why this happened, but when Mr. Budzichowski and I started the job again, the machine proceeded to ram its bit into the probing bit station. Later, I learned that this is because the machine reset sometime during the job and failed to recognize that it still had a bit installed. I'll have to mill on Monday.
+
+# 2/23/26
+
+I tried milling my board again today. I keep running into the issue of misalignment whenever I run the mill for the backside, and I'm not sure why. I tried manually recallibrating the XY origin with the probing block, but this doensn't seem effective. Partway through, I noticed that there was something slightly off with my MakeraCAM file: when I tried mirroring the B.Cu gerber files and mirrored it back, I noticed that it didn't align anymore. This was an especially frustrating discovery, since the difference is only 1-2 mm. At the same time, there is an arbitrary fail rate with the front side of the board too (the bit doesn't mill certain traces occasionally), which adds to the challenge of milling this board. 
+
+While waiting for these boards (yes, plural. Many boards. (•́ ᴖ •̀)) to mill, I began designing the ATMEGA328P board in Kicad. Besides a couple of mandatory components (crystal, 22pF capacitors, reset pull-up resistor), the design was intuitive. 
+
+Here is what my schematic looks like:
+
+![Note that there are two devices that require SPI, so I've incorporated two SPI buses, distinguishing them through unique CS pins](atmegaschematic.png)
+
+and the PCB layout:
+
+<center>
+<img src="atmegaboardsmd.png" width=400>
+</center>
+
+
+
+# 2/24/26
+
+After my nth attempt at milling the ADC/MUX board, I was able to get a successful board! Through this experience, I have reached a conclusion and semi-fool proof way to mill double sided boards. Due to the L-shaped nature of the brackets (different from the Bantam's T-shaped brackets), human error also contributes significantly to misalignment of holes/traces. To solve this, it is important to callibrate the machine BEFORE both sides are milled.
+
+I spent the rest of class soldering this board. Here's what it looked like:
+
+
+<center>
+<img src="newadcboard.JPG" width=400>
+</center>
+
+After school, I milled the atmega328pboard on the older Bantam machines, since those get the job done quicker compared to the Carveras. I promptly soldered all the components on the PCB afterwards, and here is the finished result:
+
+<center>
+<img src="finishedatmegaboard.JPG" width=400>
+</center>
+
+I checked for bridges and continuity errors on both boards, and as of right now, it seems that both should work fine.
+
+At the end of class, I also started a new print of the electronics casing that supports the new Atmega328p board.
+
+# 2/26/26
+
+Today, I tried to program the ATMega328P board and get a basic blink code uploaded to it. After doing some research and reading through [this forum](https://www.thethingsnetwork.org/forum/t/how-to-program-an-atmega-328p-on-pcb/62102), I learned that, before programming the board through a USB-to-serial converter, I need to burn the bootloader first. To do this, I used another Arduino Uno and treated it as a programmer by connecting the ISP pins to my PCB (digital pin 10 to reset, 11 to MOSI, 12 to MISO, 13 to SCK, and power/ground pins). In ArduinoIDE, I opened `Examples` > `ArduinoISP` sketch and uploaded it with "Arduino Uno" as the board selected. This worked without any challenges. However, when I tried to burn the bootloader, I kept getting a  `avrdude stk500_recv(): programmer is not responding avrdude: stk500_getsync() attempt 1 of 10: not in sync: resp=0x00` error, which indicates that the computer is unable to communicate with my PCB. I checked my wiring a few times but couldn't find any major errors.
+
+After school, Kathryn finished using conductive thread to connect the leads of each rtd to the connector flex pcb.
+
+# 2/27/26-2/28/26
+
+I talked to Mrs. Dhiman, and she said that a while back, when she tried to get the Atmega328p working during Fab Academy, there was a larger issue with the chips themselves. If this is the case, the chip might be the problem preventing me from burning the bootloader. I was curious if the same thing would happen if I tried to burn the bootloader from one Arduino Uno to another. Thus, I replicated the ISP pin connections, connecting the digital pins 11-13 between two Arduinos, and digital pin 10 of the "programmer" to the reset pin of the target board. Surprisingly, when I tried to burn the bootloader, this did work, and I was able to upload code to the target Arduino.
+
+Seems like the chips are fine. I went back online to search for solutions and found from [this Arduino forum](https://forum.arduino.cc/t/why-the-capacitor-between-reset-and-gnd-for-arduino-as-isp/1313487) that a 10uF electrolytic capacitor might be required between the reset and ground pin of the programmer, so I added it to my programmer Arduino Uno and tried again with my PCB. No success. Frustrated, I decided to put this task to rest for today.
+
+<center>
+<img src="adgtable.png" width=500>
+</center>
+
+I spent the rest of my time at the lab today attaching a battery pack to a buck converter and installing it into the new 3D-printed case. This design was conveniently compact:
+
+<center>
+<img src="case.jpeg" width=400>
+</center>
+
+and here is the case fully assembled with the screen:
+
+<center>
+<img src="assembledcase.jpg" width=400>
+</center>
+
+# 3/3/26
+
+I was absent today, but I still had my hands on my multiplexer/adc board, so I tried to work with it at home. The multiplexer mechanics are pretty simple: the address lines A0-A2 are individually controlled by digital pins. The datasheet specifies how the combinations of HIGH/LOW conditions activate specific channels.
+
+To verify the channels were actually changing, I connected one probe of a multimeter to the common ground and the other probe to A0-A2. I compared the jumps to 5V with the HIGH/LOW conditions from the table. Then, I plugged in the ribbon cables and used this code to rotate through all 8 channels and output the temperature of the RTD to the LCD:
+
+```
+#include "Protocentral_ADS1220.h"
+#include <SPI.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_ILI9341.h>
+
+// ==============================
+// ADS1220 configuration
+// ==============================
+#define PGA 1
+#define VREF 2.048
+#define FSR (((long int)1 << 23) - 1)
+
+// ==============================
+// Pin definitions
+// ==============================
+#define ADS1220_CS_PIN    10
+#define ADS1220_DRDY_PIN  2
+
+#define TFT_CS   7
+#define TFT_DC   9
+#define TFT_RST  8
+
+// ADG1408 pins
+const int a0Pin = 15;
+const int a1Pin = 16;
+const int a2Pin = 17;
+const int enPin1 = 18;
+const int enPin2 = 19;
+
+// ==============================
+// SPI settings
+// ==============================
+SPISettings ads1220SPI(1000000, MSBFIRST, SPI_MODE1);
+SPISettings tftSPI(8000000, MSBFIRST, SPI_MODE0);
+
+// ==============================
+// Objects
+// ==============================
+Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_RST);
+Protocentral_ADS1220 pc_ads1220;
+
+volatile bool drdyIntrFlag = false;
+int32_t adc_data;
+
+// ==============================
+// DRDY interrupt
+// ==============================
+void drdyInterruptHndlr() {
+  drdyIntrFlag = true;
+}
+
+void enableInterruptPin() {
+  attachInterrupt(digitalPinToInterrupt(ADS1220_DRDY_PIN),
+                  drdyInterruptHndlr, FALLING);
+}
+
+// ==============================
+// Select channel on both MUXes
+// ==============================
+void selectChannelBothMUX(int channel) {
+
+  digitalWrite(a0Pin, (channel & 1) ? HIGH : LOW);
+  digitalWrite(a1Pin, (channel & 2) ? HIGH : LOW);
+  digitalWrite(a2Pin, (channel & 4) ? HIGH : LOW);
+
+  digitalWrite(enPin1, HIGH);
+  digitalWrite(enPin2, HIGH);
+
+  delay(60); // allow one conversion period (20SPS = 50ms)
+}
+
+// ==============================
+// Setup
+// ==============================
+void setup() {
+
+  Serial.begin(115200);
+  SPI.begin();
+
+  // ---- TFT INIT ----
+  SPI.beginTransaction(tftSPI);
+  tft.begin();
+  SPI.endTransaction();
+
+  tft.setRotation(3);
+  tft.fillScreen(ILI9341_WHITE);
+  tft.setTextSize(2);
+  tft.setTextColor(ILI9341_BLACK);
+
+  tft.setCursor(10, 10);
+  tft.print("8-Channel PT1000 Monitor");
+  tft.drawLine(0, 30, 320, 30, ILI9341_BLACK);
+
+  // ---- ADS1220 INIT ----
+  pc_ads1220.begin(ADS1220_CS_PIN, ADS1220_DRDY_PIN);
+  pc_ads1220.set_data_rate(DR_20SPS);
+  pc_ads1220.set_pga_gain(PGA_GAIN_1);
+  pc_ads1220.select_mux_channels(MUX_AIN0_AIN1);
+
+  pc_ads1220.set_IDAC_Current(IDAC_1000);   // 1 mA excitation
+  pc_ads1220.set_IDAC1_Route(IDAC1_AIN0);
+  pc_ads1220.set_IDAC2_Route(IDAC_OFF);
+
+  pc_ads1220.set_conv_mode_continuous();
+  pc_ads1220.Start_Conv();
+
+  enableInterruptPin();
+
+  // ---- MUX INIT ----
+  pinMode(a0Pin, OUTPUT);
+  pinMode(a1Pin, OUTPUT);
+  pinMode(a2Pin, OUTPUT);
+  pinMode(enPin1, OUTPUT);
+  pinMode(enPin2, OUTPUT);
+
+  digitalWrite(enPin1, LOW);
+  digitalWrite(enPin2, LOW);
+}
+
+// ==============================
+// Main loop
+// ==============================
+void loop() {
+
+  for (int channel = 0; channel < 8; channel++) {
+
+    selectChannelBothMUX(channel);
+
+    // Wait for conversion ready
+    while (!drdyIntrFlag);
+    drdyIntrFlag = false;
+
+    SPI.beginTransaction(ads1220SPI);
+    adc_data = pc_ads1220.Read_Data_Samples();
+    SPI.endTransaction();
+
+    // ---- Voltage calculation ----
+    float Vout_mV = (adc_data * VREF * 1000.0) / (FSR * PGA);
+
+    // ---- Resistance (1mA excitation) ----
+    float resistance = Vout_mV;   // 1mA → mV = ohms
+
+    // ---- PT1000 temperature ----
+    float tempC = (resistance - 1000.0) / 3.85;
+    float tempF = tempC * 9.0 / 5.0 + 32.0;
+
+    // ---- Serial Debug ----
+    Serial.print("CH");
+    Serial.print(channel);
+    Serial.print(" | T: ");
+    Serial.print(tempC, 2);
+    Serial.println(" C");
+
+    // ---- TFT Display ----
+    SPI.beginTransaction(tftSPI);
+
+    int yPos = 40 + channel * 25;
+
+    tft.fillRect(10, yPos, 300, 20, ILI9341_WHITE);
+    tft.setCursor(10, yPos);
+
+    tft.print("CH");
+    tft.print(channel);
+    tft.print(": ");
+    tft.print(tempC, 2);
+    tft.print(" C  ");
+    tft.print(tempF, 1);
+    tft.print(" F");
+
+    SPI.endTransaction();
+
+    digitalWrite(enPin1, LOW);
+    digitalWrite(enPin2, LOW);
+  }
+
+  delay(200);
+}
+```
+
+and I noticed something odd. Even though I verified each channel's RTDs was individually worknig with high accuracy (.5ºC error), when I introduced the multiplexer, the results were indicating either no connection or severely high (incorrect) temperature readings. 
+
+<center>
+<video width="500" height="300" controls>
+  <source src="badmultiplex.mp4" type="video/mp4">
+</center>
+
+Curious about what caused this, I changed back to the simpler, non-multiplexer configuration and compared the readings when I directly probed the RTDs vs. using the ribbon cable connectors.
+
+<center>
+<video width="500" height="300" controls>
+  <source src="stable.mp4" type="video/mp4">
+
+
+</center>
+<center>
+  <video width="500" height="300" controls>
+  <source src="unstable.mp4" type="video/mp4">
+  </center>
+
+This brought me to my final conclusion that this design may not sustain in the long-term due to unstable connections between the RTDs and the microcontroller/main PCB. The inconsistency in the stitching, constant fabric flexing, and hybrid interface between the flex PCBs and the spandex compromises much of the data quality, leading to inaccurate readings. Although I'm able to occassionally obtain accurate readings through this type of connection, it's not reliably recreated.
+
+# 3/4/26
+
+I took on the challenge again of burning the bootloader to clean up this prototype in preparation for presentations. At some point, I was wondering if the problem had to do with the board I had selected on Arduino IDE, so I tried finding a native Atmega328P board option. To do this, I found the [MiniCore](https://github.com/MCUdude/Minicore) library, and pasted `https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json` in the Additional Boards Manager URLs. In terms of the clock settings, I selected external 16mHz. When I tried to burn the bootloader again, I got the same communication error. At this point, I wasn't really sure what to do, so I went online and read through some forums again. This is when I found [this forum](https://forum.arduino.cc/t/solved-trouble-burning-bootloader-to-atmega328p-au/676462/9), which suggested touching the jumper from pin 10 of the programmer to the reset pin of the Atmega328p directly. I was initially skeptical of this solution because I had checked continuity between my header pin and the reset pin, but I tried it anyways, and it worked! It seems that, at least for programming via Arduino as ISP, making this jump is necessary. 
+
+I uploaded the basic graphicstest to the PCB after connecting its SPI pins to the LCD. Here's a video of it working:
+
+<center>
+<video width="500" height="300" controls>
+  <source src="graphicstest.mp4" type="video/mp4">
+  </center>
+
+
+# 3/5/26
+
+Presentation day.
+
