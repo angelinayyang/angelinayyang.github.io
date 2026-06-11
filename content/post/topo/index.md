@@ -218,8 +218,3 @@ Here is what my final and trimmed topography map looks like:
 <center>
 <img src="finaltopo.jpeg" width=500>
 </center>
-
-
-Overall, through this project, I reviewed fundamental terminology, such as rough and finishing passes, as well as refreshed my memory on how to use Aspire to design toolpaths for 3D machining. It's been a while since I've used this software in general, and I've  only used it when designing toolpaths for the larger CNC machines, so the specific tools we used for table-top milling were unfamiliar to me. However, with the provided workflow and a bit of practice, I felt like I got the hang of it again!
-
-One challenge I faced was during the trimming phase of the project. Because certain sides of my topography map had very thin excess wood, I had to be particularly careful when cutting it off with the tablesaw. To ensure that the block was stable, I used some miscellaneous scrap wood I found laying around to create a secure clamp. The only other "problem" I encountered was the assigned milling depth; the value I set in Aspire was too shallow for my liking. In the future, I would adjust this leveling after importing my .STL model into Aspire. Beyond that minor change, this project was pretty successful!

@@ -171,16 +171,9 @@ The milling machine first began with the .8mm corn flatend mill to remove the bu
 <img src="midmill.jpeg" width=500>
 </center>
 
-One problem I encountered: Dr. Taylor, in epic Dr. Taylor fashion, came in and accidentally turned off the power strip powering the milling machine. As a result, my edge cuts toolpath was cut short. (  •̀⤙•́  ) This was a easy fix, though. I isolated the contour toolpath on MakeraCAM and re-exported the .nc file, before selecting and running the new .nc file on the milling machine. 
 
 Here is what the final PCB looked like:
 
 <center>
 <img src="resistor_finalboard.jpeg" width=500>
 </center>
-
-Overall, through this project, I continued to familiarize myself with the new software, and I was able to review the fundamentals of toolpaths, feeds & speeds, inclusion of tabs, etc. Additionally, although the milling machine operates through a more "hands-off" approach, I prefer it over the old Bantam machines because there is less human error involved (especially with bits snapping and issues with z-axis probing). The tool-changing feature is also a nice touch. 
-
-Besides my repeat of the edge cuts file, I didn't encounter any major issues with designing the g-code or using the new CNC machine. MakeraCAM is pretty similar to Aspire in nature, so using it was rather intuitive. 
-
-In the future, to save time on my PCB mills, I may adjust the KiCad files to include "zones". Similar to be previous board (see 10/22/25), including these zones allows you to solely mill around the traces and keep the remainder of the copper in tact. 
