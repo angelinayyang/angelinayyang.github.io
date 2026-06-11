@@ -13,7 +13,7 @@ tags:
     - PCB design
     - neural network
     - raspberry pi
-weight: 3       # You can add weight to some posts to override the default sorting (date descending)
+weight: 2       # You can add weight to some posts to override the default sorting (date descending)
 
 ---
 
@@ -221,7 +221,7 @@ Due to the sheer size of each chip, this board was produced and assembled at a d
 
 Unfortunately, this board did not work as intended, likely due to a lack of pull-up resistors present in the initial schematic.
 
-For our second iteration, we pivoted and instead opted for an integrated circuit design with Adafruit's existing MCP4728 and TCA9548A breakout boards.
+For our second iteration, we pivoted and instead opted for a design with Adafruit's existing MCP4728 and TCA9548A breakout boards.
 
 ![Integrated circuit schematic in KiCad](second_it_schematic.png)
 

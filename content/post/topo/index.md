@@ -8,7 +8,7 @@ categories:
     - Workflows
     
 tags: 
-    - daily journal
+
     
 weight: 3      # You can add weight to some posts to override the default sorting (date descending)
 
