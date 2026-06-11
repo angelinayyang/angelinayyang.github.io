@@ -2,14 +2,13 @@
 ---
 title: PCB Milling Workflows 
 description: Using MakeraCAM to develop PCB Boards
-image: cover.JPG
+image: 
 date: 2025-10-28
 
 categories:
     - Workflows
     
 tags: 
-    - daily journal
     
 weight: 2      # You can add weight to some posts to override the default sorting (date descending)
 
