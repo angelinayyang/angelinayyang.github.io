@@ -1,7 +1,7 @@
 
 ---
 title: PCB Milling Workflows 
-description: Using MakeraCAM to develop PCB Boards
+description: Using MakeraCAM to manufacture in-house printed circuit boards (PCB)
 image: 
 date: 2025-10-28
 
@@ -10,7 +10,7 @@ categories:
     
 tags: 
     
-weight: 3      # You can add weight to some posts to override the default sorting (date descending)
+weight: 4      # You can add weight to some posts to override the default sorting (date descending)
 
 ---
 

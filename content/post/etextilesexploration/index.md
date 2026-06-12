@@ -1,11 +1,12 @@
 ---
 title: Exploring E-Textiles and Embroidery 
-description: 
+description: Because why not? 
 image: 
 
 date: 2026-06-11 
 
 categories:
+    - Personal Project
     
 tags: 
     - e-textiles

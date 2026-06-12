@@ -13,7 +13,7 @@ tags:
     - PCB design
     - neural network
     - raspberry pi
-weight: 2       # You can add weight to some posts to override the default sorting (date descending)
+weight: 3       # You can add weight to some posts to override the default sorting (date descending)
 
 ---
 

@@ -1,13 +1,14 @@
 ---
 title: Temperature-Monitoring and PID-Controlled Heating Sleeve
-description: 
+description: A localized temperature-sensing and web application solution for cold limb patients in nerve conduction study
 image: 
 
-date: 2026-06-11 
+date: 2025-11-01 
 
 categories:
     - Internship
     - Research and Development
+    - Product Design
     
 tags: 
     - PCB design
