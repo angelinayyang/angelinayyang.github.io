@@ -1,7 +1,7 @@
 ---
 title: Quality Assurance Testing with EEG Electrodes
 description: Continued development of current EEG Testbed prototype and expand casing design to fit 21 electrode locations.
-image: cover.JPG
+image: cover.png
 slug: rhythmlink
 date: 2025-06-30 
 

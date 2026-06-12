@@ -1,5 +1,5 @@
 ---
-title: Exploring E-Textiles and Embroidery (in Preparation for FAB26!)
+title: Exploring E-Textiles and Embroidery 
 description: 
 image: 
 
