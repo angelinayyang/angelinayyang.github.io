@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Internship on Angelina's Internet Corner</title><link>https://angelinayyang.github.io/categories/internship/</link><description>Recent content in Internship on Angelina's Internet Corner</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 01 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://angelinayyang.github.io/categories/internship/index.xml" rel="self" type="application/rss+xml"/><item><title>Temperature-Monitoring and PID-Controlled Heating Sleeve</title><link>https://angelinayyang.github.io/p/temperature-monitoring-and-pid-controlled-heating-sleeve/</link><pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/p/temperature-monitoring-and-pid-controlled-heating-sleeve/</guid><description>&lt;h2 id="summary-slide"&gt;Summary Slide
+&lt;/h2&gt;&lt;h2 id="purpose"&gt;Purpose
+&lt;/h2&gt;&lt;p&gt;Widely used within the medical field, electrodiagnostic tests are a non-invasive mechanism that utilizes stimulated electrical signals to assess the functionality of nerves and muscles within the human body. Nerve Conduction Study (NCS) is a low-risk example of an electrodiagnostic test that assesses the speed at which an electrical impulse travels through an individual nerve. Used to diagnose conditions such as Carpal Tunnel Syndrome (CTS), Guillain-Barré syndrome, and neuropathy/nerve damage, NCS is paramount in the assessment of the peripheral nervous system. To begin the procedure, several electrode patches are placed on the skin to stimulate the nerve conduction. One electrode (cathode) acts as an active simulator, inducing a mild electrical impulse that depolarizes and excites the underlying nerve fibers. A second electrode (anode), the inactive simulator, provides a return path for the electrical signal and reduces stimulus artifacts. A third electrode records the resulting electrical activity; the speed of the signal is determined by measuring the distance between electrodes and the corresponding time it takes for impulses to travel between them.&lt;/p&gt;
+&lt;p&gt;Temperature is a major physiological factor that may affect the signals displayed during NCS. The speed at which nerve fibers conduct electrical impulses decreases by 1.5-2.5 m/s for every 1ºC drop in temperature, thereby causing discrepancies in nerve conduction values such as amplitude, distal latency, conduction velocity, and duration in both motor and sensory studies. Changes in these clinical variables due to cold limbs can skew test results, produce potential misdiagnoses, and ultimately delay intervention. Therefore, maintaining a skin surface temperature between 32ºC and 34ºC ensures the standardization and holistic accuracy of the study. Current methods for thermal stimulation include, but are not limited to, immersing a limb within warm water, using a heating pad, or applying a hot water towel; however, these approaches fail to provide real-time feedback documenting limb “cold spots” and/or display the precise temperature of the studied area. Thus, a localized solution that includes active monitoring and recording of temperature data can help improve the accuracy of nerve conduction studies. Furthermore, customized sleeves that operate in tandem with visual aids and even active warming could provide an even more streamlined and accurate process for nerve conduction study, ultimately ensuring a better outcome for the patient.&lt;/p&gt;</description></item><item><title>Quality Assurance Testing with EEG Electrodes</title><link>https://angelinayyang.github.io/p/rhythmlink/</link><pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/p/rhythmlink/</guid><description>&lt;img src="https://angelinayyang.github.io/p/rhythmlink/cover.png" alt="Featured image of post Quality Assurance Testing with EEG Electrodes" /&gt;&lt;h2 id="summary-slide"&gt;Summary Slide
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/cover.png"
+width="1920"
+height="1080"
+srcset="https://angelinayyang.github.io/p/rhythmlink/cover_hu_93d3995ea5173cd5.png 480w, https://angelinayyang.github.io/p/rhythmlink/cover_hu_de1a8e19e411e56.png 1024w"
+loading="lazy"
+alt="Here is the summary slide."
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;&lt;/p&gt;
+&lt;h2 id="purpose"&gt;Purpose
+&lt;/h2&gt;&lt;p&gt;Simulated testing environments are widely used in both medical and non-medical/consumer markets to assist in product development and testing. Access to repeatable and reproducible testing apparatus that can mimic real world outputs can reduce time and errors during the development stages and provide a more cost-effective method of initial verification than performing the same tests in-vivo.
+Neurological monitoring devices provide a great example of the potential benefits of a simulated test environment. An electroencephalogram (EEG) is a procedure in which multiple small, conductive electrodes are placed on a subject’s scalp in order to record the subject’s brain activity in the form of electric potentials. Currently a typical clinical EEG uses 21 electrodes placed on the patient’s scalp in pre-determined locations based on the international 10-20 system. Each location must be prepped to ensure low contact impedance between the electrode and the patient’s skin; prep usually includes a mild abrasion with exfoliating gel as well as the application of a highly conductive paste. Once the electrodes are applied to the patient’s scalp, an impedance check will be performed to ensure each electrode location is below 10kΩ, and preferably below 5kΩ.&lt;/p&gt;
+&lt;p&gt;Upon a successful impedance measurement, an EEG montage will be set up in the clinical software to determine what data to record. An observed EEG signal is the potential difference between two electrode locations, and the montage determines which electrode pairs will be compared. For example, the signal of an electrode at site C3 may be subtracted from the signal of an electrode at site F3 for a montage of F3-C3. This difference is what will be displayed on the screen as the “signal” and is monitored at a particular frequency based on hardware and software characteristics.&lt;/p&gt;
+&lt;p&gt;Variables that may affect the signals displayed during an EEG include but are not limited to, electrode-to-skin impedance, impedance mismatching, patient movement or muscle artifacts, electrode or leadwire movement, environmental conditions and artifacts, etc. Inconsistencies during EEG setup such as accuracy of electrode placement, amount of conductive paste applied, and abrasion techniques may affect the successfulness of signal capture as well. In addition to these clinical variables, in a product development scenario, subject variability also plays an important role in producing reliable and repeatable test results.
+Given the time, complexity, and amount of variables that may affect the outcome of an EEG, it’s easy to see how a repeatable and reproducible test method for producing and capturing EEG data could help streamline product development.&lt;/p&gt;
+&lt;h2 id="bill-of-materials-bom"&gt;Bill of Materials (BOM)
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: center"&gt;Component&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Quantity&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Source&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Cost Per Unit&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;MCP3008-I/P MCP3008 8-Channel 10-Bit A/D Converters (pack of 4)&lt;/td&gt;
+&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://www.amazon.com/Juried-Engineering-MCP3008-I-Converters-Breadboard-Friendly/dp/B08HH1YB46" target="_blank" rel="noopener"
+&gt;Amazon&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$3.12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;Raspberry Pi 5&lt;/td&gt;
+&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://a.co/d/cDMw8fp" target="_blank" rel="noopener"
+&gt;Amazon&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$93.91&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;Conductive Silicone Polymer 140cmX140cm&lt;/td&gt;
+&lt;td style="text-align: center"&gt;2&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;em&gt;Rhythmlink&lt;/em&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;N/A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;5inch Resistive Touch Screen LCD (800x480)&lt;/td&gt;
+&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://www.waveshare.com/5inch-HDMI-LCD-B.htm" target="_blank" rel="noopener"
+&gt;Waveshare&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$52.99&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;TCA9548APWR I2C Multiplexer&lt;/td&gt;
+&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://www.digikey.com/en/products/detail/texas-instruments/TCA9548APWR/3615458" target="_blank" rel="noopener"
+&gt;Digikey&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$6.95&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;MCP4728 SMD Digital-to-Analog Converter&lt;/td&gt;
+&lt;td style="text-align: center"&gt;6&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://www.digikey.com/en/products/detail/microchip-technology/MCP47CVB08-20E-ST/14565703" target="_blank" rel="noopener"
+&gt;Digikey&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$2.50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;10kΩ Resistor SMD&lt;/td&gt;
+&lt;td style="text-align: center"&gt;24&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://www.digikey.com/en/products/detail/yageo/RC0603FR-1310KL/12756437?gclsrc=aw.ds&amp;amp;&amp;amp;utm_adgroup=Yageo&amp;amp;utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=PMax%2520Shopping_Supplier_Yageo&amp;amp;utm_term=&amp;amp;utm_content=Yageo&amp;amp;utm_id=go_cmp-17816160916_adg-_ad-__dev-c_ext-_prd-12756437_sig-Cj0KCQjwkZm_BhDrARIsAAEbX1GcpxlbON39Y_XcKtH9hMcIOqrQUDgvZBVQ528ILB-zckAXLBPtfwIaAqxdEALw_wcB&amp;amp;gad_source=1&amp;amp;gclid=Cj0KCQjwkZm_BhDrARIsAAEbX1GcpxlbON39Y_XcKtH9hMcIOqrQUDgvZBVQ528ILB-zckAXLBPtfwIaAqxdEALw_wcB&amp;amp;gclsrc=aw.ds" target="_blank" rel="noopener"
+&gt;Digikey&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$0.10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;Head Pin to Touch Proof Electrode Adapter&lt;/td&gt;
+&lt;td style="text-align: center"&gt;21&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://shop.openbci.com/products/touch-proof-electrode-cable-adapter" target="_blank" rel="noopener"
+&gt;OpenBCI&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$2.99&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;Conductive Scalp Material (e.g. silicone)&lt;/td&gt;
+&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;em&gt;Rhythmlink&lt;/em&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;N/A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="determining-electrode-number-mapping"&gt;Determining Electrode Number Mapping
+&lt;/h2&gt;&lt;p&gt;Below is the workflow for determining the above number mapping from scratch if the inner wiring of the analog output PCB board to the outputs has been done:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Turn on the Raspberry Pi and connect a display.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connect the Raspberry Pi to a local WiFi network and check the IP address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On another computer, SSH into the Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;3a. Username: “rhythmlink”&lt;/p&gt;
+&lt;p&gt;3b. Password: “Rhythmlink1”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “cd /home/rhythmlink/RHY_NEW/FINAL_SCRIPTS”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “bash _00_ELECTRODE_MAP_FINAL.bash”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One at a time, a 3.3V signal will be output from each electrode, and the terminal output will indicate the electrode number from which it is outputting. Use a multimeter to find this electrode and record the corresponding name in the 10-20 system.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="matrix-calibration"&gt;Matrix Calibration
+&lt;/h2&gt;&lt;p&gt;Below is the workflow for configuring the Matrix Calibration if the scalp material is changed from the conductive silicone polymer:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Turn on the Raspberry Pi and connect a display.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connect the Raspberry Pi to a local WiFi network and check the IP address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On another computer, SSH into the Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;3a. Username: “rhythmlink”&lt;/p&gt;
+&lt;p&gt;3b. Password: “Rhythmlink1”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “cd /home/rhythmlink/RHY_NEW/FINAL_SCRIPTS”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ensure that a function set of 21 electrodes is set up with the head phantom.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “bash _01_CALIBRATE_FINAL.bash”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="ai-training"&gt;AI Training
+&lt;/h2&gt;&lt;p&gt;Below is the workflow for re-training the AI:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Turn on the Raspberry Pi and connect a display.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connect the Raspberry Pi to a local WiFi network and check the IP address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On another computer, SSH into the Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;3a. Username: “rhythmlink”&lt;/p&gt;
+&lt;p&gt;3b. Password: “Rhythmlink1”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “cd /home/rhythmlink/RHY_NEW/FINAL_SCRIPTS”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ensure that a functional set of 21 electrodes is set up with the head phantom.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “_02_TRAIN_FINAL.bash”.&lt;/p&gt;
+&lt;p&gt;6a. When prompted for a label name, give a name that you will remember corresponds to functional electrodes, such as “success”, “working”, or “functional.”&lt;/p&gt;
+&lt;p&gt;6b. When prompted for electrode numbers, give the electrode numbers corresponding to the electrodes that you have just attached, comma-separated with no spaces. For example, if you have just attached a full set of 21 electrodes, write “0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Repeat steps 5-6, switching out the electrodes for different types of defective electrodes, giving each a descriptive label name that you will remember and the electrode numbers that correspond to the electrodes where you have attached the defective ones.
+When prompted for a label name, now that you have finished collecting all the data, you can type “no” and the model training will run.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="quality-assurance-testing-of-new-electrodes"&gt;Quality Assurance Testing of New Electrodes
+&lt;/h2&gt;&lt;p&gt;Below is the workflow for using the trained AI model to predict any defects in a new set of 21 electrodes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Turn on the Raspberry Pi and connect a display.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connect the Raspberry Pi to a local WiFi network and check the IP address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On another computer, SSH into the Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;3a. Username: “rhythmlink”&lt;/p&gt;
+&lt;p&gt;3b. Password: “Rhythmlink1”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “cd /home/rhythmlink/RHY_NEW/FINAL_SCRIPTS”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ensure that a functional set of 21 electrodes is set up with the head phantom.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “_03_RUN_FINAL.bash”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When prompted for electrode numbers, give the electrode numbers corresponding to the electrodes that you have just attached, comma-separated with no spaces. For example, if you have just attached a full set of 21 electrodes, write “0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When the application window has opened, click the button on the touchscreen to run the test and see the results! Note that it may take several minutes for the LLM natural language summary to populate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="final-prototype-development"&gt;Final Prototype Development
+&lt;/h2&gt;&lt;h3 id="head-phantom"&gt;Head Phantom
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;The CAD for the prototype consisted of modeling a head phantom, touch screen display case, and two circuit boards using Fusion 360 and KiCAD.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To ensure precision and ease of production, we decided to 3D print the head phantom, a deviation from traditional approaches of injection molding&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;. This allowed for precise touch-proof electrode adapters to produce from the head phantom, as well as sturdy electronics casing for a Raspberry Pi, circuit boards, and electrodes, and wiring in the lumen of the head phantom.&lt;/p&gt;
+&lt;p&gt;In addition to “lollipop” shaped slits tangent to the head at points aligning with the 10-20 Standard, for electrodes that are not clamped down, we used a string that loops through the inner webbed electrodes on different sides of the head to hold them tightly in place.&lt;/p&gt;
+&lt;p&gt;The head phantom was made in a shape as close to a real human head as possible to ensure a realistic simulated testing environment that would detect potential issues or defects with electrodes during the quality assurance process.
+You can access the Fusion 360 model &lt;a class="link" href="https://a360.co/4cvf0zE" target="_blank" rel="noopener"
+&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/3D_head_model.png"
+width="1122"
+height="816"
+srcset="https://angelinayyang.github.io/p/rhythmlink/3D_head_model_hu_295735568493def6.png 480w, https://angelinayyang.github.io/p/rhythmlink/3D_head_model_hu_417a70d333e8b2e0.png 1024w"
+loading="lazy"
+alt="Head phantom separated to show top and bottom hemisphere, LCD mount"
+class="gallery-image"
+data-flex-grow="137"
+data-flex-basis="330px"
+&gt;&lt;/p&gt;
+&lt;p&gt;To secure the various ‘prongs’ of the conductive silicone polymer to the head, a set of twelve clamps was developed. Each clamp contains a label according to the 10-20 Standard, two M3 threaded holes, and an impressment for the outer electrode.&lt;/p&gt;
+&lt;center&gt;
+&lt;img src="../rhythmlink/clamp.png" width=500 &gt;
+&lt;/center&gt;
+&lt;h3 id="silicone-polymer-wrapping"&gt;Silicone Polymer Wrapping
+&lt;/h3&gt;&lt;p&gt;To implement a suitable silicone cut-out that can tightly ‘wrap’ around the head phantom, minimize scrunching, and effectively cover each of the electrodes, we initially looked into using map projections, which are used to portray spherical shapes in 2D. Thus, we created a snowflake design.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/cuttle.png"
+width="1600"
+height="795"
+srcset="https://angelinayyang.github.io/p/rhythmlink/cuttle_hu_7038f41565b9fa49.png 480w, https://angelinayyang.github.io/p/rhythmlink/cuttle_hu_fec4b3faddbf648d.png 1024w"
+loading="lazy"
+alt="‘Snowflake’ design in Cuttle"
+class="gallery-image"
+data-flex-grow="201"
+data-flex-basis="483px"
+&gt;&lt;/p&gt;
+&lt;p&gt;To simulate the positional accuracy of each of the snowflake prongs, we used cloth simulations in Blender on top of the existing head phantom CAD model. Then, we adjusted the Cuttle file as needed.&lt;/p&gt;
+&lt;video width="685" height="445" controls&gt;
+&lt;source src="../rhythmlink/cloth_sim.mp4#t=2,8" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;p&gt;We initially explored using complex boolean operations (subtract/combine) in Blender to physically embed the snowflake design into the head phantom. However, with the development of the silicone clamps, we ultimately decided to keep the head phantom in its original state.&lt;/p&gt;
+&lt;p&gt;To cut out the snowflake, we used an Epilog CO2 laser cutter with the following settings: &lt;strong&gt;15% speed, 100% power, and 100% frequency&lt;/strong&gt;. We ran the job twice to ensure the laser fully penetrated the material.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/cover.JPG"
+width="5712"
+height="4284"
+srcset="https://angelinayyang.github.io/p/rhythmlink/cover_hu_72aaf798ffe943b8.JPG 480w, https://angelinayyang.github.io/p/rhythmlink/cover_hu_1371433ba9a02442.JPG 1024w"
+loading="lazy"
+alt="Fully-scaled snowflake after laser cutting with listed settings above"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+&gt;&lt;/p&gt;
+&lt;h3 id="assembly"&gt;Assembly
+&lt;/h3&gt;&lt;p&gt;The EEG Electrode Testbed was assembled in the following order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Place microcontrollers into the casing.&lt;/li&gt;
+&lt;li&gt;Insert screws to fasten the microcontroller into the base of the head.&lt;/li&gt;
+&lt;li&gt;Wire microcontroller to the digital-to-analog board and analog-to-digital board, as well as the screen.&lt;/li&gt;
+&lt;li&gt;Inserting the electrodes from the head phantom’s interior, install the first set of electrodes.&lt;/li&gt;
+&lt;li&gt;Stretch the silicone over each electrode.&lt;/li&gt;
+&lt;li&gt;Apply silicone paste to each electrode of the second electrode set.&lt;/li&gt;
+&lt;li&gt;Insert the exterior electrode into the clamp.&lt;/li&gt;
+&lt;li&gt;Screw the clamp(s) into their respective positions on the head, ensuring sufficient contact between the silicone and the electrodes.&lt;/li&gt;
+&lt;li&gt;Screw the screen onto the front of the casing.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="electronics-amplifying-the-signal"&gt;Electronics: Amplifying the Signal
+&lt;/h3&gt;&lt;p&gt;After 20+ iterations of the circuit board designs, we arrived at two double-sided PCB boards that allow the Raspberry Pi to interface with the analog-to-digital and digital-to-analog converter chips, as well as an I2C multiplexer. KiCad, an open-source PCB CAD program, was utilized in tandem with Fab Academy’s footprint and symbol library in order to develop these boards. We produced one PCB in-house and ordered one from PCBWay.&lt;/p&gt;
+&lt;h4 id="analog-to-digital-converter-board"&gt;Analog-to-Digital Converter Board
+&lt;/h4&gt;&lt;p&gt;The Raspberry Pi 5 does not have built-in analog input capabilities on its GPIO pins. Thus, to convert the electrodes’ analog signals to digital, which can be effectively processed by the Pi, an analog-to-digital board was developed using the MCP3008 digital-to-analog converter chip. Each MCP3008 has eight input channels, and each channel is paired with a 10K ohm pull-down resistor.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/adc_schematic.png"
+width="1112"
+height="680"
+srcset="https://angelinayyang.github.io/p/rhythmlink/adc_schematic_hu_22f35c26c8c5f5fd.png 480w, https://angelinayyang.github.io/p/rhythmlink/adc_schematic_hu_4932c32bf5f478bc.png 1024w"
+loading="lazy"
+alt="Schematic for the analog to digital converter board in Kicad"
+class="gallery-image"
+data-flex-grow="163"
+data-flex-basis="392px"
+&gt;&lt;/p&gt;
+&lt;p&gt;The board was routed with two copper layers, F.Cu and B.Cu.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/adc_layout.png"
+width="1080"
+height="738"
+srcset="https://angelinayyang.github.io/p/rhythmlink/adc_layout_hu_7c64d78ac4130889.png 480w, https://angelinayyang.github.io/p/rhythmlink/adc_layout_hu_124641b3cd544b91.png 1024w"
+loading="lazy"
+alt="Tool paths visualized: red and blue indicate traces, yellow indicates silkscreen, and white indicates edge cuts"
+class="gallery-image"
+data-flex-grow="146"
+data-flex-basis="351px"
+&gt;&lt;/p&gt;
+&lt;p&gt;This board was manufactured by PCBWay and assembled in-house.&lt;/p&gt;
+&lt;p&gt;**&lt;/p&gt;
+&lt;h4 id="digital-to-analog-converter-board"&gt;Digital-to-Analog Converter Board
+&lt;/h4&gt;&lt;p&gt;Contrarily, to output analog signals from the Raspberry Pi, a digital-to-analog converter board was designed using the MCP4728 digital-to-analog converter chip and a TCA9548A 1-to-8 I2C multiplexer breakout. Each MCP4728 has four output channels.&lt;/p&gt;
+&lt;p&gt;The first iteration involved utilizing embedded circuits, or mounting the MCP4728 and the TCA9548A directly onto the PCB.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/first_it_schematic.png"
+width="1198"
+height="1088"
+srcset="https://angelinayyang.github.io/p/rhythmlink/first_it_schematic_hu_3434d61bcb5e3914.png 480w, https://angelinayyang.github.io/p/rhythmlink/first_it_schematic_hu_461831b53cf49f81.png 1024w"
+loading="lazy"
+alt="Embedded circuit schematic in KiCad"
+class="gallery-image"
+data-flex-grow="110"
+data-flex-basis="264px"
+&gt;&lt;/p&gt;
+&lt;p&gt;Similar to the analog-to-digital converter board, the digital-to-analog converter board necessitated a two-sided PCB.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/first_it_layout.png"
+width="1144"
+height="686"
+srcset="https://angelinayyang.github.io/p/rhythmlink/first_it_layout_hu_62d97640aca3e807.png 480w, https://angelinayyang.github.io/p/rhythmlink/first_it_layout_hu_563668db57fd93a0.png 1024w"
+loading="lazy"
+alt="Tool paths visualized for the embedded circuit iteration"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="400px"
+&gt;&lt;/p&gt;
+&lt;p&gt;Due to the sheer size of each chip, this board was produced and assembled at a domestic PCB company called &lt;a class="link" href="https://u-fab.co/" target="_blank" rel="noopener"
+&gt;uFab&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/first_it_manufactured.png"
+width="1086"
+height="810"
+srcset="https://angelinayyang.github.io/p/rhythmlink/first_it_manufactured_hu_20d7b12b01bf0700.png 480w, https://angelinayyang.github.io/p/rhythmlink/first_it_manufactured_hu_5ee99a32dc68e1f3.png 1024w"
+loading="lazy"
+alt="Manufactured and assembled embedded circuit PCB"
+class="gallery-image"
+data-flex-grow="134"
+data-flex-basis="321px"
+&gt;&lt;/p&gt;
+&lt;h2 id="software"&gt;Software
+&lt;/h2&gt;&lt;p&gt;The EEG testbed prototype applies two networking and communications: SPI and I2C. To interface with the MCP3008 Digital-to-Analog Converters from the Raspberry Pi 5, SPI protocol was implemented over one bus with three Chip Select pins. The adafruit_mcp3xxx.mcp3008 Python library was used to implement this communication. To interface with the MCP4728 Analog-to-Digital Converters from the Raspberry Pi 5, I2C protocol was implemented with a TCA9548A I2C Multiplexer to allow for communication to six MCP4728 chips from a single I2C channel.&lt;/p&gt;
+&lt;h3 id="artificial-intelligence"&gt;Artificial Intelligence
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;The system architecture consists of Specialist, Generalist, &amp;amp; Synthesizer Models&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The AI-driven approach was expanded to use neural networks trained with specialized datasets to make them more accurate at specific tasks, such as diagnosing defects in a specific electrode pair. In tandem, we trained generalist neural networks that are trained on data from all different electrode pairs and can diagnose defects in any pair of electrodes. And finally, we utilized a synthesizer model, an LLM that takes the output of these specialist and generalist models to diagnose manufacturing issues that have occurred in the electrode set as a whole. This leads to 21 specialist networks + 1 generalist network + 1 synthesizer LLM = 23 neural AI agents, 22 of which were hyper-parameter tuned using a grid-search algorithm.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Model Architecture&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Specialist AI models’ hidden layers: 16x64x64x64 – ReLU + Softmax for output layer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Generalist AI model’s hidden layer&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;: 16x[64,128]x[64, 128]x[64, 128] – ReLU + Softmax for output layer&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of these neural networks were trained using the ‘Adam’ optimizer and ‘Cross-Entropy Loss’ as the loss function for the model. It was run for 100 epochs with a validation split of 0.2 and batch size of 32 for the specialist models and 16 for the generalist model. The exact number of data points depends on the calibration results. This yielded a model with ~84% accuracy.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/Ai-train-results.png"
+width="1693"
+height="314"
+srcset="https://angelinayyang.github.io/p/rhythmlink/Ai-train-results_hu_ee1284ade803cbd3.png 480w, https://angelinayyang.github.io/p/rhythmlink/Ai-train-results_hu_a168ff8a62456dfb.png 1024w"
+loading="lazy"
+alt="AI training results yielding 84% accuracy"
+class="gallery-image"
+data-flex-grow="539"
+data-flex-basis="1294px"
+&gt;&lt;/p&gt;
+&lt;p&gt;The synthesizer AI model was then created using Meta&amp;rsquo;s LLama 2.7 billion parameter LLM to diagnose overall issues with the EEG electrodes and generate a prompt summary.&lt;/p&gt;
+&lt;p&gt;After several iterations of prompt engineering, we landed on this script for LLM Prompt Generation, finding that it yields the most consistent and comprehensive results while minimizing hallucinations&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/prompt_generation.png"
+width="2238"
+height="564"
+srcset="https://angelinayyang.github.io/p/rhythmlink/prompt_generation_hu_d2392c8c995679ab.png 480w, https://angelinayyang.github.io/p/rhythmlink/prompt_generation_hu_79b02f3e7247ad68.png 1024w"
+loading="lazy"
+alt="LLM prompt generation definition"
+class="gallery-image"
+data-flex-grow="396"
+data-flex-basis="952px"
+&gt;&lt;/p&gt;
+&lt;h4 id="signal-replication-for-defective-electrodes"&gt;Signal Replication for Defective Electrodes
+&lt;/h4&gt;&lt;p&gt;Although the Specialist AI Models are designed to train specifically to detect defects in the manufacturing process for specific electrodes, i.e. FP1 or C4, our training dataset only included data collected from the 1-3 electrodes provided per bad sample. For these datasets, predominantly for defective electrodes, that did not contain data for several electrode channels, the data was copied around the head to the different electrode positions to enable the specialist models to complete their training with defective data in addition to the existing functional electrode data. No code change is required to train on a full set of 21 defective electrodes if this becomes available.&lt;/p&gt;
+&lt;h4 id="matrix-calibration-1"&gt;Matrix Calibration
+&lt;/h4&gt;&lt;p&gt;Referencing the matrix calculations run by several previous attempts&lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt; at creating EEG testbeds, we came up with the following process:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/matrix.png"
+width="1484"
+height="1196"
+srcset="https://angelinayyang.github.io/p/rhythmlink/matrix_hu_19db46277bbafaf.png 480w, https://angelinayyang.github.io/p/rhythmlink/matrix_hu_c8ee4dd4fec5728c.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="124"
+data-flex-basis="297px"
+&gt;&lt;/p&gt;
+&lt;p&gt;After calculating the matrix &lt;strong&gt;Z&lt;/strong&gt;, applying the same transformation from the input to the output brainwave signal to &lt;strong&gt;Z&lt;/strong&gt; returns the original brainwave, which comes as close to a simulated testing environment as possible where the EEG data generated by the MATLAB library is approximated by the signal distorted after being sent through the conductive silicone polymer.&lt;/p&gt;
+&lt;p&gt;These calculations were implemented using the &lt;a class="link" href="https://numpy.org/" target="_blank" rel="noopener"
+&gt;NumPy Python library&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="prototype-testing"&gt;Prototype Testing
+&lt;/h2&gt;&lt;p&gt;After completing the prototype, we conducted a blind test to ensure the functionality of the prototype. One person did not look at the electrodes and solely controlled the touchscreen the SSH terminal, while the other person used a random number generator to select either one of different types of defective electrodes or a set of broken electrodes, and indicated to the other person the electrode numbers to test. Then, after running the test, the predicted results were recorded and verified against the actual results. The predictions were all accurate, demonstrating that the prototype works!&lt;/p&gt;
+&lt;h3 id="electrode-callibration"&gt;Electrode Callibration
+&lt;/h3&gt;&lt;p&gt;In the calibration, we can visualize all of the read values through the silicone polymer.&lt;/p&gt;
+&lt;center&gt;
+&lt;img src="../rhythmlink/all21.png" width=500 &gt;
+&lt;/center&gt;
+&lt;h3 id="diagnosis"&gt;Diagnosis
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Defective Electrode&lt;/strong&gt;&lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;video width="685" height="445" controls&gt;
+&lt;source src="../rhythmlink/defective.MOV" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;p&gt;&lt;strong&gt;Functional Electrode&lt;/strong&gt;&lt;/p&gt;
+&lt;video width="685" height="445" controls&gt;
+&lt;source src="../rhythmlink/functional.MOV" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;h2 id="next-steps"&gt;Next Steps
+&lt;/h2&gt;&lt;p&gt;The next steps to address in improving the prototype are as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Include a much larger dataset of defective electrode signals labeled with different kinds of defects – can be used to fine-tune an LLM for accurate diagnosis.&lt;/li&gt;
+&lt;li&gt;Simplify wire management inside of the 3D printed head phantom.&lt;/li&gt;
+&lt;li&gt;Transition from using embedded circuits to integrated circuits on the custom PCB board to minimize space taken up and copper costs.&lt;/li&gt;
+&lt;li&gt;If a dedicated server with a GPU is able to run code to support the EEG Testbed, the code already exists in the GitHub Repo to interface over WiFi with a server locally hosting the Llama LLM, minimizing the time it takes for a natural text summary to generate from running directly on the Raspberry Pi’s CPU.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.researchgate.net/publication/339697951_Design_and_Demonstration_of_a_Head_Phantom_for_Testing_of_Electroencephalography_EEG_Equipment" target="_blank" rel="noopener"
+&gt;Audette, William E., et. al.&lt;/a&gt;&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;“[64,128]” indicates that the grid-search algorithm determined whether these hidden layers contained 64 or 128 neurons. All of these layers implemented the ReLU activation function.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;&lt;a class="link" href="https://arstechnica.com/information-technology/2023/04/why-ai-chatbots-are-the-ultimate-bs-machines-and-how-people-hope-to-fix-them/" target="_blank" rel="noopener"
+&gt;Edwards, Benj.&lt;/a&gt;&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.researchgate.net/publication/230714956_Creation_of_a_Human_Head_Phantom_for_Testing_of_Electroencephalography_Equipment_and_Techniques" target="_blank" rel="noopener"
+&gt;Collier, Thomas J., PhD, et. al.&lt;/a&gt;&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;Note that the defect is replicated across all 21 electrodes.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item></channel></rss>

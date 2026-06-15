@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Angelina's Internet Corner</title><link>https://angelinayyang.github.io/</link><description>Recent content on Angelina's Internet Corner</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://angelinayyang.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Exploring E-Textiles and Embroidery</title><link>https://angelinayyang.github.io/p/exploring-e-textiles-and-embroidery/</link><pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/p/exploring-e-textiles-and-embroidery/</guid><description/></item><item><title>Trichy</title><link>https://angelinayyang.github.io/p/trichy/</link><pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/p/trichy/</guid><description/></item><item><title>Temperature-Monitoring and PID-Controlled Heating Sleeve</title><link>https://angelinayyang.github.io/p/temperature-monitoring-and-pid-controlled-heating-sleeve/</link><pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/p/temperature-monitoring-and-pid-controlled-heating-sleeve/</guid><description>&lt;h2 id="summary-slide"&gt;Summary Slide
+&lt;/h2&gt;&lt;h2 id="purpose"&gt;Purpose
+&lt;/h2&gt;&lt;p&gt;Widely used within the medical field, electrodiagnostic tests are a non-invasive mechanism that utilizes stimulated electrical signals to assess the functionality of nerves and muscles within the human body. Nerve Conduction Study (NCS) is a low-risk example of an electrodiagnostic test that assesses the speed at which an electrical impulse travels through an individual nerve. Used to diagnose conditions such as Carpal Tunnel Syndrome (CTS), Guillain-Barré syndrome, and neuropathy/nerve damage, NCS is paramount in the assessment of the peripheral nervous system. To begin the procedure, several electrode patches are placed on the skin to stimulate the nerve conduction. One electrode (cathode) acts as an active simulator, inducing a mild electrical impulse that depolarizes and excites the underlying nerve fibers. A second electrode (anode), the inactive simulator, provides a return path for the electrical signal and reduces stimulus artifacts. A third electrode records the resulting electrical activity; the speed of the signal is determined by measuring the distance between electrodes and the corresponding time it takes for impulses to travel between them.&lt;/p&gt;
+&lt;p&gt;Temperature is a major physiological factor that may affect the signals displayed during NCS. The speed at which nerve fibers conduct electrical impulses decreases by 1.5-2.5 m/s for every 1ºC drop in temperature, thereby causing discrepancies in nerve conduction values such as amplitude, distal latency, conduction velocity, and duration in both motor and sensory studies. Changes in these clinical variables due to cold limbs can skew test results, produce potential misdiagnoses, and ultimately delay intervention. Therefore, maintaining a skin surface temperature between 32ºC and 34ºC ensures the standardization and holistic accuracy of the study. Current methods for thermal stimulation include, but are not limited to, immersing a limb within warm water, using a heating pad, or applying a hot water towel; however, these approaches fail to provide real-time feedback documenting limb “cold spots” and/or display the precise temperature of the studied area. Thus, a localized solution that includes active monitoring and recording of temperature data can help improve the accuracy of nerve conduction studies. Furthermore, customized sleeves that operate in tandem with visual aids and even active warming could provide an even more streamlined and accurate process for nerve conduction study, ultimately ensuring a better outcome for the patient.&lt;/p&gt;</description></item><item><title>Quality Assurance Testing with EEG Electrodes</title><link>https://angelinayyang.github.io/p/rhythmlink/</link><pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/p/rhythmlink/</guid><description>&lt;img src="https://angelinayyang.github.io/p/rhythmlink/cover.png" alt="Featured image of post Quality Assurance Testing with EEG Electrodes" /&gt;&lt;h2 id="summary-slide"&gt;Summary Slide
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/cover.png"
+width="1920"
+height="1080"
+srcset="https://angelinayyang.github.io/p/rhythmlink/cover_hu_93d3995ea5173cd5.png 480w, https://angelinayyang.github.io/p/rhythmlink/cover_hu_de1a8e19e411e56.png 1024w"
+loading="lazy"
+alt="Here is the summary slide."
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;&lt;/p&gt;
+&lt;h2 id="purpose"&gt;Purpose
+&lt;/h2&gt;&lt;p&gt;Simulated testing environments are widely used in both medical and non-medical/consumer markets to assist in product development and testing. Access to repeatable and reproducible testing apparatus that can mimic real world outputs can reduce time and errors during the development stages and provide a more cost-effective method of initial verification than performing the same tests in-vivo.
+Neurological monitoring devices provide a great example of the potential benefits of a simulated test environment. An electroencephalogram (EEG) is a procedure in which multiple small, conductive electrodes are placed on a subject’s scalp in order to record the subject’s brain activity in the form of electric potentials. Currently a typical clinical EEG uses 21 electrodes placed on the patient’s scalp in pre-determined locations based on the international 10-20 system. Each location must be prepped to ensure low contact impedance between the electrode and the patient’s skin; prep usually includes a mild abrasion with exfoliating gel as well as the application of a highly conductive paste. Once the electrodes are applied to the patient’s scalp, an impedance check will be performed to ensure each electrode location is below 10kΩ, and preferably below 5kΩ.&lt;/p&gt;
+&lt;p&gt;Upon a successful impedance measurement, an EEG montage will be set up in the clinical software to determine what data to record. An observed EEG signal is the potential difference between two electrode locations, and the montage determines which electrode pairs will be compared. For example, the signal of an electrode at site C3 may be subtracted from the signal of an electrode at site F3 for a montage of F3-C3. This difference is what will be displayed on the screen as the “signal” and is monitored at a particular frequency based on hardware and software characteristics.&lt;/p&gt;
+&lt;p&gt;Variables that may affect the signals displayed during an EEG include but are not limited to, electrode-to-skin impedance, impedance mismatching, patient movement or muscle artifacts, electrode or leadwire movement, environmental conditions and artifacts, etc. Inconsistencies during EEG setup such as accuracy of electrode placement, amount of conductive paste applied, and abrasion techniques may affect the successfulness of signal capture as well. In addition to these clinical variables, in a product development scenario, subject variability also plays an important role in producing reliable and repeatable test results.
+Given the time, complexity, and amount of variables that may affect the outcome of an EEG, it’s easy to see how a repeatable and reproducible test method for producing and capturing EEG data could help streamline product development.&lt;/p&gt;
+&lt;h2 id="bill-of-materials-bom"&gt;Bill of Materials (BOM)
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: center"&gt;Component&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Quantity&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Source&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Cost Per Unit&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;MCP3008-I/P MCP3008 8-Channel 10-Bit A/D Converters (pack of 4)&lt;/td&gt;
+&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://www.amazon.com/Juried-Engineering-MCP3008-I-Converters-Breadboard-Friendly/dp/B08HH1YB46" target="_blank" rel="noopener"
+&gt;Amazon&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$3.12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;Raspberry Pi 5&lt;/td&gt;
+&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://a.co/d/cDMw8fp" target="_blank" rel="noopener"
+&gt;Amazon&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$93.91&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;Conductive Silicone Polymer 140cmX140cm&lt;/td&gt;
+&lt;td style="text-align: center"&gt;2&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;em&gt;Rhythmlink&lt;/em&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;N/A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;5inch Resistive Touch Screen LCD (800x480)&lt;/td&gt;
+&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://www.waveshare.com/5inch-HDMI-LCD-B.htm" target="_blank" rel="noopener"
+&gt;Waveshare&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$52.99&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;TCA9548APWR I2C Multiplexer&lt;/td&gt;
+&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://www.digikey.com/en/products/detail/texas-instruments/TCA9548APWR/3615458" target="_blank" rel="noopener"
+&gt;Digikey&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$6.95&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;MCP4728 SMD Digital-to-Analog Converter&lt;/td&gt;
+&lt;td style="text-align: center"&gt;6&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://www.digikey.com/en/products/detail/microchip-technology/MCP47CVB08-20E-ST/14565703" target="_blank" rel="noopener"
+&gt;Digikey&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$2.50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;10kΩ Resistor SMD&lt;/td&gt;
+&lt;td style="text-align: center"&gt;24&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://www.digikey.com/en/products/detail/yageo/RC0603FR-1310KL/12756437?gclsrc=aw.ds&amp;amp;&amp;amp;utm_adgroup=Yageo&amp;amp;utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=PMax%2520Shopping_Supplier_Yageo&amp;amp;utm_term=&amp;amp;utm_content=Yageo&amp;amp;utm_id=go_cmp-17816160916_adg-_ad-__dev-c_ext-_prd-12756437_sig-Cj0KCQjwkZm_BhDrARIsAAEbX1GcpxlbON39Y_XcKtH9hMcIOqrQUDgvZBVQ528ILB-zckAXLBPtfwIaAqxdEALw_wcB&amp;amp;gad_source=1&amp;amp;gclid=Cj0KCQjwkZm_BhDrARIsAAEbX1GcpxlbON39Y_XcKtH9hMcIOqrQUDgvZBVQ528ILB-zckAXLBPtfwIaAqxdEALw_wcB&amp;amp;gclsrc=aw.ds" target="_blank" rel="noopener"
+&gt;Digikey&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$0.10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;Head Pin to Touch Proof Electrode Adapter&lt;/td&gt;
+&lt;td style="text-align: center"&gt;21&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;a class="link" href="https://shop.openbci.com/products/touch-proof-electrode-cable-adapter" target="_blank" rel="noopener"
+&gt;OpenBCI&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$2.99&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;Conductive Scalp Material (e.g. silicone)&lt;/td&gt;
+&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;em&gt;Rhythmlink&lt;/em&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;N/A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="determining-electrode-number-mapping"&gt;Determining Electrode Number Mapping
+&lt;/h2&gt;&lt;p&gt;Below is the workflow for determining the above number mapping from scratch if the inner wiring of the analog output PCB board to the outputs has been done:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Turn on the Raspberry Pi and connect a display.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connect the Raspberry Pi to a local WiFi network and check the IP address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On another computer, SSH into the Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;3a. Username: “rhythmlink”&lt;/p&gt;
+&lt;p&gt;3b. Password: “Rhythmlink1”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “cd /home/rhythmlink/RHY_NEW/FINAL_SCRIPTS”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “bash _00_ELECTRODE_MAP_FINAL.bash”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One at a time, a 3.3V signal will be output from each electrode, and the terminal output will indicate the electrode number from which it is outputting. Use a multimeter to find this electrode and record the corresponding name in the 10-20 system.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="matrix-calibration"&gt;Matrix Calibration
+&lt;/h2&gt;&lt;p&gt;Below is the workflow for configuring the Matrix Calibration if the scalp material is changed from the conductive silicone polymer:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Turn on the Raspberry Pi and connect a display.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connect the Raspberry Pi to a local WiFi network and check the IP address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On another computer, SSH into the Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;3a. Username: “rhythmlink”&lt;/p&gt;
+&lt;p&gt;3b. Password: “Rhythmlink1”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “cd /home/rhythmlink/RHY_NEW/FINAL_SCRIPTS”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ensure that a function set of 21 electrodes is set up with the head phantom.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “bash _01_CALIBRATE_FINAL.bash”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="ai-training"&gt;AI Training
+&lt;/h2&gt;&lt;p&gt;Below is the workflow for re-training the AI:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Turn on the Raspberry Pi and connect a display.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connect the Raspberry Pi to a local WiFi network and check the IP address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On another computer, SSH into the Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;3a. Username: “rhythmlink”&lt;/p&gt;
+&lt;p&gt;3b. Password: “Rhythmlink1”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “cd /home/rhythmlink/RHY_NEW/FINAL_SCRIPTS”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ensure that a functional set of 21 electrodes is set up with the head phantom.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “_02_TRAIN_FINAL.bash”.&lt;/p&gt;
+&lt;p&gt;6a. When prompted for a label name, give a name that you will remember corresponds to functional electrodes, such as “success”, “working”, or “functional.”&lt;/p&gt;
+&lt;p&gt;6b. When prompted for electrode numbers, give the electrode numbers corresponding to the electrodes that you have just attached, comma-separated with no spaces. For example, if you have just attached a full set of 21 electrodes, write “0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Repeat steps 5-6, switching out the electrodes for different types of defective electrodes, giving each a descriptive label name that you will remember and the electrode numbers that correspond to the electrodes where you have attached the defective ones.
+When prompted for a label name, now that you have finished collecting all the data, you can type “no” and the model training will run.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="quality-assurance-testing-of-new-electrodes"&gt;Quality Assurance Testing of New Electrodes
+&lt;/h2&gt;&lt;p&gt;Below is the workflow for using the trained AI model to predict any defects in a new set of 21 electrodes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Turn on the Raspberry Pi and connect a display.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connect the Raspberry Pi to a local WiFi network and check the IP address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On another computer, SSH into the Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;3a. Username: “rhythmlink”&lt;/p&gt;
+&lt;p&gt;3b. Password: “Rhythmlink1”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “cd /home/rhythmlink/RHY_NEW/FINAL_SCRIPTS”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ensure that a functional set of 21 electrodes is set up with the head phantom.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run “_03_RUN_FINAL.bash”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When prompted for electrode numbers, give the electrode numbers corresponding to the electrodes that you have just attached, comma-separated with no spaces. For example, if you have just attached a full set of 21 electrodes, write “0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When the application window has opened, click the button on the touchscreen to run the test and see the results! Note that it may take several minutes for the LLM natural language summary to populate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="final-prototype-development"&gt;Final Prototype Development
+&lt;/h2&gt;&lt;h3 id="head-phantom"&gt;Head Phantom
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;The CAD for the prototype consisted of modeling a head phantom, touch screen display case, and two circuit boards using Fusion 360 and KiCAD.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To ensure precision and ease of production, we decided to 3D print the head phantom, a deviation from traditional approaches of injection molding&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;. This allowed for precise touch-proof electrode adapters to produce from the head phantom, as well as sturdy electronics casing for a Raspberry Pi, circuit boards, and electrodes, and wiring in the lumen of the head phantom.&lt;/p&gt;
+&lt;p&gt;In addition to “lollipop” shaped slits tangent to the head at points aligning with the 10-20 Standard, for electrodes that are not clamped down, we used a string that loops through the inner webbed electrodes on different sides of the head to hold them tightly in place.&lt;/p&gt;
+&lt;p&gt;The head phantom was made in a shape as close to a real human head as possible to ensure a realistic simulated testing environment that would detect potential issues or defects with electrodes during the quality assurance process.
+You can access the Fusion 360 model &lt;a class="link" href="https://a360.co/4cvf0zE" target="_blank" rel="noopener"
+&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/3D_head_model.png"
+width="1122"
+height="816"
+srcset="https://angelinayyang.github.io/p/rhythmlink/3D_head_model_hu_295735568493def6.png 480w, https://angelinayyang.github.io/p/rhythmlink/3D_head_model_hu_417a70d333e8b2e0.png 1024w"
+loading="lazy"
+alt="Head phantom separated to show top and bottom hemisphere, LCD mount"
+class="gallery-image"
+data-flex-grow="137"
+data-flex-basis="330px"
+&gt;&lt;/p&gt;
+&lt;p&gt;To secure the various ‘prongs’ of the conductive silicone polymer to the head, a set of twelve clamps was developed. Each clamp contains a label according to the 10-20 Standard, two M3 threaded holes, and an impressment for the outer electrode.&lt;/p&gt;
+&lt;center&gt;
+&lt;img src="../rhythmlink/clamp.png" width=500 &gt;
+&lt;/center&gt;
+&lt;h3 id="silicone-polymer-wrapping"&gt;Silicone Polymer Wrapping
+&lt;/h3&gt;&lt;p&gt;To implement a suitable silicone cut-out that can tightly ‘wrap’ around the head phantom, minimize scrunching, and effectively cover each of the electrodes, we initially looked into using map projections, which are used to portray spherical shapes in 2D. Thus, we created a snowflake design.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/cuttle.png"
+width="1600"
+height="795"
+srcset="https://angelinayyang.github.io/p/rhythmlink/cuttle_hu_7038f41565b9fa49.png 480w, https://angelinayyang.github.io/p/rhythmlink/cuttle_hu_fec4b3faddbf648d.png 1024w"
+loading="lazy"
+alt="‘Snowflake’ design in Cuttle"
+class="gallery-image"
+data-flex-grow="201"
+data-flex-basis="483px"
+&gt;&lt;/p&gt;
+&lt;p&gt;To simulate the positional accuracy of each of the snowflake prongs, we used cloth simulations in Blender on top of the existing head phantom CAD model. Then, we adjusted the Cuttle file as needed.&lt;/p&gt;
+&lt;video width="685" height="445" controls&gt;
+&lt;source src="../rhythmlink/cloth_sim.mp4#t=2,8" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;p&gt;We initially explored using complex boolean operations (subtract/combine) in Blender to physically embed the snowflake design into the head phantom. However, with the development of the silicone clamps, we ultimately decided to keep the head phantom in its original state.&lt;/p&gt;
+&lt;p&gt;To cut out the snowflake, we used an Epilog CO2 laser cutter with the following settings: &lt;strong&gt;15% speed, 100% power, and 100% frequency&lt;/strong&gt;. We ran the job twice to ensure the laser fully penetrated the material.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/cover.JPG"
+width="5712"
+height="4284"
+srcset="https://angelinayyang.github.io/p/rhythmlink/cover_hu_72aaf798ffe943b8.JPG 480w, https://angelinayyang.github.io/p/rhythmlink/cover_hu_1371433ba9a02442.JPG 1024w"
+loading="lazy"
+alt="Fully-scaled snowflake after laser cutting with listed settings above"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+&gt;&lt;/p&gt;
+&lt;h3 id="assembly"&gt;Assembly
+&lt;/h3&gt;&lt;p&gt;The EEG Electrode Testbed was assembled in the following order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Place microcontrollers into the casing.&lt;/li&gt;
+&lt;li&gt;Insert screws to fasten the microcontroller into the base of the head.&lt;/li&gt;
+&lt;li&gt;Wire microcontroller to the digital-to-analog board and analog-to-digital board, as well as the screen.&lt;/li&gt;
+&lt;li&gt;Inserting the electrodes from the head phantom’s interior, install the first set of electrodes.&lt;/li&gt;
+&lt;li&gt;Stretch the silicone over each electrode.&lt;/li&gt;
+&lt;li&gt;Apply silicone paste to each electrode of the second electrode set.&lt;/li&gt;
+&lt;li&gt;Insert the exterior electrode into the clamp.&lt;/li&gt;
+&lt;li&gt;Screw the clamp(s) into their respective positions on the head, ensuring sufficient contact between the silicone and the electrodes.&lt;/li&gt;
+&lt;li&gt;Screw the screen onto the front of the casing.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="electronics-amplifying-the-signal"&gt;Electronics: Amplifying the Signal
+&lt;/h3&gt;&lt;p&gt;After 20+ iterations of the circuit board designs, we arrived at two double-sided PCB boards that allow the Raspberry Pi to interface with the analog-to-digital and digital-to-analog converter chips, as well as an I2C multiplexer. KiCad, an open-source PCB CAD program, was utilized in tandem with Fab Academy’s footprint and symbol library in order to develop these boards. We produced one PCB in-house and ordered one from PCBWay.&lt;/p&gt;
+&lt;h4 id="analog-to-digital-converter-board"&gt;Analog-to-Digital Converter Board
+&lt;/h4&gt;&lt;p&gt;The Raspberry Pi 5 does not have built-in analog input capabilities on its GPIO pins. Thus, to convert the electrodes’ analog signals to digital, which can be effectively processed by the Pi, an analog-to-digital board was developed using the MCP3008 digital-to-analog converter chip. Each MCP3008 has eight input channels, and each channel is paired with a 10K ohm pull-down resistor.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/adc_schematic.png"
+width="1112"
+height="680"
+srcset="https://angelinayyang.github.io/p/rhythmlink/adc_schematic_hu_22f35c26c8c5f5fd.png 480w, https://angelinayyang.github.io/p/rhythmlink/adc_schematic_hu_4932c32bf5f478bc.png 1024w"
+loading="lazy"
+alt="Schematic for the analog to digital converter board in Kicad"
+class="gallery-image"
+data-flex-grow="163"
+data-flex-basis="392px"
+&gt;&lt;/p&gt;
+&lt;p&gt;The board was routed with two copper layers, F.Cu and B.Cu.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/adc_layout.png"
+width="1080"
+height="738"
+srcset="https://angelinayyang.github.io/p/rhythmlink/adc_layout_hu_7c64d78ac4130889.png 480w, https://angelinayyang.github.io/p/rhythmlink/adc_layout_hu_124641b3cd544b91.png 1024w"
+loading="lazy"
+alt="Tool paths visualized: red and blue indicate traces, yellow indicates silkscreen, and white indicates edge cuts"
+class="gallery-image"
+data-flex-grow="146"
+data-flex-basis="351px"
+&gt;&lt;/p&gt;
+&lt;p&gt;This board was manufactured by PCBWay and assembled in-house.&lt;/p&gt;
+&lt;p&gt;**&lt;/p&gt;
+&lt;h4 id="digital-to-analog-converter-board"&gt;Digital-to-Analog Converter Board
+&lt;/h4&gt;&lt;p&gt;Contrarily, to output analog signals from the Raspberry Pi, a digital-to-analog converter board was designed using the MCP4728 digital-to-analog converter chip and a TCA9548A 1-to-8 I2C multiplexer breakout. Each MCP4728 has four output channels.&lt;/p&gt;
+&lt;p&gt;The first iteration involved utilizing embedded circuits, or mounting the MCP4728 and the TCA9548A directly onto the PCB.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/first_it_schematic.png"
+width="1198"
+height="1088"
+srcset="https://angelinayyang.github.io/p/rhythmlink/first_it_schematic_hu_3434d61bcb5e3914.png 480w, https://angelinayyang.github.io/p/rhythmlink/first_it_schematic_hu_461831b53cf49f81.png 1024w"
+loading="lazy"
+alt="Embedded circuit schematic in KiCad"
+class="gallery-image"
+data-flex-grow="110"
+data-flex-basis="264px"
+&gt;&lt;/p&gt;
+&lt;p&gt;Similar to the analog-to-digital converter board, the digital-to-analog converter board necessitated a two-sided PCB.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/first_it_layout.png"
+width="1144"
+height="686"
+srcset="https://angelinayyang.github.io/p/rhythmlink/first_it_layout_hu_62d97640aca3e807.png 480w, https://angelinayyang.github.io/p/rhythmlink/first_it_layout_hu_563668db57fd93a0.png 1024w"
+loading="lazy"
+alt="Tool paths visualized for the embedded circuit iteration"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="400px"
+&gt;&lt;/p&gt;
+&lt;p&gt;Due to the sheer size of each chip, this board was produced and assembled at a domestic PCB company called &lt;a class="link" href="https://u-fab.co/" target="_blank" rel="noopener"
+&gt;uFab&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/first_it_manufactured.png"
+width="1086"
+height="810"
+srcset="https://angelinayyang.github.io/p/rhythmlink/first_it_manufactured_hu_20d7b12b01bf0700.png 480w, https://angelinayyang.github.io/p/rhythmlink/first_it_manufactured_hu_5ee99a32dc68e1f3.png 1024w"
+loading="lazy"
+alt="Manufactured and assembled embedded circuit PCB"
+class="gallery-image"
+data-flex-grow="134"
+data-flex-basis="321px"
+&gt;&lt;/p&gt;
+&lt;h2 id="software"&gt;Software
+&lt;/h2&gt;&lt;p&gt;The EEG testbed prototype applies two networking and communications: SPI and I2C. To interface with the MCP3008 Digital-to-Analog Converters from the Raspberry Pi 5, SPI protocol was implemented over one bus with three Chip Select pins. The adafruit_mcp3xxx.mcp3008 Python library was used to implement this communication. To interface with the MCP4728 Analog-to-Digital Converters from the Raspberry Pi 5, I2C protocol was implemented with a TCA9548A I2C Multiplexer to allow for communication to six MCP4728 chips from a single I2C channel.&lt;/p&gt;
+&lt;h3 id="artificial-intelligence"&gt;Artificial Intelligence
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;The system architecture consists of Specialist, Generalist, &amp;amp; Synthesizer Models&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The AI-driven approach was expanded to use neural networks trained with specialized datasets to make them more accurate at specific tasks, such as diagnosing defects in a specific electrode pair. In tandem, we trained generalist neural networks that are trained on data from all different electrode pairs and can diagnose defects in any pair of electrodes. And finally, we utilized a synthesizer model, an LLM that takes the output of these specialist and generalist models to diagnose manufacturing issues that have occurred in the electrode set as a whole. This leads to 21 specialist networks + 1 generalist network + 1 synthesizer LLM = 23 neural AI agents, 22 of which were hyper-parameter tuned using a grid-search algorithm.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Model Architecture&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Specialist AI models’ hidden layers: 16x64x64x64 – ReLU + Softmax for output layer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Generalist AI model’s hidden layer&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;: 16x[64,128]x[64, 128]x[64, 128] – ReLU + Softmax for output layer&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of these neural networks were trained using the ‘Adam’ optimizer and ‘Cross-Entropy Loss’ as the loss function for the model. It was run for 100 epochs with a validation split of 0.2 and batch size of 32 for the specialist models and 16 for the generalist model. The exact number of data points depends on the calibration results. This yielded a model with ~84% accuracy.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/Ai-train-results.png"
+width="1693"
+height="314"
+srcset="https://angelinayyang.github.io/p/rhythmlink/Ai-train-results_hu_ee1284ade803cbd3.png 480w, https://angelinayyang.github.io/p/rhythmlink/Ai-train-results_hu_a168ff8a62456dfb.png 1024w"
+loading="lazy"
+alt="AI training results yielding 84% accuracy"
+class="gallery-image"
+data-flex-grow="539"
+data-flex-basis="1294px"
+&gt;&lt;/p&gt;
+&lt;p&gt;The synthesizer AI model was then created using Meta&amp;rsquo;s LLama 2.7 billion parameter LLM to diagnose overall issues with the EEG electrodes and generate a prompt summary.&lt;/p&gt;
+&lt;p&gt;After several iterations of prompt engineering, we landed on this script for LLM Prompt Generation, finding that it yields the most consistent and comprehensive results while minimizing hallucinations&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/prompt_generation.png"
+width="2238"
+height="564"
+srcset="https://angelinayyang.github.io/p/rhythmlink/prompt_generation_hu_d2392c8c995679ab.png 480w, https://angelinayyang.github.io/p/rhythmlink/prompt_generation_hu_79b02f3e7247ad68.png 1024w"
+loading="lazy"
+alt="LLM prompt generation definition"
+class="gallery-image"
+data-flex-grow="396"
+data-flex-basis="952px"
+&gt;&lt;/p&gt;
+&lt;h4 id="signal-replication-for-defective-electrodes"&gt;Signal Replication for Defective Electrodes
+&lt;/h4&gt;&lt;p&gt;Although the Specialist AI Models are designed to train specifically to detect defects in the manufacturing process for specific electrodes, i.e. FP1 or C4, our training dataset only included data collected from the 1-3 electrodes provided per bad sample. For these datasets, predominantly for defective electrodes, that did not contain data for several electrode channels, the data was copied around the head to the different electrode positions to enable the specialist models to complete their training with defective data in addition to the existing functional electrode data. No code change is required to train on a full set of 21 defective electrodes if this becomes available.&lt;/p&gt;
+&lt;h4 id="matrix-calibration-1"&gt;Matrix Calibration
+&lt;/h4&gt;&lt;p&gt;Referencing the matrix calculations run by several previous attempts&lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt; at creating EEG testbeds, we came up with the following process:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/rhythmlink/matrix.png"
+width="1484"
+height="1196"
+srcset="https://angelinayyang.github.io/p/rhythmlink/matrix_hu_19db46277bbafaf.png 480w, https://angelinayyang.github.io/p/rhythmlink/matrix_hu_c8ee4dd4fec5728c.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="124"
+data-flex-basis="297px"
+&gt;&lt;/p&gt;
+&lt;p&gt;After calculating the matrix &lt;strong&gt;Z&lt;/strong&gt;, applying the same transformation from the input to the output brainwave signal to &lt;strong&gt;Z&lt;/strong&gt; returns the original brainwave, which comes as close to a simulated testing environment as possible where the EEG data generated by the MATLAB library is approximated by the signal distorted after being sent through the conductive silicone polymer.&lt;/p&gt;
+&lt;p&gt;These calculations were implemented using the &lt;a class="link" href="https://numpy.org/" target="_blank" rel="noopener"
+&gt;NumPy Python library&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="prototype-testing"&gt;Prototype Testing
+&lt;/h2&gt;&lt;p&gt;After completing the prototype, we conducted a blind test to ensure the functionality of the prototype. One person did not look at the electrodes and solely controlled the touchscreen the SSH terminal, while the other person used a random number generator to select either one of different types of defective electrodes or a set of broken electrodes, and indicated to the other person the electrode numbers to test. Then, after running the test, the predicted results were recorded and verified against the actual results. The predictions were all accurate, demonstrating that the prototype works!&lt;/p&gt;
+&lt;h3 id="electrode-callibration"&gt;Electrode Callibration
+&lt;/h3&gt;&lt;p&gt;In the calibration, we can visualize all of the read values through the silicone polymer.&lt;/p&gt;
+&lt;center&gt;
+&lt;img src="../rhythmlink/all21.png" width=500 &gt;
+&lt;/center&gt;
+&lt;h3 id="diagnosis"&gt;Diagnosis
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Defective Electrode&lt;/strong&gt;&lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;video width="685" height="445" controls&gt;
+&lt;source src="../rhythmlink/defective.MOV" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;p&gt;&lt;strong&gt;Functional Electrode&lt;/strong&gt;&lt;/p&gt;
+&lt;video width="685" height="445" controls&gt;
+&lt;source src="../rhythmlink/functional.MOV" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;h2 id="next-steps"&gt;Next Steps
+&lt;/h2&gt;&lt;p&gt;The next steps to address in improving the prototype are as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Include a much larger dataset of defective electrode signals labeled with different kinds of defects – can be used to fine-tune an LLM for accurate diagnosis.&lt;/li&gt;
+&lt;li&gt;Simplify wire management inside of the 3D printed head phantom.&lt;/li&gt;
+&lt;li&gt;Transition from using embedded circuits to integrated circuits on the custom PCB board to minimize space taken up and copper costs.&lt;/li&gt;
+&lt;li&gt;If a dedicated server with a GPU is able to run code to support the EEG Testbed, the code already exists in the GitHub Repo to interface over WiFi with a server locally hosting the Llama LLM, minimizing the time it takes for a natural text summary to generate from running directly on the Raspberry Pi’s CPU.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.researchgate.net/publication/339697951_Design_and_Demonstration_of_a_Head_Phantom_for_Testing_of_Electroencephalography_EEG_Equipment" target="_blank" rel="noopener"
+&gt;Audette, William E., et. al.&lt;/a&gt;&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;“[64,128]” indicates that the grid-search algorithm determined whether these hidden layers contained 64 or 128 neurons. All of these layers implemented the ReLU activation function.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;&lt;a class="link" href="https://arstechnica.com/information-technology/2023/04/why-ai-chatbots-are-the-ultimate-bs-machines-and-how-people-hope-to-fix-them/" target="_blank" rel="noopener"
+&gt;Edwards, Benj.&lt;/a&gt;&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.researchgate.net/publication/230714956_Creation_of_a_Human_Head_Phantom_for_Testing_of_Electroencephalography_Equipment_and_Techniques" target="_blank" rel="noopener"
+&gt;Collier, Thomas J., PhD, et. al.&lt;/a&gt;&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;Note that the defect is replicated across all 21 electrodes.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>Topography Map, Aspire Toolpaths, and 3D Milling Workflows</title><link>https://angelinayyang.github.io/p/topography-map-aspire-toolpaths-and-3d-milling-workflows/</link><pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/p/topography-map-aspire-toolpaths-and-3d-milling-workflows/</guid><description>&lt;p&gt;Unlike &lt;a class="link" href="https://angelinayyang.github.io/p/pcb-milling-workflows/" target="_blank" rel="noopener"
+&gt;milling PCBs&lt;/a&gt;, which uses the native MakeraCAM software to define the trace toolpaths, designing toolpaths for milling 3D materials like wood is often done through Vetric Aspire. This page introduces the fundamentals of 3D milling, comprising topography STL creation, a workflow for toolpath generation in Vetric Aspire, and the development of a milled topography map.&lt;/p&gt;
+&lt;h2 id="3d-machining-terminology"&gt;3D Machining Terminology
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Roughing pass&lt;/strong&gt;: Typically the first pass, the roughing pass uses an end mill (e.g., flat end mill) that will eject a large number of chips at a high feed rate. In other words, the roughing pass is intended to create the &lt;em&gt;rough&lt;/em&gt; shape of the design.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Finishing pass&lt;/strong&gt;: The second pass, called the finishing pass, won’t require as aggressive of a cut (e.g., use of the ball nose bit) and can provide a smoother finish at a high speed. The finishing pass cuts the material into a &lt;em&gt;fine&lt;/em&gt; shape and usually takes significantly longer than the roughing pass.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="exporting-an-stl-via-terrain2stl"&gt;Exporting an STL via Terrain2STL
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;This workflow is an extention of the provided workflow by Mr. Dubick, Mr. Budzichowski, and Dr. Taylor&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Go to the &lt;a class="link" href="https://jthatch.com/Terrain2STL/" target="_blank" rel="noopener"
+&gt;Terrain2STL website&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use the map interface to locate a geographical area of your desire&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Define the model area using the &amp;ldquo;Box Width,&amp;rdquo; &amp;ldquo;Box Height,&amp;rdquo; and &amp;ldquo;Box Scaling Factor&amp;rdquo; under the &amp;ldquo;Model Details&amp;rdquo; tab&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Adjust model settings&lt;/p&gt;
+&lt;p&gt;4a. Vertical scaling amplifies the height of the terrain, making vertical elements of the land more pronounced in the exported .STL file&lt;/p&gt;
+&lt;p&gt;4b. Water drop lowers the height of water bodies&lt;/p&gt;
+&lt;p&gt;4c. Base height adds an additional and solid base underneath the terrain&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once all settings are adjusted as intended, click the &amp;ldquo;Generate Model&amp;rdquo; button. This will generate and export your terrain .STL file as a .ZIP file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="3d-printed-topography-map"&gt;3D-Printed Topography Map
+&lt;/h2&gt;&lt;p&gt;After picking my mountain range and generating an .STL file, I imported it into Bambu Studio. I used the &amp;ldquo;scale&amp;rdquo; tool to adjust the x, y, and z dimensions to 2.5in, 3.5in, and 1.0in, respectively. Then, I sent the file to be printed.&lt;/p&gt;
+&lt;center&gt;
+&lt;img src="finalmountaininbambu.png" width=500&gt;
+&lt;/center&gt;
+&lt;p&gt;Below is the final print. Once I verified the mountain range was depicted well on the 3D-print, I transitioned towards developing the CNC toolpaths.&lt;/p&gt;
+&lt;center&gt;
+&lt;img src="3dprintedtopo.jpg" width=400&gt;
+&lt;/center&gt;
+&lt;h2 id="aspire-workflow"&gt;Aspire Workflow
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;This workflow is an extention of the provided workflow by Mr. Dubick, Mr. Budzichowski, and Dr. Taylor&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open Vetric Aspire 12.5&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;ldquo;Create New File&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the &amp;ldquo;Job Setup&amp;rdquo; dialogue box that pops up, set the &amp;ldquo;Job Type&amp;rdquo; to &amp;ldquo;Single Sided&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set the &amp;ldquo;Job Size (X, Y)&amp;rdquo; to match the physical stock. For the topography map, the dimensions for x, y, and z are 2.5, 3.5, and 1.0 inches, respectively&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;set the &amp;ldquo;Z Zero Position&amp;rdquo; to the &amp;ldquo;Material Surface&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;for the &amp;ldquo;XY Datum Position,&amp;rdquo; select the bottom left corner, as this allows you to easiler center the component&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set the &amp;ldquo;Model Resolution&amp;rdquo; to &amp;ldquo;Standard (fastest)&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;
+&lt;img src="jobsetup.png" width=200&gt;
+&lt;/center&gt;
+&lt;ol start="8"&gt;
+&lt;li&gt;Under the &amp;ldquo;Modeling&amp;rdquo; tab, click the &amp;ldquo;Import a Component or 3D model&amp;rdquo; and select your .STL file&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;
+&lt;img src="dimensions.png" width=200&gt;
+&lt;/center&gt;
+&lt;ol start="9"&gt;
+&lt;li&gt;
+&lt;p&gt;Under the &amp;ldquo;Import 3D Model &amp;gt; Transform&amp;rdquo; dialogue box, set the &amp;ldquo;Initial Orientation&amp;rdquo; to &amp;ldquo;Top&amp;rdquo;; leave the &amp;ldquo;Rotation About Z Axis&amp;rdquo; at 0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Adjust the width, height, and length of the file under &amp;ldquo;Model Size&amp;rdquo;; ensure they are in the intended units of measurement&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;ldquo;Apply&amp;rdquo; and &amp;ldquo;Center Model&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;ldquo;Position and Import &amp;gt;&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Under the &amp;ldquo;Import 3D Model &amp;gt; Position&amp;rdquo; dialogue box, use the slider bar to position the purple horizontal cutting plane at the appropriate depth to maximize the vertical relief of your model while maintaining a reasonable base height&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Under the &amp;ldquo;Component&amp;rdquo; side tab, right-click the name of the .STL file under the &amp;ldquo;Level 1&amp;rdquo; to access the &amp;ldquo;Component Properties&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Adjust the &amp;ldquo;Shape Height&amp;rdquo; value to 1.0 and the &amp;ldquo;Base Height&amp;rdquo; value to 0.0, before clicking &amp;ldquo;Close&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To position the 3D model within your material, switch to the &amp;ldquo;Design&amp;rdquo; tab and click on the &amp;ldquo;2D view&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click the &amp;ldquo;Alignment Tool,&amp;rdquo; located under &amp;ldquo;Transform Objects&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click the &amp;ldquo;Center&amp;rdquo; tool, before clicking &amp;ldquo;Close&amp;rdquo;; this will center the imported model accordingly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Staying in the 2D view, go under &amp;ldquo;Create Vectors&amp;rdquo; and click &amp;ldquo;Draw Rectangle&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Draw a rectangle around the boundary of the model (2.5&amp;quot; by 3.5&amp;quot;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Switch to the &amp;ldquo;Toolpaths&amp;rdquo; tab in the top right of Aspire&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select the 3D model image in the 2D view&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click on the &amp;ldquo;3D Roughing Toolpath&amp;rdquo; icon located in the &amp;ldquo;Toolpaths Operations&amp;rdquo; menu&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Define the constraints for the roughing pass (material should be hardwood):&lt;/p&gt;
+&lt;p&gt;24a. Select a large 25 mm Flute End Mill (3.175mm) under the Carvera Tools subsection; note that this tool is also referred to as a 1/8&amp;quot; End Mill&lt;/p&gt;
+&lt;p&gt;24b. Define the machining limit boundary as the model boundary&lt;/p&gt;
+&lt;p&gt;24c. Define the machining allowance as a small value (e.g., .024&amp;quot;) to prevent the bit from breaking&lt;/p&gt;
+&lt;p&gt;24d. Under &amp;ldquo;Strategy,&amp;rdquo; choose &amp;ldquo;Z level&amp;rsquo; or &amp;ldquo;3D Raster&amp;rdquo;; note that Z level is efficient for stairstepping down, while 3D raster is good for flatter models&lt;/p&gt;
+&lt;p&gt;24e. As a general rule of thumb, rename your toolpath to maintain organization. Once you&amp;rsquo;d created a name, click &amp;ldquo;Calculate&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Keeping the boundary vector selected, click on the &amp;ldquo;3D Finishing Toolpath&amp;rdquo; icon&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Define the constraints for the finishing pass (material should be hardwood):&lt;/p&gt;
+&lt;p&gt;26a. Select a small 1/8&amp;rdquo; Ball Nose bit; note that the smaller the bit, the more detail you get at the expense of time&lt;/p&gt;
+&lt;p&gt;26b. Define the machining limit boundary as the model boundary&lt;/p&gt;
+&lt;p&gt;26c. Under &amp;ldquo;Strategy,&amp;rdquo; select &amp;ldquo;Raster&amp;rdquo; and set the &amp;ldquo;Raster Angle&amp;rdquo; to go back and forth along the X-axis&lt;/p&gt;
+&lt;p&gt;26d. Similar to the roughing pass, name your toolpath accordingly. Click &amp;ldquo;Calculate&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;
+&lt;img src="finishing.png" width=200&gt;
+&lt;/center&gt;
+&lt;ol start="27"&gt;
+&lt;li&gt;
+&lt;p&gt;In the 2D view, click on the &lt;em&gt;rectangular&lt;/em&gt; model profile&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click the &amp;ldquo;2D Roughing Toolpath&amp;rdquo; icon&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Define constraints for the 2D profile cut (material should be hardwood):&lt;/p&gt;
+&lt;p&gt;29a. In terms of the &amp;ldquo;Cutting Depths,&amp;rdquo; make the &amp;ldquo;Start Depth&amp;rdquo; 0 and the &amp;ldquo;Cut Depth&amp;rdquo; .5&lt;/p&gt;
+&lt;p&gt;29b. Select a large 25mm Flute End mill as the tool&lt;/p&gt;
+&lt;p&gt;29c. For &amp;ldquo;Machine Vectors,&amp;rdquo; select &amp;ldquo;On&amp;rdquo; the line and the direction of &amp;ldquo;Climb&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;29d. Same as before, name your toolpath and click &amp;ldquo;Calculate&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;
+&lt;img src="2dprofile.png" width=200&gt;
+&lt;/center&gt;
+&lt;ol start="30"&gt;
+&lt;li&gt;To review your toolpaths. click the &amp;ldquo;Preview all Toolpaths&amp;rdquo; button; Aspire will run a complete 3D simulation, progressing from the Roughing pass to the Finishing pass to the profile cut&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/topography-map-aspire-toolpaths-and-3d-milling-workflows/aspirefile.png"
+width="916"
+height="645"
+srcset="https://angelinayyang.github.io/p/topography-map-aspire-toolpaths-and-3d-milling-workflows/aspirefile_hu_efa4718f32f4e566.png 480w, https://angelinayyang.github.io/p/topography-map-aspire-toolpaths-and-3d-milling-workflows/aspirefile_hu_2061872d82470e05.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="142"
+data-flex-basis="340px"
+&gt; &lt;img src="https://angelinayyang.github.io/p/topography-map-aspire-toolpaths-and-3d-milling-workflows/aspiretoolpath.png"
+width="1021"
+height="766"
+srcset="https://angelinayyang.github.io/p/topography-map-aspire-toolpaths-and-3d-milling-workflows/aspiretoolpath_hu_106281bf79001e09.png 480w, https://angelinayyang.github.io/p/topography-map-aspire-toolpaths-and-3d-milling-workflows/aspiretoolpath_hu_cb5e9b3cde967b72.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="319px"
+&gt;&lt;/p&gt;
+&lt;ol start="31"&gt;
+&lt;li&gt;
+&lt;p&gt;To save the Aspire file, go to &amp;ldquo;File&amp;rdquo; &amp;gt; &amp;ldquo;Save As&amp;rdquo; and save your .crv3d project file&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To export your g-code or your toolpath files, click the &amp;ldquo;Save Toolpaths&amp;rdquo; button&lt;/p&gt;
+&lt;p&gt;32a. Choose the &amp;ldquo;Machine&amp;rdquo; as the &amp;ldquo;Carvera Desktop CNC Machine&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;32b. Choose the &amp;ldquo;Post-Processor&amp;rdquo; as the &amp;ldquo;Carvera ATC (mm) (*cnc)&amp;rdquo; and click &amp;ldquo;Save Toolpath(s)&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="producing-a-topography-map-on-the-carvera"&gt;Producing a Topography Map on the Carvera
+&lt;/h2&gt;&lt;p&gt;For my topography map, I selected a small region in the Himalayas and exported the mountain range as an .STL from Terrain2STL. Here is the &lt;a class="link" href="Yang_A_B_Topo.stl" &gt;.STL file&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Following the workflow for designing CNC toolpaths via Aspire, I successfully designed the roughing pass, finishing pass, and profile cut, saving the g-code:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Here is my &lt;a class="link" href="https://angelinayyang.github.io/Yang_A_B_Topo_Aspire_File.crv3d" &gt;Aspire file (.cr3vd)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Here is my &lt;a class="link" href="Yang_A_B_Topo_Gcode.cnc" &gt;G-code file (.cnc)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The process of loading the file to the Carvera was virtually the same as instructed in the PCB milling workflow; the only major difference was that I disabled the automatic z-axis probing (5x5 touchdown), since we already defined the depth in the Aspire Job Setup.&lt;/p&gt;
+&lt;p&gt;Here is what my topography map looked like:&lt;/p&gt;
+&lt;center&gt;
+&lt;img src="finishedtopo.JPG" width=400&gt;
+&lt;/center&gt;
+&lt;p&gt;To clean up the edges, I used the tablesaw and trimmed off excess wood from each side of the topography map:&lt;/p&gt;
+&lt;center&gt;
+&lt;video width="500" height="300" controls&gt;
+&lt;source src="tablesaw.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;/center&gt;
+&lt;p&gt;Here is what my final and trimmed topography map looks like:&lt;/p&gt;
+&lt;center&gt;
+&lt;img src="finaltopo.jpeg" width=500&gt;
+&lt;/center&gt;</description></item><item><title>PCB Milling Workflows</title><link>https://angelinayyang.github.io/p/pcb-milling-workflows/</link><pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/p/pcb-milling-workflows/</guid><description>&lt;h2 id="introduction-and-scope"&gt;Introduction and Scope
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://www.makerverse.com/resources/insights-and-trends/subtractive-manufacturing/" target="_blank" rel="noopener"
+&gt;Subtractive manufacturing&lt;/a&gt; is a process where material is removed from a larger block of stock to create a final part, using techniques like cutting, drilling, and milling. This article will cover the fundamentals and everything you need to get started for producing your own printed circuit boards through the following softwares:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/pcb-milling-workflows/BantamBanner.png"
+width="887"
+height="174"
+srcset="https://angelinayyang.github.io/p/pcb-milling-workflows/BantamBanner_hu_c4c7f4b64f4e4664.png 480w, https://angelinayyang.github.io/p/pcb-milling-workflows/BantamBanner_hu_88e9fa3652115e15.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="509"
+data-flex-basis="1223px"
+&gt; &lt;img src="https://angelinayyang.github.io/p/pcb-milling-workflows/MakeraBanner.png"
+width="554"
+height="184"
+srcset="https://angelinayyang.github.io/p/pcb-milling-workflows/MakeraBanner_hu_e6117e5c8fd4b757.png 480w, https://angelinayyang.github.io/p/pcb-milling-workflows/MakeraBanner_hu_24a7dd80e5106ec.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="301"
+data-flex-basis="722px"
+&gt;&lt;/p&gt;
+&lt;h2 id="cnc-router-terminology"&gt;CNC Router Terminology
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Flute&lt;/strong&gt;: Cutting edge of a metal bit for removing stock material. Most common types of flutes include a &lt;strong&gt;straight flute&lt;/strong&gt; and &lt;strong&gt;spiral flute&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Straight Flute&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Spiral Flute&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Chip load&lt;/strong&gt;: Thickness of a machined chip as cut by a specific tool type&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Spindle speed&lt;/strong&gt;: Number of revolutions made by the endmill in a unit of time (RPM)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="feeds-and-speeds"&gt;Feeds and Speeds
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Feeds and speeds&lt;/strong&gt; are the two key variables that control a cutting tool&amp;rsquo;s movement and rotation when shaping material through CNC machining:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Speed&lt;/strong&gt; is the rotational speed of the tool, measured in revolutions per minute (RPM).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Feed&lt;/strong&gt; refers to how fast the tool moves through the material, measured in units per minute (like inches per minute or millimeters per minute). There are two types of feeds:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Standard Feed Rate&lt;/strong&gt;: The speed at which the tool moves across the material.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Plunge Rate&lt;/strong&gt;: The speed at which the tool moves down into the material, often set lower than the standard feed rate to reduce stress.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There isn&amp;rsquo;t one &lt;em&gt;universal&lt;/em&gt; way to determine speeds and feeds because they often depend on the material, tool, spindle speed, and desired cut quality. However, having the wrong speed/feed can introduce a variety of problems, including but not limited to tool breakage and stock damage.&lt;/p&gt;
+&lt;h2 id="makeracam-workflows"&gt;MakeraCAM Workflows
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Key notes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;.8mm Corn flat-end bit is used to remove the bulk of the material&lt;/li&gt;
+&lt;li&gt;The .2mm*30ºEngraving(Metal) engraving bit will be used to cut out the copper traces&lt;/li&gt;
+&lt;li&gt;The Makera Milling machine affixes the FR4 using clamps, rather than adhesive, so tabs are necessary to keep the PCB in place.&lt;/li&gt;
+&lt;li&gt;2D contour is used for edge cuts&lt;/li&gt;
+&lt;li&gt;2D pocket is used for copper traces&lt;/li&gt;
+&lt;li&gt;2D drilling is used for drill holes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;PCB Toolpath Workflow on MakeraCAM&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;strong&gt;MakeraCAM&lt;/strong&gt; on your desktop.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select the “3-AXIS” option on the welcome screen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Edit the “Stock” settings in the top right corner&lt;/p&gt;
+&lt;p&gt;3a. For Material, select “PCB”&lt;/p&gt;
+&lt;p&gt;3b.For Length(X), adjust the value to 150mm&lt;/p&gt;
+&lt;p&gt;3c. For Width(Y), adjust the value to 100mm&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;
+&lt;img src="stock.png" width=400&gt;
+&lt;/center&gt;
+&lt;ol start="4"&gt;
+&lt;li&gt;For Height(Z), adjust the value to 1.7mm (thickness of FR4)&lt;/li&gt;
+&lt;li&gt;In the top toolbar, click the icon titled “import PCB” and individually insert all Gerber files into the workspace.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;
+&lt;img src="hierarchy.png" width=400&gt;
+&lt;/center&gt;
+&lt;ol start="6"&gt;
+&lt;li&gt;The imported gerbers will likely populate outside of the workspace, so select all 2D layers, hover over the “Adjust object” and “Transform” drop-down menu and select the “Move” tool&lt;/li&gt;
+&lt;li&gt;When layers are dotted, that indicates that they are selected; when layers are solid, that indicates that they are unselected&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/pcb-milling-workflows/selected.png"
+width="581"
+height="372"
+srcset="https://angelinayyang.github.io/p/pcb-milling-workflows/selected_hu_70c194644ad9cc09.png 480w, https://angelinayyang.github.io/p/pcb-milling-workflows/selected_hu_b462944631a688e6.png 1024w"
+loading="lazy"
+alt="Selected files"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="374px"
+&gt; &lt;img src="https://angelinayyang.github.io/p/pcb-milling-workflows/notselected.png"
+width="578"
+height="356"
+srcset="https://angelinayyang.github.io/p/pcb-milling-workflows/notselected_hu_9adf59b785e44371.png 480w, https://angelinayyang.github.io/p/pcb-milling-workflows/notselected_hu_973a021b5507d8ff.png 1024w"
+loading="lazy"
+alt="Non-selected files"
+class="gallery-image"
+data-flex-grow="162"
+data-flex-basis="389px"
+&gt;&lt;/p&gt;
+&lt;ol start="8"&gt;
+&lt;li&gt;Select the bottom left corner as the anchor point&lt;/li&gt;
+&lt;li&gt;Set both the X and Y location values to 6 mm, which positions the file in the bottom right corner of the workspace&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;
+&lt;img src="positioning.png" width=500&gt;
+&lt;/center&gt;
+&lt;ol start="10"&gt;
+&lt;li&gt;Keeping all layers selected, hold the shift key and deselect the outer edge of the Edge_cuts&lt;/li&gt;
+&lt;li&gt;Toggle the visibility such that only the “F_Cu” and the “Edge_cuts” layer are visible&lt;/li&gt;
+&lt;li&gt;In the top toolbar, hover over the “2D Path” drop-down menu and select the “2D Pocket” option&lt;/li&gt;
+&lt;li&gt;In the dialogue box, adjust the “End Depth” value to .05mm&lt;/li&gt;
+&lt;li&gt;Under “Tools,” click the “Add Tool” button, select “.8mm Corn tool” and click “Choose”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/pcb-milling-workflows/tools.png"
+width="1160"
+height="789"
+srcset="https://angelinayyang.github.io/p/pcb-milling-workflows/tools_hu_e8d43c2d4c105242.png 480w, https://angelinayyang.github.io/p/pcb-milling-workflows/tools_hu_752631954a05011d.png 1024w"
+loading="lazy"
+alt="Here is the dialogue box that pops up, containing all of the tools."
+class="gallery-image"
+data-flex-grow="147"
+data-flex-basis="352px"
+&gt;&lt;/p&gt;
+&lt;ol start="15"&gt;
+&lt;li&gt;Click “Add Tool” again, select the “.2mm*30ºEngraving(Metal),“ and click “Choose”&lt;/li&gt;
+&lt;li&gt;Ensure that the material selected is “PCB”&lt;/li&gt;
+&lt;li&gt;Click “Calculate”; you should see a “2D Pocket” toolpath fall under the Path dropdown in the hierarchy&lt;/li&gt;
+&lt;li&gt;If you have drill files, untoggle the visibility for all “F_Cu” and “Edge_cuts” layers and toggle visibility for all drill files&lt;/li&gt;
+&lt;li&gt;In the top toolbar, hover over the “2D Path” drop-down menu and select the “2D Drilling” option&lt;/li&gt;
+&lt;li&gt;In the dialogue box, adjust the “Drill Tip End Depth” value to 1.7mm&lt;/li&gt;
+&lt;li&gt;Under “Tools,” click the “Add Tool” button, select “.8mm Corn tool” and click “Choose”&lt;/li&gt;
+&lt;li&gt;Click “Calculate”; you should see a “2D Drilling” toolpath fall under the Path dropdown in the hierarchy&lt;/li&gt;
+&lt;li&gt;To design a toolpath for the edge cuts, untoggle the visibility for all drill files and toggle visibility for solely the “Edge_cuts” layer&lt;/li&gt;
+&lt;li&gt;Select the inner outline of the “Edge_cuts” layer&lt;/li&gt;
+&lt;li&gt;In the top toolbar, hover over the “2D Path” drop-down menu and select the “2D Contour” option (synonymous with a “Pocket” cut)&lt;/li&gt;
+&lt;li&gt;In the dialogue box, adjust the “End Depth” value to 1.7mm&lt;/li&gt;
+&lt;li&gt;Under “Tools,” click the “Add Tool” button, select “.8mm Corn tool” and click “Choose”&lt;/li&gt;
+&lt;li&gt;Under “Strategy,” select “Outside”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;
+&lt;img src="outside.png" width=350&gt;
+&lt;/center&gt;
+&lt;ol start="29"&gt;
+&lt;li&gt;
+&lt;p&gt;Under “Tabs,” select “Custom,” and click “Add”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add appropriate tabs around the selected “Edge_cuts” layer (typically, 3 will be sufficient)&lt;/p&gt;
+&lt;p&gt;30a. Tip: Ensure that these tabs are staggered and not directly across from one another&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;
+&lt;img src="tabs.png" width=500&gt;
+&lt;/center&gt;
+&lt;ol start="31"&gt;
+&lt;li&gt;Click “Calculate”; you should see a “2D Contour” toolpath fall under the Path dropdown in the hierarchy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;
+&lt;img src="finaltoolpaths.png" width=300&gt;
+&lt;/center&gt;
+&lt;ol start="32"&gt;
+&lt;li&gt;In the top toolbar, click the icon “Preview Toolpaths,” and select all toolpaths in the pop-up dialogue box&lt;/li&gt;
+&lt;li&gt;Click “Preview” and press the play button to view a simulation of the toolpaths&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;
+&lt;img src="preview.png" width=500&gt;
+&lt;/center&gt;
+&lt;ol start="34"&gt;
+&lt;li&gt;In the top toolbar, click the “Export” button, ensure all toolpaths are selected, and click “Export”
+Rename the .nc file to your last name, your first initial, and your project name, followed by “gcode”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;PCB Milling on Carvera&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open the Carvera Controller software on the desktop&lt;/li&gt;
+&lt;li&gt;In the top toolbar, click on the button with the status “N/A disconnected”&lt;/li&gt;
+&lt;li&gt;Select the appropriate COM port to connect the Carvera to the computer (if the COM port is already connected, leave it as is)&lt;/li&gt;
+&lt;li&gt;In the menu in the top right corner, click “Switch to display manual control interface” followed by the “Home” button&lt;/li&gt;
+&lt;li&gt;Under “Tool Status and Control,” ensure that the probe is charged to at least 3.6V (this ensures the machine operates in the z-axis as intended)&lt;/li&gt;
+&lt;li&gt;In the bottom left corner, open the G-code from your files&lt;/li&gt;
+&lt;li&gt;Before starting the mill, open the menu in the top right corner and click the “Switch to display file preview interface” to preview the toolpaths&lt;/li&gt;
+&lt;li&gt;Click “Config and run,” and ensure that both the “auto vacuum” and “auto leveling” options are on.&lt;/li&gt;
+&lt;li&gt;Once all settings are verified, click “Run”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="producing-a-pcb-on-the-carvera"&gt;Producing a PCB on the Carvera
+&lt;/h2&gt;&lt;p&gt;To do this, I first downloaded the gerber files from the FabLab google drive, including &lt;a class="link" href="Resistance1-Edge_Cuts.gbr" &gt;Resistance1-Edge_cuts&lt;/a&gt; and &lt;a class="link" href="Resistance1-F_Cu.gbr" &gt;Resistance1-F_Cu&lt;/a&gt;, and imported them into the MakeraCAM software. I created three toolpaths total: 1 pocket toolpath with an end depth of .05mm (traces), 1 contour toolpath with an end depth of 1.7mm (edge cuts), and 1 drill file with an end depth of 1.7mm (holes). I previewed these toolpaths in the software, before exporting them as a .nc file. You can access this file &lt;a class="link" href="YangA_resistorgcode.nc" &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On the Carvera software, I first checked the probe voltage. Initially, it said 3.3V, which is below the functional threshold; however, this was because a tool had already been selected and installed by the milling machine. Once I uninstalled the tool, the voltage went to 3.7V. Perfect!&lt;/p&gt;
+&lt;p&gt;I imported the .nc file into the software and clicked &amp;ldquo;Config and run.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;The milling machine first began with the .8mm corn flatend mill to remove the bulk of material on the PCB, before going back in with the engraving bit and creating the intricate traces. Something I found odd was that the engraving bit moved around the perimeter as well, but Mr. Budzichowski told me that this was naturally apart of the g-code.&lt;/p&gt;
+&lt;center&gt;
+&lt;img src="midmill.jpeg" width=500&gt;
+&lt;/center&gt;
+&lt;p&gt;Here is what the final PCB looked like:&lt;/p&gt;
+&lt;center&gt;
+&lt;img src="resistor_finalboard.jpeg" width=500&gt;
+&lt;/center&gt;</description></item><item><title>How I Made This Website</title><link>https://angelinayyang.github.io/p/how-i-made-this-website/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/p/how-i-made-this-website/</guid><description>&lt;img src="https://angelinayyang.github.io/p/how-i-made-this-website/cover.png" alt="Featured image of post How I Made This Website" /&gt;&lt;p&gt;The site that you are currently viewing runs using &lt;a class="link" href="https://www.MkDocs.org/" target="_blank" rel="noopener"
+&gt;MkDocs&lt;/a&gt;, a static site generator tailored towards project documentation. The process to creating a website is fairly easy, even for mac users like myself! ( • ᴖ • ｡)&lt;/p&gt;
+&lt;h2 id="repo-creation-and-cloning"&gt;Repo Creation and Cloning
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"
+&gt;Github&lt;/a&gt; is a web-based platform built upon Git that utilizes &lt;a class="link" href="https://about.gitlab.com/topics/version-control/" target="_blank" rel="noopener"
+&gt;version control&lt;/a&gt; to manage source code and projects in a &lt;strong&gt;repository&lt;/strong&gt; (often referred to as a &amp;lsquo;repo&amp;rsquo;).&lt;/p&gt;
+&lt;p&gt;To create the site, I created a new &lt;a class="link" href="https://pages.github.com/" target="_blank" rel="noopener"
+&gt;Github Pages&lt;/a&gt; repository and named it&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;angelinayyang.github.io
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;or, in general,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;YOUR_USERNAME.github.io
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;After creating this repo, I &lt;strong&gt;cloned&lt;/strong&gt; it to my local folder by using the command&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone REPO-NAME
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I acquired the repo name by copying and pasting the SSH url as seen below:&lt;/p&gt;
+&lt;center&gt;
+&lt;img src="sshcopy.png" width=400 &gt;
+&lt;/center&gt;
+&lt;h2 id="ssh-key-creation"&gt;SSH Key Creation
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;center&gt; &lt;strong&gt;&lt;p style="color: red;"&gt; Do not share your SSH key with anyone. Do not post it online. &lt;/p&gt; &lt;/strong&gt; &lt;/center&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Speaking of SSH keys, an SSH key is a cryptographic key pair, consisting of a public and private key, used to authenticate and secure connections to remote servers using the SSH protocol. In other words, it is a type of password unique to each device.&lt;/p&gt;
+&lt;p&gt;I ran the following command in terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-YAML" data-lang="YAML"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="l"&gt;ssh-keygen -t ed25519 -C &amp;#34;your_email@example.com&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="l"&gt;Generating public/private ed25519 key pair.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;Enter file in which to save the key (/home/user/.ssh/id_ed25519)&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;Enter passphrase (empty for no passphrase)&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;Enter the same passphrase again&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To &lt;strong&gt;access&lt;/strong&gt; your ssh key:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat ~/.ssh/id_rsa.pub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Your SSH key will appear as &amp;lsquo;ssh-rsa&amp;rsquo; followed by a string of generated characters.&lt;/p&gt;
+&lt;p&gt;To directly &lt;strong&gt;copy&lt;/strong&gt; your ssh key:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat ~/.ssh/id_ed25519.pub | clip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To add your SSH key into your Github, go to Github &amp;gt; Account Settings &amp;gt; SSH and GPG Keys &amp;gt; New SSH Key and paste in the string of characters.&lt;/p&gt;
+&lt;h2 id="installing-mkdocs"&gt;Installing MkDocs
+&lt;/h2&gt;&lt;p&gt;In your coding environment, ensure that you have:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Installed the latest update of python and &lt;a class="link" href="https://pip.pypa.io/en/stable/installation/" target="_blank" rel="noopener"
+&gt;pip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1a. Update pip by running the following command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python -m pip install --upgrade pip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Installed the latest version of Git&lt;/p&gt;
+&lt;p&gt;1a. For &lt;strong&gt;MacOS&lt;/strong&gt; or &lt;strong&gt;Linux&lt;/strong&gt; users, you will need to use a package manager such as &lt;a class="link" href="https://brew.sh/" target="_blank" rel="noopener"
+&gt;Homebrew&lt;/a&gt; to update git . Once installed, you can update Git by running the following command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew upgrade git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;1b. For &lt;strong&gt;Windows&lt;/strong&gt; users, you will need to use Gitbash (packaged with the Git download for Windows) and run the following command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git update-git-for-windows
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once you have met both requirements, you can install MkDocs by running the following command in a new terminal in the cloned site folder:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pip install mkdocs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;MkDocs has good &lt;a class="link" href="https://www.MkDocs.org/getting-started/" target="_blank" rel="noopener"
+&gt;documentation&lt;/a&gt; on how to get started, but here&amp;rsquo;s a general summary of the most fundamental commands. To create a basic static documentation site, run the following command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdocs new my-project
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cd my-project
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This will create the following &lt;strong&gt;hierarchy&lt;/strong&gt; or directory structure in your coding environment, where index.md is the home-page and the MkDocs.yml configures the site with information like site_name, repo_url, and site_description:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├─ docs/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └─ index.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└─ mkdocs.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To view your site on a local server, run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdocs serve
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You will get something like this in response:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;INFO - Building documentation...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;INFO - Cleaning site directory
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;INFO - Documentation built in 0.22 seconds
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;INFO - [15:50:43] Watching paths for changes: &amp;#39;docs&amp;#39;, &amp;#39;mkdocs.yml&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;INFO - [15:50:43] Serving on http://127.0.0.1:8000/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class="link" href="http://127.0.0.1:8000/" target="_blank" rel="noopener"
+&gt;http://127.0.0.1:8000/&lt;/a&gt; is the local server that you can view your site on when you copy and paste the url into your browser.&lt;/p&gt;
+&lt;h3 id="intro-to-markdown"&gt;Intro to Markdown
+&lt;/h3&gt;&lt;p&gt;Markdown is a pretty dandy tool to streamline documentation because it can simultaneously support an intuitive markup language as well as direct HTML.&lt;/p&gt;
+&lt;h4 id="basic-syntax"&gt;Basic Syntax
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Text Alteration&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;*This is italicized text.*
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;This is italicized text.&lt;/em&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;**This is bolded text.**
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;This is bolded text.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Headings&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# H1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;## H2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;### H3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#### H4
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;##### H5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;###### H6
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1&gt; H1 &lt;/h1&gt;
+&lt;h2&gt; H2 &lt;/h2&gt;
+&lt;h3&gt; H3 &lt;/h3&gt;
+&lt;h4&gt; H4 &lt;/h4&gt;
+&lt;h5&gt; H5 &lt;/h5&gt;
+&lt;h6&gt; H6 &lt;/h6&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Images&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;![This is a caption.](hall.jpeg)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/how-i-made-this-website/hall.jpeg"
+width="2368"
+height="1578"
+srcset="https://angelinayyang.github.io/p/how-i-made-this-website/hall_hu_e0a50d3dac5972e2.jpeg 480w, https://angelinayyang.github.io/p/how-i-made-this-website/hall_hu_4b1e0dace9a6ee29.jpeg 1024w"
+loading="lazy"
+alt="This is a caption."
+class="gallery-image"
+data-flex-grow="150"
+data-flex-basis="360px"
+&gt;&lt;/p&gt;
+&lt;h4 id="hyperlinks"&gt;Hyperlinks
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[Link to an interesting video](https://www.youtube.com/watch?v=dQw4w9WgXcQ&amp;amp;list=RDdQw4w9WgXcQ&amp;amp;start_radio=1)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class="link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&amp;amp;list=RDdQw4w9WgXcQ&amp;amp;start_radio=1" target="_blank" rel="noopener"
+&gt;Link to an interesting video&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id="lists"&gt;Lists
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Unordered List&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;need a blank line above to start new list&lt;/li&gt;
+&lt;li&gt;valid bullet symbols &lt;code&gt;*&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt; or &amp;lsquo;+&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;nested
+&lt;ul&gt;
+&lt;li&gt;4 spaces or 1 tab&lt;/li&gt;
+&lt;li&gt;to indent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Ordered List&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;use &lt;em&gt;numbers&lt;/em&gt; for ordered&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;you can nest these too&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;numbers&lt;/strong&gt; can be in order&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;but markdown will automatically fix them if not&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="blockquotes"&gt;Blockquotes
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;gt; Insert some profound blockquote.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Insert some profound blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="tables"&gt;Tables
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| Item | Description |
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| ----------- | ----------------------- |
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| Item 1 | Description for item 1 |
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| Item 2 | Description for item 2 |
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| Item 3 | Description for item 3 |
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Item 1&lt;/td&gt;
+&lt;td&gt;Description for item 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Item 2&lt;/td&gt;
+&lt;td&gt;Description for item 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Item 3&lt;/td&gt;
+&lt;td&gt;Description for item 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;More about MkDocs syntax can be found &lt;a class="link" href="https://www.markdownguide.org/basic-syntax/#overview" target="_blank" rel="noopener"
+&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="customizing-with-hugo-stack-theme"&gt;Customizing with Hugo: Stack Theme
+&lt;/h2&gt;&lt;p&gt;MkDocs naturally has themes, such as &lt;a class="link" href="https://squidfunk.github.io/MkDocs-material/" target="_blank" rel="noopener"
+&gt;Material&lt;/a&gt;, which work wonderfully for documentation purposes. However, for greater visual appeal, you can opt for other theme options. &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+&gt;Hugo&lt;/a&gt;, for instance provides a simple and easy-to-follow framework for developing visually stunning sites. This documentation specifically uses the &lt;a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/" target="_blank" rel="noopener"
+&gt;Stack&lt;/a&gt; theme, created by Jimmy Cai.&lt;/p&gt;
+&lt;p&gt;To use Hugo, ensure that you have&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Installed the latest version of Go.&lt;/p&gt;
+&lt;p&gt;1a. Download the &lt;a class="link" href="https://go.dev/doc/install" target="_blank" rel="noopener"
+&gt;Go MSI package&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1b. To see the Go version, run&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; go version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Installed the latest version of Git&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To install hugo, run the following command in terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="installing-theme-manually"&gt;Installing Theme Manually
+&lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;re starting with an existing repo, you can create a new site with the command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hugo new site SITE-NAME
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This will create the following hierarchy:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;my-site/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── archetypes/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── default.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── assets/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── content/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── data/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── i18n/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── layouts/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── themes/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── hugo.toml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then, you can change the current directory to the root of your project by running&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cd SITE-NAME
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To clone the stack theme as a submodule to your existing repo, run&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git submodule add https://github.com/CaiJimmy hugo-theme-stack/ themes/hugo-theme-stack
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="using-the-starter-pack"&gt;Using the Starter Pack
+&lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;re starting from scratch &lt;strong&gt;without a repo&lt;/strong&gt; and would like to use the theme starter, you can also directly create a new codespace from the &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack-starter/tree/master" target="_blank" rel="noopener"
+&gt;hugo-theme-stack-starter repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The starter pack configuration file lies under the config/_default/ folder.&lt;/p&gt;
+&lt;p&gt;Note that the hugo-theme-stack-starter, format-wise, looks a bit different from the manually installed theme. For instance, the starter pack is missing the &lt;strong&gt;layouts folder&lt;/strong&gt;, which is crucial for defining the HTML templates that control your website&amp;rsquo;s content. The layout folder consists of files like &lt;strong&gt;list.html&lt;/strong&gt; and &lt;strong&gt;single.html&lt;/strong&gt;. Without this folder, you don&amp;rsquo;t have as much control or flexibility with the visual format of your website.&lt;/p&gt;
+&lt;p&gt;Depending on which option you pick to create your Hugo site, you will either have a &lt;strong&gt;config.yaml&lt;/strong&gt; or &lt;strong&gt;config.toml&lt;/strong&gt; file, which configures site-wide parameters. For instance:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;baseurl = &amp;#34;https://angelinayyang.github.io&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;languageCode = &amp;#34;en-us&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;title = &amp;#34;Angelina&amp;#39;s Internet Corner&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Other parameters include the &lt;strong&gt;avatar&lt;/strong&gt; icon. For my site, I custom designed a pixel art avatar of myself in a free online software, &lt;a class="link" href="https://www.pixilart.com/" target="_blank" rel="noopener"
+&gt;PixilArt&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/how-i-made-this-website/pixelavatar.png"
+width="2880"
+height="1476"
+srcset="https://angelinayyang.github.io/p/how-i-made-this-website/pixelavatar_hu_8215e399bbe4368b.png 480w, https://angelinayyang.github.io/p/how-i-made-this-website/pixelavatar_hu_778074b43f0e7db.png 1024w"
+loading="lazy"
+alt="A pixel version of me!"
+class="gallery-image"
+data-flex-grow="195"
+data-flex-basis="468px"
+&gt;&lt;/p&gt;
+&lt;p&gt;Each post in your new site will also have its own metadata and specific parameters, known as &lt;a class="link" href="https://gohugo.io/content-management/front-matter/" target="_blank" rel="noopener"
+&gt;front matter&lt;/a&gt;. For instance, here is the front matter for this particular page:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;How I Made This Website&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Intro to Github Pages, using static site generation with MkDocs, and applying the Hugo Stack theme to develop my personal blog.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;cover.png&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;date&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2025-06-15&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;categories&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;Web Development&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;Personal Project&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;tags&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;website design&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;html&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;markdown&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Whether you are manually installing the theme or applying the starter pack, to view your site on a local server, run in the terminal of your coding environment&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hugo serve -D -F
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;-D&lt;/strong&gt; ensures that pages marked as &amp;ldquo;drafts&amp;rdquo; will be included in the server, and &lt;strong&gt;-F&lt;/strong&gt; loads pages with dates set in the future. Here is what the example site will look like:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/how-i-made-this-website/examplesite.png"
+width="2848"
+height="1538"
+srcset="https://angelinayyang.github.io/p/how-i-made-this-website/examplesite_hu_75e1b4d843aeca89.png 480w, https://angelinayyang.github.io/p/how-i-made-this-website/examplesite_hu_b706a08075326f7.png 1024w"
+loading="lazy"
+alt="Example site with Hugo Stack theme"
+class="gallery-image"
+data-flex-grow="185"
+data-flex-basis="444px"
+&gt;&lt;/p&gt;
+&lt;h2 id="publishing-your-site"&gt;Publishing Your Site
+&lt;/h2&gt;&lt;p&gt;Before publishing changes, make sure that Github Pages is set up properly by going to your repository on Github &amp;gt; Settings &amp;gt; Pages &amp;gt; toggling &lt;strong&gt;gh-pages&lt;/strong&gt; as the main branch.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://angelinayyang.github.io/p/how-i-made-this-website/ghpages.png"
+width="1564"
+height="272"
+srcset="https://angelinayyang.github.io/p/how-i-made-this-website/ghpages_hu_732720baf8670af7.png 480w, https://angelinayyang.github.io/p/how-i-made-this-website/ghpages_hu_5ee0385023f05c32.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="575"
+data-flex-basis="1380px"
+&gt;&lt;/p&gt;
+&lt;p&gt;To publish your local changes to your remote repository, run the following commands:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git commit -m &amp;#34;Insert description here&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Git add .&lt;/strong&gt; adds all changes in the current directory and its subdirectories to the Git staging area, in preparation for a commit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Git commit -m &amp;ldquo;&amp;rdquo;&lt;/strong&gt; is a local action that records all changes in the repository&amp;rsquo;s history. This is the &amp;lsquo;version control&amp;rsquo; aspect of Git.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Git push&lt;/strong&gt; then takes all of the changes that have been made locally and push them up to a remote repository&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you make any changes in the remote repository (e.g. via the web IDE), be sure to &lt;strong&gt;pull&lt;/strong&gt; all changes first before making additional edits in your local repository. Use the following command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git pull
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;(˵ •̀ ᴗ •́ ˵ ) ✧ With that, congrats on building your first site using MkDocs!&lt;/p&gt;</description></item><item><title>Archives</title><link>https://angelinayyang.github.io/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/archives/</guid><description/></item><item><title>About Me</title><link>https://angelinayyang.github.io/about-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/about-me/</guid><description>&lt;p&gt;(˵ ¬ᴗ¬˵) Hi there! My name is &lt;strong&gt;Angelina Yang&lt;/strong&gt;, an incoming freshman at MIT class of 2030! This website is my creative space to showcase my vlogging, engineering, and writing/art journeys!&lt;/p&gt;
+&lt;p&gt;To watch my most recent vlog, click &lt;a class="link" href="https://www.youtube.com/watch?v=prV4ML1Jztg" target="_blank" rel="noopener"
+&gt;here&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text-icon lucide-file-text"&gt;&lt;path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/&gt;&lt;path d="M14 2v4a2 2 0 0 0 2 2h4"/&gt;&lt;path d="M10 9H8"/&gt;&lt;path d="M16 13H8"/&gt;&lt;path d="M16 17H8"/&gt;&lt;/svg&gt; &lt;a class="link" href="../angelinaresume.pdf" &gt;Download my resume here!&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Search</title><link>https://angelinayyang.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/search/</guid><description/></item><item><title>Workflows</title><link>https://angelinayyang.github.io/categories/workflows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://angelinayyang.github.io/categories/workflows/</guid><description/></item></channel></rss>
