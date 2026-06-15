@@ -166,7 +166,7 @@ We initially explored using complex boolean operations (subtract/combine) in Ble
 
 To cut out the snowflake, we used an Epilog CO2 laser cutter with the following settings: **15% speed, 100% power, and 100% frequency**. We ran the job twice to ensure the laser fully penetrated the material.
 
-![Fully-scaled snowflake after laser cutting with listed settings above](fullyscaled_snowflake.jpg)
+![Fully-scaled snowflake after laser cutting with listed settings above](cover.JPG)
 
 
 ### Assembly
@@ -219,18 +219,6 @@ Due to the sheer size of each chip, this board was produced and assembled at a d
 
 ![Manufactured and assembled embedded circuit PCB](first_it_manufactured.png)
 
-Unfortunately, this board did not work as intended, likely due to a lack of pull-up resistors present in the initial schematic.
-
-For our second iteration, we pivoted and instead opted for a design with Adafruit's existing MCP4728 and TCA9548A breakout boards.
-
-![Integrated circuit schematic in KiCad](second_it_schematic.png)
-
-
-![Tool paths visualized for the integrated circuit interation](second_it_layout.png)
-
-After 2 iterations, this board was successfully produced and soldered in-house.
-
-![Manufactured and assembled integrated circuit PCB](second_it_manufactured.jpg)
 
 ## Software
 
